@@ -1,0 +1,203 @@
+.headerSection {
+  padding: var(--spacing-8) 0 var(--spacing-4) 0;
+  margin-top: 80px; /* Offset for global fixed header */
+  background: var(--md-sys-color-background);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-8);
+}
+
+.mainInfo {
+  display: flex;
+  gap: var(--spacing-8);
+  flex: 1;
+}
+
+.iconContainer {
+  flex-shrink: 0;
+}
+
+.appIcon {
+  border-radius: 20%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.appDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: var(--spacing-2);
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--md-sys-color-on-background);
+  margin-bottom: var(--spacing-2);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.developer {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--md-sys-color-primary);
+  margin-bottom: var(--spacing-1);
+}
+
+.category {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--md-sys-color-on-surface-variant);
+  margin-bottom: var(--spacing-4);
+}
+
+.statsRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.statValue {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--md-sys-color-on-background);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.starIcon {
+  color: var(--md-sys-color-on-background);
+  fill: var(--md-sys-color-on-background);
+}
+
+.everyoneIcon {
+  color: var(--md-sys-color-on-background);
+}
+
+.statDivider {
+  width: 1px;
+  height: 24px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.actionSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--spacing-3);
+  padding-top: var(--spacing-2);
+}
+
+.installBtn {
+  font-size: 1.125rem;
+  padding: 0.75rem 3rem;
+  border-radius: var(--radius-full);
+  font-weight: 500;
+}
+
+.actionMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 992px) {
+  .title {
+    font-size: 2rem;
+  }
+  .appIcon {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: var(--spacing-4);
+  }
+  
+  .mainInfo {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--spacing-4);
+    width: 100%;
+  }
+  
+  .appIcon {
+    width: 72px;
+    height: 72px;
+    border-radius: 20%;
+    mix-blend-mode: multiply;
+  }
+  
+  .appDetails {
+    padding-top: 0;
+  }
+
+  .title {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-1);
+    text-align: left;
+  }
+
+  .developer {
+    font-size: 0.875rem;
+    margin-bottom: 0;
+  }
+
+  .category {
+    font-size: 0.75rem;
+    margin-bottom: var(--spacing-2);
+  }
+
+  .statsRow {
+    gap: var(--spacing-3);
+  }
+
+  .statValue {
+    font-size: 0.875rem;
+  }
+
+  .statLabel {
+    font-size: 0.65rem;
+  }
+
+  .actionSection {
+    width: 100%;
+    align-items: stretch;
+    padding-top: 0;
+  }
+  
+  .installBtn {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.6rem 2rem;
+  }
+  
+  .actionMeta {
+    justify-content: center;
+    font-size: 0.75rem;
+  }
+}

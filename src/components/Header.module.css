@@ -1,0 +1,67 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  background: var(--md-sys-color-background);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  text-decoration: none;
+}
+
+.logoImage {
+  border-radius: var(--radius-xs);
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.brandName {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--md-sys-color-on-background);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+}
+
+.navLink {
+  font-weight: 500;
+  color: var(--md-sys-color-on-surface-variant);
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: var(--md-sys-color-on-surface);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+}
