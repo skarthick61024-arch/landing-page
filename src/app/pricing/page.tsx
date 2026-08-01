@@ -8,13 +8,13 @@ export const metadata = {
 
 export default function PricingPage() {
   return (
-    <div className="pt-24 pb-32 min-h-[80vh] flex items-center justify-center">
+    <div className="pt-12 pb-24 md:pt-16 md:pb-32 min-h-[80vh] flex items-center justify-center">
       <div className="container mx-auto px-4 md:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-[-0.04em] mb-6">
+          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6">
             Simple, Transparent Pricing.
           </h1>
-          <p className="text-muted-foreground text-sm md:text-base">
+          <p className="text-lg md:text-xl font-normal text-muted-foreground">
             Start for free, upgrade when you need more power.
           </p>
         </div>
@@ -22,8 +22,8 @@ export default function PricingPage() {
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {/* Free Tier */}
           <div className="p-8 rounded-3xl border border-border/50 bg-background flex flex-col">
-            <h3 className="font-semibold text-xl mb-2">Free</h3>
-            <p className="text-muted-foreground text-sm mb-6">Perfect for light usage.</p>
+            <h3 className="font-semibold text-xl mb-2 text-foreground">Free</h3>
+            <p className="text-sm font-normal text-muted-foreground mb-6">Perfect for light usage.</p>
             <div className="text-4xl font-bold mb-8">$0<span className="text-lg text-muted-foreground font-normal">/mo</span></div>
             <ul className="space-y-4 mb-8 flex-1">
               {["Background Downloads", "Up to 2GB file sizes", "Standard Speed", "Basic Queue"].map((feature, i) => (
@@ -41,8 +41,8 @@ export default function PricingPage() {
             <div className="absolute top-0 right-8 -translate-y-1/2 bg-foreground text-background text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
               Recommended
             </div>
-            <h3 className="font-semibold text-xl mb-2">Pro</h3>
-            <p className="text-muted-foreground text-sm mb-6">For heavy power users.</p>
+            <h3 className="font-semibold text-xl mb-2 text-foreground">Pro</h3>
+            <p className="text-sm font-normal text-muted-foreground mb-6">For heavy power users.</p>
             <div className="text-4xl font-bold mb-8">$4.99<span className="text-lg text-muted-foreground font-normal">/mo</span></div>
             <ul className="space-y-4 mb-8 flex-1">
               {["Unlimited file sizes", "Priority max speed", "Advanced Queue Management", "Auto-Resume & Sync", "Priority Support"].map((feature, i) => (

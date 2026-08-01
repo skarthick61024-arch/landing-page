@@ -30,11 +30,11 @@ const features = [
 
 export function FeaturesSection() {
   return (
-    <section id="features" className="py-24 md:py-32">
+    <section id="features" className="pt-12 pb-24 md:pt-16 md:pb-32">
       <div className="container mx-auto px-4 md:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16 md:mb-24">
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">Everything you need in a download manager</h2>
-          <p className="text-lg text-muted-foreground">
+          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6">Everything you need in a download manager</h2>
+          <p className="text-lg md:text-xl font-normal text-muted-foreground">
             A comprehensive suite of tools designed specifically for handling large files from Telegram.
           </p>
         </div>
@@ -46,8 +46,8 @@ export function FeaturesSection() {
                 {feature.icon}
               </div>
               <div>
-                <h3 className="font-semibold text-lg mb-2">{feature.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
+                <h3 className="font-semibold text-xl mb-2 text-foreground">{feature.title}</h3>
+                <p className="text-sm font-normal text-muted-foreground leading-relaxed">{feature.description}</p>
               </div>
             </div>
           ))}

@@ -29,11 +29,11 @@ const steps = [
 
 export function HowItWorksSection() {
   return (
-    <section id="how-it-works" className="py-24 md:py-32 bg-muted/30 border-y border-border/40">
+    <section id="how-it-works" className="pt-12 pb-24 md:pt-16 md:pb-32 bg-muted/30 border-y border-border/40">
       <div className="container mx-auto px-4 md:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16 md:mb-24">
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">How it works</h2>
-          <p className="text-lg text-muted-foreground">
+          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6">How it works</h2>
+          <p className="text-lg md:text-xl font-normal text-muted-foreground">
             Get started in seconds. No complicated setup required.
           </p>
         </div>
@@ -48,8 +48,8 @@ export function HowItWorksSection() {
                 {step.icon}
               </div>
               <span className="text-sm font-bold text-muted-foreground mb-2">{step.num}</span>
-              <h3 className="font-semibold text-xl mb-3">{step.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed max-w-[200px]">{step.description}</p>
+              <h3 className="font-semibold text-xl mb-3 text-foreground">{step.title}</h3>
+              <p className="text-sm font-normal text-muted-foreground leading-relaxed max-w-[200px]">{step.description}</p>
             </div>
           ))}
         </div>

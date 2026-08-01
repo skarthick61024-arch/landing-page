@@ -14,8 +14,8 @@ export function ScreenShowcaseSection() {
     <section className="py-24 md:py-32 overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16 md:mb-24">
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">A beautiful native experience</h2>
-          <p className="text-lg text-muted-foreground">
+          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6">A beautiful native experience</h2>
+          <p className="text-lg md:text-xl font-normal text-muted-foreground">
             Carefully crafted interfaces that feel right at home on your device.
           </p>
         </div>

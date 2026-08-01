@@ -1,3 +1,5 @@
+"use client"
+
 import {
   Accordion,
   AccordionContent,
@@ -41,12 +43,29 @@ const faqs = [
 ]
 
 export function FAQSection() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <section className="py-24 md:py-32">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="container mx-auto px-4 md:px-8 max-w-3xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">Frequently Asked Questions</h2>
-          <p className="text-lg text-muted-foreground">
+          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6">Frequently Asked Questions</h2>
+          <p className="text-lg md:text-xl font-normal text-muted-foreground">
             Everything you need to know about TeleTorrent.
           </p>
         </div>
@@ -54,8 +73,8 @@ export function FAQSection() {
         <Accordion type="single" collapsible className="w-full">
           {faqs.map((faq, index) => (
             <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="text-left font-medium text-lg py-6">{faq.question}</AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed text-base">
+              <AccordionTrigger className="text-left font-semibold text-xl py-6 text-foreground">{faq.question}</AccordionTrigger>
+              <AccordionContent className="text-sm font-normal text-muted-foreground leading-relaxed">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

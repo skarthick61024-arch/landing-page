@@ -1,9 +1,9 @@
 export function AboutSection() {
   return (
-    <section id="about" className="py-24 md:py-32">
+    <section id="about" className="pt-12 pb-24 md:pt-16 md:pb-32">
       <div className="container mx-auto px-4 md:px-8">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-8 text-center">About TeleTorrent</h2>
+          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-8 text-center">About TeleTorrent</h2>
           
           <div className="space-y-6 text-base md:text-lg leading-relaxed text-muted-foreground">
             <p>

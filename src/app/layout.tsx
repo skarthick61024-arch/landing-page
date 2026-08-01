@@ -8,14 +8,14 @@ import { Footer } from "@/components/layout/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://teletorrent.app"),
+  metadataBase: new URL("https://www.teletorrent.me"),
   title: "TeleTorrent \u2013 Telegram File Downloader for Android",
   description: "Download Telegram videos, documents, ZIP files, APKs, audio, and media with TeleTorrent. Fast, secure background downloads with resume support and download management.",
   keywords: "telegram downloader, telegram file downloader, telegram download manager, telegram video downloader, telegram media downloader, telegram saved messages downloader, download telegram files, telegram document downloader, telegram apk downloader",
   openGraph: {
     title: "TeleTorrent \u2013 Telegram File Downloader for Android",
     description: "Download Telegram videos, documents, ZIP files, APKs, audio, and media with TeleTorrent. Fast, secure background downloads with resume support.",
-    url: "https://teletorrent.app",
+    url: "https://www.teletorrent.me",
     siteName: "TeleTorrent",
     images: [
       {
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://teletorrent.app",
+    canonical: "https://www.teletorrent.me",
   },
 };
 
@@ -44,32 +44,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "TeleTorrent",
-    "operatingSystem": "Android",
-    "applicationCategory": "UtilitiesApplication",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD",
-    },
-    "description": "Download Telegram videos, documents, ZIP files, APKs, audio, and media with TeleTorrent. Fast, secure background downloads with resume support and download management.",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "ratingCount": "2150"
-    }
-  };
+
 
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+
       </head>
       <body className={`${inter.className} antialiased`} suppressHydrationWarning={true}>
         <ThemeProvider
