@@ -7,7 +7,7 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           <div className="col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <img src="/logo.jpg" alt="TeleTorrent Logo" className="w-8 h-8 rounded-lg" />
+              <img src="/logo.png" alt="TeleTorrent Logo" className="w-8 h-8" />
               <span className="font-bold text-lg tracking-tight">TeleTorrent</span>
             </Link>
             <p className="text-muted-foreground max-w-xs text-sm">
