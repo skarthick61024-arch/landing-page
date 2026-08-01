@@ -1,12 +1,24 @@
-import { MetadataRoute } from "next";
+import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://teletorrent.app",
+      url: 'https://teletorrent.app',
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: 'weekly',
       priority: 1,
     },
-  ];
+    {
+      url: 'https://teletorrent.app/privacy',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },
+    {
+      url: 'https://teletorrent.app/terms',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },
+  ]
 }

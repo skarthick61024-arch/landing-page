@@ -7,8 +7,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: "The Fastest Telegram Download Manager for Android",
     start_url: "/",
     display: "standalone",
-    background_color: "#16C75D",
-    theme_color: "#16C75D",
+    background_color: "#007BFF",
+    theme_color: "#007BFF",
     icons: [
       {
         src: "/favicon.ico",

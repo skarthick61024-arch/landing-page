@@ -4,67 +4,67 @@
 
 @layer base {
   :root {
-    --background: 204 33% 98%; /* #F7FAFC */
-    --foreground: 222 47% 11%; /* #0F172A */
+    --background: 0 0% 98%; /* Ultra light gray/white */
+    --foreground: 0 0% 9%; /* Almost black */
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 0 0% 9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 0 0% 9%;
 
-    --primary: 144 80% 43%; /* #16C75D */
-    --primary-foreground: 0 0% 100%;
+    --primary: 0 0% 9%; /* Black */
+    --primary-foreground: 0 0% 98%; /* White text */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%; /* Mid gray */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222 47% 11%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 9%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 13% 91%; /* #E5E7EB */
-    --input: 220 13% 91%;
-    --ring: 144 80% 43%;
+    --border: 0 0% 90%; /* Very light gray border */
+    --input: 0 0% 90%;
+    --ring: 0 0% 9%;
 
     --radius: 1rem; /* XL radius (16px) */
 
-    --hero-card: 204 55% 97%; /* #F2F8FC */
+    --hero-card: 0 0% 100%;
   }
 
   .dark {
-    --background: 0 0% 7%; /* #111111 */
-    --foreground: 210 40% 98%;
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
 
     --card: 0 0% 11%;
-    --card-foreground: 210 40% 98%;
+    --card-foreground: 0 0% 98%;
 
     --popover: 0 0% 11%;
-    --popover-foreground: 210 40% 98%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 144 80% 43%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 0 0% 98%; /* White button in dark mode */
+    --primary-foreground: 0 0% 9%; /* Black text */
 
     --secondary: 0 0% 15%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary-foreground: 0 0% 98%;
 
     --muted: 0 0% 15%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted-foreground: 0 0% 65%;
 
     --accent: 0 0% 15%;
-    --accent-foreground: 210 40% 98%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 15%;
     --input: 0 0% 15%;
-    --ring: 144 80% 43%;
+    --ring: 0 0% 98%;
     
     --hero-card: 0 0% 11%;
   }
@@ -90,4 +90,22 @@ html {
   scroll-behavior: smooth;
 }
 
-/* 8px spacing utility classes if needed, though Tailwind spacing is already based on 4px units */
+.glass-nav {
+  @apply bg-background/70 backdrop-blur-md border-b border-border/50;
+}
+
+.premium-shadow {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05), inset 0 1px 0 0 rgb(255 255 255 / 0.1);
+}
+
+.dark .premium-shadow {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.2), 0 2px 4px -2px rgb(0 0 0 / 0.2), inset 0 1px 0 0 rgb(255 255 255 / 0.05);
+}
+
+.gradient-bg {
+  background: radial-gradient(circle at top center, hsl(var(--primary) / 0.08) 0%, transparent 40%);
+}
+
+.dark .gradient-bg {
+  background: radial-gradient(circle at top center, hsl(var(--primary) / 0.15) 0%, transparent 40%);
+}

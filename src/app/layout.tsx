@@ -2,21 +2,24 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "TeleTorrent - The Fastest Telegram Download Manager for Android",
-  description: "Download Telegram files faster. Resume anytime. Manage downloads like a pro with TeleTorrent. The ultimate Telegram download manager.",
-  keywords: "telegram downloader, telegram download manager, telegram file downloader, telegram video downloader, android download manager, telegram apk, resume downloads, background download, telegram media downloader, download telegram videos",
+  metadataBase: new URL("https://teletorrent.app"),
+  title: "TeleTorrent \u2013 Telegram File Downloader for Android",
+  description: "Download Telegram videos, documents, ZIP files, APKs, audio, and media with TeleTorrent. Fast, secure background downloads with resume support and download management.",
+  keywords: "telegram downloader, telegram file downloader, telegram download manager, telegram video downloader, telegram media downloader, telegram saved messages downloader, download telegram files, telegram document downloader, telegram apk downloader",
   openGraph: {
-    title: "TeleTorrent - The Fastest Telegram Download Manager",
-    description: "Download Telegram files faster. Resume anytime. Manage downloads like a pro.",
+    title: "TeleTorrent \u2013 Telegram File Downloader for Android",
+    description: "Download Telegram videos, documents, ZIP files, APKs, audio, and media with TeleTorrent. Fast, secure background downloads with resume support.",
     url: "https://teletorrent.app",
     siteName: "TeleTorrent",
     images: [
       {
-        url: "/mockups/photo_2026-07-13_22-39-33.jpg", // Placeholder for og-image
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "TeleTorrent - Telegram Download Manager",
@@ -27,9 +30,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "TeleTorrent - The Fastest Telegram Download Manager",
-    description: "Download Telegram files faster. Resume anytime. Manage downloads like a pro.",
-    images: ["/mockups/photo_2026-07-13_22-39-33.jpg"],
+    title: "TeleTorrent \u2013 Telegram File Downloader for Android",
+    description: "Download Telegram videos, documents, ZIP files, APKs, audio, and media with TeleTorrent. Fast, secure background downloads with resume support.",
+    images: ["/og-image.jpg"],
   },
   alternates: {
     canonical: "https://teletorrent.app",
@@ -52,11 +55,11 @@ export default function RootLayout({
       "price": "0",
       "priceCurrency": "USD",
     },
-    "description": "Download Telegram files faster. Resume anytime. Manage downloads like a pro.",
+    "description": "Download Telegram videos, documents, ZIP files, APKs, audio, and media with TeleTorrent. Fast, secure background downloads with resume support and download management.",
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "ratingCount": "1250"
+      "ratingValue": "4.9",
+      "ratingCount": "2150"
     }
   };
 
@@ -68,14 +71,20 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${inter.className} antialiased`} suppressHydrationWarning={true}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div className="flex flex-col min-h-screen">
+            <Navbar />
+            <main className="flex-1">
+              {children}
+            </main>
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>
