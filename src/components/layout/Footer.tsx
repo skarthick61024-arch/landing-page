@@ -2,8 +2,8 @@ import Link from "next/link"
 
 export function Footer() {
   return (
-    <footer className="border-t border-border/40 bg-background/50">
-      <div className="container mx-auto px-4 md:px-8 py-12 md:py-16">
+    <footer className="mt-12 md:mt-24 mx-4 md:mx-auto max-w-7xl border border-border/40 bg-background/50 rounded-2xl md:rounded-3xl mb-8 overflow-hidden">
+      <div className="px-4 md:px-8 py-12 md:py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           <div className="col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">

@@ -34,6 +34,11 @@ export const metadata: Metadata = {
     description: "Download Telegram videos, documents, ZIP files, APKs, audio, and media with TeleTorrent. Fast, secure background downloads with resume support.",
     images: ["/og-image.jpg"],
   },
+  icons: {
+    icon: "/logo-round.jpg",
+    shortcut: "/logo-round.jpg",
+    apple: "/logo-round.jpg",
+  },
   alternates: {
     canonical: "https://www.teletorrent.me",
   },
