@@ -35,9 +35,9 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
   },
   icons: {
-    icon: "/logo-round.jpg",
-    shortcut: "/logo-round.jpg",
-    apple: "/logo-round.jpg",
+    icon: "/logo-new.jpg",
+    shortcut: "/logo-new.jpg",
+    apple: "/logo-new.jpg",
   },
   alternates: {
     canonical: "https://www.teletorrent.me",
