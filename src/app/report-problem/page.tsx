@@ -10,7 +10,22 @@ export default function ReportProblemPage() {
     e.preventDefault()
     setStatus("submitting")
     
-    // Simulate backend submission
+    const title = (document.getElementById("title") as HTMLInputElement).value;
+    const category = (document.getElementById("category") as HTMLSelectElement).value;
+    const device = (document.getElementById("device") as HTMLInputElement).value;
+    const appVersion = (document.getElementById("app_version") as HTMLInputElement).value;
+    const description = (document.getElementById("description") as HTMLTextAreaElement).value;
+
+    const subject = encodeURIComponent(`TeleTorrent Problem Report: ${title}`);
+    const body = encodeURIComponent(
+      `Category: ${category}\n` +
+      `Device: ${device}\n` +
+      `App Version: ${appVersion}\n\n` +
+      `Description:\n${description}`
+    );
+
+    window.location.href = `mailto:support@teletorrent.me?subject=${subject}&body=${body}`;
+
     setTimeout(() => {
       setStatus("success")
     }, 1500)
