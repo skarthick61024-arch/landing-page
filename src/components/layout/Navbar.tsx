@@ -38,29 +38,9 @@ export function Navbar() {
 
   return (
     <>
-      {/* Mobile Header (Sticky Top) */}
-      <header className="md:hidden sticky top-0 z-40 w-full bg-[#000000]/80 backdrop-blur-xl border-b border-[#141518] h-[64px] flex items-center px-5 justify-between">
-        <Link href="/" className="flex items-center gap-2.5 z-50">
-          <img src="/logo-round.jpg" alt="TeleTorrent Logo" className="w-8 h-8 rounded-full" />
-          <span className="font-bold text-[16px] tracking-tight text-[#F5F5F5]">TeleTorrent</span>
-        </Link>
-        <button 
-          className="text-[#F5F5F5] focus:outline-none z-50"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
-      </header>
-
-      {/* Mobile Sidebar Overlay */}
-      <div 
-        className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-40 transition-opacity duration-300 md:hidden ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
-        onClick={() => setIsOpen(false)}
-      />
-
-      {/* Modern Floating Pill Sidebar (Desktop Persistent, Mobile Drawer) */}
+      {/* Modern Floating Pill Sidebar (Desktop Only) */}
       <aside 
-        className={`fixed top-4 left-4 h-[calc(100vh-32px)] w-[80px] bg-white/10 backdrop-blur-xl border border-white/20 rounded-[40px] shadow-[0_8px_32px_rgba(0,0,0,0.4)] z-50 flex flex-col items-center transition-transform duration-300 ease-in-out md:translate-x-0 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
+        className="hidden md:flex fixed top-4 left-4 h-[calc(100vh-32px)] w-[80px] bg-white/10 backdrop-blur-xl border border-white/20 rounded-[40px] shadow-[0_8px_32px_rgba(0,0,0,0.4)] z-50 flex-col items-center"
       >
         {/* Logo Area */}
         <div className="h-[100px] flex items-center justify-center shrink-0 w-full mt-2">
