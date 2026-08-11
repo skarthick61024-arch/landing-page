@@ -159,7 +159,7 @@ export const blogPosts: BlogPost[] = [
     category: "Telegram Guides",
     date: "Aug 08, 2026",
     readingTime: "4 min read",
-    image: "/media__1786419721703.png",
+    image: "/blog-video-download-guide.jpg",
     content: (
       <>
         <p className="text-[17px] md:text-[18px] text-[#8D919B] leading-relaxed mb-8">
