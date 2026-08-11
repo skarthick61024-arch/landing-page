@@ -71,7 +71,7 @@ export function Navbar() {
         </div>
 
         {/* Navigation Links */}
-        <nav className="flex-1 flex flex-col gap-1 py-6 pl-6 pr-0 overflow-y-auto">
+        <nav className="flex-1 flex flex-col gap-2 p-6 overflow-y-auto">
           <div className="text-[12px] font-bold text-[#888888] tracking-wider uppercase mb-4 px-2">Menu</div>
           {navLinks.map((link) => {
             const isActive = activeHref === link.href || (activeHref.startsWith('/blog') && link.name === 'Blog');
@@ -93,7 +93,7 @@ export function Navbar() {
                   }
                 }
               }}
-              className={`text-[15px] font-medium py-3.5 pl-4 flex items-center gap-3 transition-all ${isActive ? 'nav-item-active text-[#B7FF32] shadow-lg' : 'text-[#666666] hover:text-[#000000] hover:bg-[#F5F5F5] rounded-l-[24px]'}`}
+              className={`text-[15px] font-medium px-5 py-3.5 flex items-center gap-3 transition-all rounded-full ${isActive ? 'bg-[#000000] text-[#B7FF32] shadow-md' : 'text-[#666666] hover:text-[#000000] hover:bg-[#F5F5F5]'}`}
             >
               {link.icon}
               {link.name}
