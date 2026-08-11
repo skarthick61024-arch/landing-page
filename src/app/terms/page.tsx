@@ -207,7 +207,7 @@ export default function TermsPage() {
         <h2 className="text-[24px] font-bold text-[#F5F5F5] mt-8 mb-4">18. Contact</h2>
         <p className="text-[16px] text-[#8D919B] leading-relaxed mb-2">For questions regarding these Terms:</p>
         <p className="text-[16px] font-bold text-[#F5F5F5] leading-relaxed mb-2">TeleTorrent Support</p>
-        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-8">Email: <a href="mailto:support@teletorrent.app" className="text-[#F5F5F5] hover:text-[#B7FF32]">support@teletorrent.app</a></p>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-8">Email: <a href="mailto:support@teletorrent.me" className="text-[#F5F5F5] hover:text-[#B7FF32]">support@teletorrent.me</a></p>
 
       </div>
     </div>

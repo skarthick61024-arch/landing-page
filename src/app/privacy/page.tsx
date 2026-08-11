@@ -187,7 +187,7 @@ export default function PrivacyPolicyPage() {
         <h2 className="text-[24px] font-bold text-[#F5F5F5] mt-8 mb-4">18. Contact</h2>
         <p className="text-[16px] text-[#8D919B] leading-relaxed mb-2">For privacy questions:</p>
         <p className="text-[16px] font-bold text-[#F5F5F5] leading-relaxed mb-2">TeleTorrent Privacy Team</p>
-        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-2">Email: <a href="mailto:privacy@teletorrent.app" className="text-[#F5F5F5] hover:text-[#B7FF32]">privacy@teletorrent.app</a></p>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-2">Email: <a href="mailto:support@teletorrent.me" className="text-[#F5F5F5] hover:text-[#B7FF32]">support@teletorrent.me</a></p>
         <p className="text-[16px] text-[#8D919B] leading-relaxed mb-8">Website: <a href="https://www.teletorrent.app" className="text-[#F5F5F5] hover:text-[#B7FF32]">www.teletorrent.app</a></p>
 
       </div>

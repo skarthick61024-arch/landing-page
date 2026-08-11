@@ -34,20 +34,20 @@ export default function ContactPage() {
             <div className="space-y-8 mb-12">
               <div>
                 <h3 className="text-[15px] font-bold text-[#F5F5F5] mb-1">General Support</h3>
-                <a href="mailto:support@teletorrent.app" className="text-[16px] text-[#8D919B] hover:text-[#B7FF32] transition-colors">
-                  support@teletorrent.app
+                <a href="mailto:support@teletorrent.me" className="text-[16px] text-[#8D919B] hover:text-[#B7FF32] transition-colors">
+                  support@teletorrent.me
                 </a>
               </div>
               <div>
                 <h3 className="text-[15px] font-bold text-[#F5F5F5] mb-1">Privacy</h3>
-                <a href="mailto:privacy@teletorrent.app" className="text-[16px] text-[#8D919B] hover:text-[#B7FF32] transition-colors">
-                  privacy@teletorrent.app
+                <a href="mailto:support@teletorrent.me" className="text-[16px] text-[#8D919B] hover:text-[#B7FF32] transition-colors">
+                  support@teletorrent.me
                 </a>
               </div>
               <div>
                 <h3 className="text-[15px] font-bold text-[#F5F5F5] mb-1">Business enquiries</h3>
-                <a href="mailto:hello@teletorrent.app" className="text-[16px] text-[#8D919B] hover:text-[#B7FF32] transition-colors">
-                  hello@teletorrent.app
+                <a href="mailto:support@teletorrent.me" className="text-[16px] text-[#8D919B] hover:text-[#B7FF32] transition-colors">
+                  support@teletorrent.me
                 </a>
               </div>
             </div>
