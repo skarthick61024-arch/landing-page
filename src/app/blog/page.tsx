@@ -1,122 +1,133 @@
 import Link from "next/link"
+import { Metadata } from "next"
+import { blogPosts } from "@/lib/blogData"
 
-export default function BlogPage() {
-  const posts = [
-    {
-      title: "How to Build a Zero-Based Budget That Actually Works",
-      description: "Stop wondering where your money went and start telling it where to go. A comprehensive guide to modern zero-based budgeting.",
-      category: "Finance",
-      date: "Oct 12, 2026",
-      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=600"
-    },
-    {
-      title: "Introducing Mensta 2.0: The Future of Personal Finance",
-      description: "We're completely overhauling the core engine of Mensta to make it faster, smarter, and more insightful than ever before.",
-      category: "Product",
-      date: "Oct 05, 2026",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600"
-    },
-    {
-      title: "The Psychology of Saving: Overcoming Financial Friction",
-      description: "Why is it so hard to save money even when we want to? Exploring the behavioral economics behind everyday financial decisions.",
-      category: "Insights",
-      date: "Sep 28, 2026",
-      image: "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&q=80&w=600"
-    },
-    {
-      title: "5 Hidden Traps in Modern Subscription Services",
-      description: "How 'set it and forget it' is draining your wealth, and the tools you need to fight back against dark patterns.",
-      category: "Finance",
-      date: "Sep 15, 2026",
-      image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&q=80&w=600"
-    },
-    {
-      title: "Our New Machine Learning Categorization Engine",
-      description: "A deep dive into the engineering behind our new smart transaction categorizer that learns from your specific habits.",
-      category: "Updates",
-      date: "Sep 02, 2026",
-      image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&q=80&w=600"
-    },
-    {
-      title: "A Guide to Managing Freelance Taxes with Mensta",
-      description: "The complete workflow for 1099 contractors and freelancers to organize expenses and prepare for tax season.",
-      category: "Guides",
-      date: "Aug 22, 2026",
-      image: "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?auto=format&fit=crop&q=80&w=600"
-    }
-  ];
+export const metadata: Metadata = {
+  title: "Telegram Download Guides & Tips | TeleTorrent Blog",
+  description: "Practical guides and tips for downloading and managing Telegram videos, files and media with TeleTorrent.",
+  alternates: {
+    canonical: "https://www.teletorrent.me/blog",
+  },
+  openGraph: {
+    title: "Telegram Download Guides & Tips | TeleTorrent Blog",
+    description: "Practical guides and tips for downloading and managing Telegram videos, files and media with TeleTorrent.",
+    url: "https://www.teletorrent.me/blog",
+    type: "website",
+  }
+}
 
-  const filters = ["All", "Finance", "Product", "Guides", "Updates"];
+export default function BlogIndex() {
+  const featuredPost = blogPosts[0];
+  const remainingPosts = blogPosts.slice(1);
+  const categories = Array.from(new Set(blogPosts.map(p => p.category)));
 
   return (
-    <div className="bg-white min-h-screen pt-[160px] pb-[120px]">
-      <div className="container mx-auto px-5 md:px-12 max-w-[1240px]">
-        
-        {/* Header & Filters */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
-          <div>
-            <h1 className="text-[44px] md:text-[56px] font-bold tracking-tight text-[#111111] leading-none mb-4">
-              Insights
+    <div className="min-h-screen bg-[#000000] text-[#F5F5F5] flex flex-col">
+
+      <main className="flex-1 pt-24 pb-20">
+        <div className="container mx-auto px-5 md:px-12 max-w-[1240px]">
+          
+          {/* Breadcrumb */}
+          <div className="text-[13px] md:text-[14px] text-[#8D919B] mb-12 flex items-center gap-2">
+            <Link href="/" className="hover:text-[#F5F5F5] transition-colors">Home</Link>
+            <span>/</span>
+            <span className="text-[#F5F5F5]">Blog</span>
+          </div>
+
+          {/* Hero */}
+          <div className="max-w-[800px] mb-20">
+            <div className="text-[#B7FF32] text-[13px] font-bold tracking-wider uppercase mb-4">
+              TELETORRENT BLOG
+            </div>
+            <h1 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold tracking-tight mb-6 leading-[1.1]">
+              Telegram Download Guides & Tips
             </h1>
-            <p className="text-[17px] text-[#666666]">
-              Thoughts on product, finance, and building better habits.
+            <p className="text-[16px] md:text-[18px] text-[#8D919B] leading-[1.6] max-w-[600px]">
+              Practical guides, troubleshooting tips and useful resources for downloading and managing Telegram videos, files and media.
             </p>
           </div>
-          
-          <div className="flex flex-wrap items-center gap-2">
-            {filters.map((filter, i) => (
-              <button 
-                key={i}
-                className={`px-4 py-2 rounded-full text-[14px] font-medium transition-colors ${
-                  i === 0 
-                    ? "bg-[#111111] text-white" 
-                    : "bg-white text-[#666666] border border-[#E8E8E8] hover:border-[#111111] hover:text-[#111111]"
-                }`}
-              >
-                {filter}
-              </button>
-            ))}
-          </div>
-        </div>
 
-        {/* Blog Grid */}
-        <div className="grid md:grid-cols-3 gap-x-8 gap-y-16">
-          {posts.map((post, i) => (
-            <article key={i} className="group cursor-pointer flex flex-col">
-              <div className="relative w-full aspect-[4/3] rounded-[16px] overflow-hidden mb-6 border border-[#E8E8E8]">
+          {/* Featured Article */}
+          <Link href={`/blog/${featuredPost.slug}`} className="block group mb-20">
+            <div className="bg-[#101114] border border-[#141518] rounded-[24px] overflow-hidden flex flex-col md:flex-row transition-transform duration-300 hover:-translate-y-1">
+              <div className="w-full md:w-1/2 h-[250px] md:h-[400px] bg-[#1A1A1A] overflow-hidden">
                 <img 
-                  src={post.image} 
-                  alt={post.title} 
-                  className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
+                  src={featuredPost.image} 
+                  alt={featuredPost.title} 
+                  className="w-full h-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105 group-hover:opacity-100"
                 />
               </div>
-              
-              <div className="flex items-center gap-3 mb-4">
-                <span className="text-[12px] font-bold text-[#111111] uppercase tracking-wider">
-                  {post.category}
-                </span>
-                <span className="w-1 h-1 rounded-full bg-[#E8E8E8]"></span>
-                <span className="text-[13px] text-[#8A8A8A]">
-                  {post.date}
-                </span>
+              <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                <div className="text-[#B7FF32] text-[13px] font-bold mb-4 uppercase">{featuredPost.category}</div>
+                <h2 className="text-[28px] md:text-[36px] font-bold mb-4 leading-[1.2] group-hover:text-[#B7FF32] transition-colors">{featuredPost.title}</h2>
+                <p className="text-[16px] text-[#8D919B] leading-[1.6] mb-8 line-clamp-3">
+                  {featuredPost.description}
+                </p>
+                <div className="flex items-center justify-between text-[#8D919B] text-[14px]">
+                  <span>{featuredPost.date} • {featuredPost.readingTime}</span>
+                  <span className="text-[#F5F5F5] font-semibold flex items-center gap-2 group-hover:text-[#B7FF32] transition-colors">
+                    Read article <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                  </span>
+                </div>
               </div>
-              
-              <h2 className="text-[20px] font-bold text-[#111111] leading-[1.3] mb-3 group-hover:text-[#FF4F00] transition-colors">
-                {post.title}
-              </h2>
-              
-              <p className="text-[15px] text-[#666666] leading-relaxed mb-6 flex-1">
-                {post.description}
-              </p>
-              
-              <div className="flex items-center text-[14px] font-semibold text-[#111111] group-hover:text-[#FF4F00] transition-colors">
-                Read article <span className="ml-1 transition-transform group-hover:translate-x-1">→</span>
-              </div>
-            </article>
-          ))}
-        </div>
+            </div>
+          </Link>
 
-      </div>
+          {/* Latest Guides */}
+          <div className="mb-24">
+            <h3 className="text-[24px] md:text-[28px] font-bold mb-8">Latest Guides</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {remainingPosts.map((post) => (
+                <Link href={`/blog/${post.slug}`} key={post.slug} className="group flex flex-col bg-[#101114] border border-[#141518] rounded-[20px] overflow-hidden transition-transform duration-300 hover:-translate-y-1">
+                  <div className="w-full h-[200px] bg-[#1A1A1A] overflow-hidden">
+                    <img 
+                      src={post.image} 
+                      alt={post.title} 
+                      className="w-full h-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105 group-hover:opacity-100"
+                    />
+                  </div>
+                  <div className="p-6 flex flex-col flex-1">
+                    <div className="text-[#B7FF32] text-[12px] font-bold mb-3 uppercase">{post.category}</div>
+                    <h4 className="text-[20px] font-bold mb-3 leading-[1.3] group-hover:text-[#B7FF32] transition-colors line-clamp-2">{post.title}</h4>
+                    <p className="text-[15px] text-[#8D919B] leading-[1.6] mb-6 line-clamp-2 flex-1">
+                      {post.description}
+                    </p>
+                    <div className="flex items-center justify-between text-[#8D919B] text-[13px] pt-4 border-t border-[#141518]">
+                      <span>{post.date}</span>
+                      <span className="text-[#F5F5F5] font-semibold group-hover:text-[#B7FF32] transition-colors">Read →</span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Browse by Topic */}
+          <div className="mb-24">
+            <h3 className="text-[24px] md:text-[28px] font-bold mb-8">Browse by Topic</h3>
+            <div className="flex flex-wrap gap-4">
+              {categories.map((cat) => (
+                <div key={cat} className="bg-[#101114] border border-[#141518] px-6 py-3 rounded-full text-[#F5F5F5] text-[15px] font-medium hover:bg-[#141518] hover:text-[#B7FF32] cursor-pointer transition-colors">
+                  {cat}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Contextual CTA */}
+          <div className="bg-gradient-to-r from-[#101114] to-[#141518] border border-[#1A1A1A] rounded-[24px] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+            <div>
+              <h3 className="text-[24px] md:text-[28px] font-bold mb-3">Need to download a Telegram file?</h3>
+              <p className="text-[16px] text-[#8D919B]">Use TeleTorrent to manage supported Telegram downloads.</p>
+            </div>
+            <Link href="/" className="bg-[#B7FF32] hover:bg-[#a3e62c] text-[#000000] font-bold py-3.5 px-8 rounded-full text-[15px] transition-colors shrink-0">
+              Open TeleTorrent
+            </Link>
+          </div>
+
+        </div>
+      </main>
+
     </div>
   )
 }

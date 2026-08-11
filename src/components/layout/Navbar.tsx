@@ -28,6 +28,9 @@ export function Navbar() {
           <Link href="/about" className="text-[13px] font-medium text-[#8D919B] hover:text-[#F5F5F5] transition-colors">
             About
           </Link>
+          <Link href="/blog" className="text-[13px] font-medium text-[#8D919B] hover:text-[#F5F5F5] transition-colors">
+            Blog
+          </Link>
           <Link href="/help" className="text-[13px] font-medium text-[#8D919B] hover:text-[#F5F5F5] transition-colors">
             Support
           </Link>

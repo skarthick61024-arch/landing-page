@@ -7,6 +7,7 @@ import { TrustSection } from "@/components/sections/TrustSection"
 import { ProductShowcaseSection } from "@/components/sections/ProductShowcaseSection"
 import { SEOContentSection } from "@/components/sections/SEOContentSection"
 import { FAQSection } from "@/components/sections/FAQSection"
+import { BlogHighlightSection } from "@/components/sections/BlogHighlightSection"
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <DownloadExperienceSection />
       <TrustSection />
       <SEOContentSection />
+      <BlogHighlightSection />
       <FAQSection />
     </>
   )
