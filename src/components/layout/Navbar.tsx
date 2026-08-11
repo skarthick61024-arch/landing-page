@@ -2,10 +2,12 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu, X } from "lucide-react"
+import { usePathname } from "next/navigation"
+import { Menu, X, LayoutDashboard, Sparkles, HelpCircle, FileText } from "lucide-react"
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
 
   // Prevent scrolling when sidebar is open
   useEffect(() => {
@@ -20,12 +22,10 @@ export function Navbar() {
   }, [isOpen])
 
   const navLinks = [
-    { name: "Product", href: "/#features" },
-    { name: "Features", href: "/#features" },
-    { name: "How it works", href: "/#how-it-works" },
-    { name: "About", href: "/about" },
-    { name: "Blog", href: "/blog" },
-    { name: "Support", href: "/help" },
+    { name: "Product", href: "/", icon: <LayoutDashboard className="w-5 h-5" /> },
+    { name: "Features", href: "/#features", icon: <Sparkles className="w-5 h-5" /> },
+    { name: "Blog", href: "/blog", icon: <FileText className="w-5 h-5" /> },
+    { name: "Support", href: "/help", icon: <HelpCircle className="w-5 h-5" /> },
   ]
 
   return (
@@ -52,7 +52,7 @@ export function Navbar() {
 
       {/* Modern Sidebar (Desktop Persistent, Mobile Drawer) */}
       <aside 
-        className={`fixed top-0 left-0 h-full w-[260px] bg-[#000000] border-r border-[#141518] z-50 flex flex-col transition-transform duration-300 ease-in-out md:translate-x-0 ${isOpen ? "translate-x-0 shadow-2xl" : "-translate-x-full"}`}
+        className={`fixed top-0 left-0 h-full w-[260px] bg-[#101114] border-r border-[#141518] z-50 flex flex-col transition-transform duration-300 ease-in-out md:translate-x-0 ${isOpen ? "translate-x-0 shadow-2xl" : "-translate-x-full"}`}
       >
         {/* Logo Area */}
         <div className="h-[80px] flex items-center px-8 border-b border-[#141518] shrink-0">
@@ -63,18 +63,21 @@ export function Navbar() {
         </div>
 
         {/* Navigation Links */}
-        <nav className="flex-1 flex flex-col gap-1 p-6 overflow-y-auto">
+        <nav className="flex-1 flex flex-col gap-1 py-6 pl-6 pr-0 overflow-y-auto">
           <div className="text-[12px] font-bold text-[#8D919B] tracking-wider uppercase mb-4 px-2">Menu</div>
-          {navLinks.map((link) => (
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href || (pathname.startsWith('/blog') && link.name === 'Blog');
+            return (
             <Link 
               key={link.name} 
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="text-[14px] font-medium text-[#8D919B] hover:text-[#B7FF32] hover:bg-[#101114] px-4 py-3 rounded-[12px] transition-all flex items-center"
+              className={`text-[15px] font-medium py-3.5 pl-4 flex items-center gap-3 transition-colors ${isActive ? 'nav-item-active text-[#B7FF32]' : 'text-[#8D919B] hover:text-[#F5F5F5] rounded-l-[24px]'}`}
             >
+              {link.icon}
               {link.name}
             </Link>
-          ))}
+          )})}
         </nav>
 
         {/* CTA Bottom */}
