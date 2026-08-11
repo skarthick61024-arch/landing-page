@@ -39,7 +39,7 @@ export default function HelpPage() {
 
         <div className="space-y-6">
           {faqs.map((faq, i) => (
-            <div key={i} className="bg-[#F7F7F7] rounded-[16px] p-6 border border-[#141518] hover:border-[#090909] transition-colors cursor-pointer group flex flex-col justify-center min-h-[120px]">
+            <div key={i} className="bg-[#101114] rounded-[16px] p-6 border border-[#1A1A1A] hover:border-[#B7FF32] transition-colors cursor-pointer group flex flex-col justify-center min-h-[120px]">
               <h3 className="text-[18px] font-bold text-[#F5F5F5] mb-2 group-hover:text-[#B7FF32] transition-colors">
                 {faq.q}
               </h3>
@@ -50,14 +50,14 @@ export default function HelpPage() {
           ))}
         </div>
 
-        <div className="mt-16 bg-[#090909] rounded-[24px] p-8 md:p-12 text-center text-white border border-[#111111]">
-          <h2 className="text-[28px] font-bold mb-4">Report a Problem</h2>
-          <p className="text-[16px] text-[#A1A1A1] mb-8 max-w-[500px] mx-auto">
+        <div className="mt-16 bg-[#101114] rounded-[24px] p-8 md:p-12 text-center text-white border border-[#1A1A1A]">
+          <h2 className="text-[28px] font-bold text-[#F5F5F5] mb-4">Report a Problem</h2>
+          <p className="text-[16px] text-[#8D919B] mb-8 max-w-[500px] mx-auto">
             When reporting a problem, please include a title, description, screenshot, app version, Android version, and device model. Do not automatically upload private Telegram messages or unrelated device files with a support report.
           </p>
           <a 
             href="/report-problem" 
-            className="inline-flex items-center justify-center px-8 h-[52px] rounded-full bg-[#B7FF32] text-[#F5F5F5] font-semibold hover:bg-[#a1e626] transition-colors"
+            className="inline-flex items-center justify-center px-8 h-[52px] rounded-full bg-[#B7FF32] text-[#000000] font-semibold hover:bg-[#a1e626] transition-colors"
           >
             Submit a Report
           </a>
