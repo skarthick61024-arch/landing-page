@@ -78,7 +78,7 @@ export const blogPosts: BlogPost[] = [
     category: "File Downloads",
     date: "Aug 10, 2026",
     readingTime: "4 min read",
-    image: "/downloading_ui_1786419939540.png",
+    image: "/blog-file-download.jpg",
     content: (
       <>
         <p className="text-[17px] md:text-[18px] text-[#8D919B] leading-relaxed mb-8">
