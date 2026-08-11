@@ -60,11 +60,11 @@ export function Navbar() {
 
       {/* Modern Floating Pill Sidebar (Desktop Persistent, Mobile Drawer) */}
       <aside 
-        className={`fixed top-4 left-4 h-[calc(100vh-32px)] w-[80px] bg-[#000000] border border-[#1A1A1A] rounded-[40px] shadow-2xl z-50 flex flex-col items-center transition-transform duration-300 ease-in-out md:translate-x-0 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
+        className={`fixed top-4 left-4 h-[calc(100vh-32px)] w-[80px] bg-white/10 backdrop-blur-xl border border-white/20 rounded-[40px] shadow-[0_8px_32px_rgba(0,0,0,0.4)] z-50 flex flex-col items-center transition-transform duration-300 ease-in-out md:translate-x-0 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
         {/* Logo Area */}
         <div className="h-[100px] flex items-center justify-center shrink-0 w-full mt-2">
-          <Link href="/" className="flex items-center justify-center w-12 h-12 bg-[#101114] border border-[#1A1A1A] rounded-full hover:scale-105 transition-transform" title="TeleTorrent Home">
+          <Link href="/" className="flex items-center justify-center w-12 h-12 bg-white/10 border border-white/20 rounded-full hover:scale-105 transition-transform shadow-inner" title="TeleTorrent Home">
             <img src="/logo-round.jpg" alt="TeleTorrent Logo" className="w-9 h-9 rounded-full" />
           </Link>
         </div>
@@ -92,10 +92,10 @@ export function Navbar() {
                   }
                 }
               }}
-              className={`relative flex items-center justify-center w-12 h-12 transition-all rounded-[18px] group ${isActive ? 'text-[#B7FF32]' : 'text-[#8D919B] hover:text-[#FFFFFF]'}`}
+              className={`relative flex items-center justify-center w-12 h-12 transition-all rounded-[18px] group ${isActive ? 'text-[#B7FF32] bg-[#B7FF32]/10' : 'text-white/70 hover:text-white hover:bg-white/10'}`}
             >
               {isActive && (
-                <div className="absolute inset-0 border border-[#B7FF32] rounded-[18px] opacity-80 shadow-[0_0_12px_rgba(183,255,50,0.15)]"></div>
+                <div className="absolute inset-0 border border-[#B7FF32]/50 rounded-[18px] shadow-[0_0_12px_rgba(183,255,50,0.2)]"></div>
               )}
               {link.icon}
             </Link>
@@ -104,7 +104,7 @@ export function Navbar() {
 
         {/* CTA Bottom */}
         <div className="h-[100px] flex items-center justify-center shrink-0 w-full mb-2">
-          <a href="https://play.google.com/store/apps/details?id=com.teletorrent.app" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-12 h-12 bg-[#101114] border border-[#1A1A1A] hover:bg-[#1A1A1A] hover:scale-110 transition-all focus:outline-none rounded-full" title="Get it on Google Play">
+          <a href="https://play.google.com/store/apps/details?id=com.teletorrent.app" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-12 h-12 bg-white/10 border border-white/20 hover:bg-white/20 hover:scale-110 transition-all focus:outline-none rounded-full shadow-inner" title="Get it on Google Play">
             <img src="/play-store-icon.png" alt="Get it on Google Play" className="w-8 h-8 object-contain" />
           </a>
         </div>
