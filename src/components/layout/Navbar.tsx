@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Menu, X, LayoutDashboard, Sparkles, HelpCircle, FileText } from "lucide-react"
+import { Menu, X, LayoutDashboard, Sparkles, HelpCircle, FileText, Download } from "lucide-react"
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -58,27 +58,26 @@ export function Navbar() {
         onClick={() => setIsOpen(false)}
       />
 
-      {/* Modern Sidebar (Desktop Persistent, Mobile Drawer) */}
+      {/* Modern Floating Pill Sidebar (Desktop Persistent, Mobile Drawer) */}
       <aside 
-        className={`fixed top-0 left-0 h-full w-[260px] bg-[#FFFFFF] border-r border-[#E5E5E5] z-50 flex flex-col transition-transform duration-300 ease-in-out md:translate-x-0 ${isOpen ? "translate-x-0 shadow-2xl" : "-translate-x-full"}`}
+        className={`fixed top-4 left-4 h-[calc(100vh-32px)] w-[80px] bg-[#000000] border border-[#1A1A1A] rounded-[40px] shadow-2xl z-50 flex flex-col items-center transition-transform duration-300 ease-in-out md:translate-x-0 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
         {/* Logo Area */}
-        <div className="h-[80px] flex items-center px-8 border-b border-[#E5E5E5] shrink-0">
-          <Link href="/" className="flex items-center gap-3">
-            <img src="/logo-round.jpg" alt="TeleTorrent Logo" className="w-8 h-8 rounded-full shadow-sm" />
-            <span className="font-bold text-[18px] tracking-tight text-[#000000]">TeleTorrent</span>
+        <div className="h-[100px] flex items-center justify-center shrink-0 w-full mt-2">
+          <Link href="/" className="flex items-center justify-center w-12 h-12 bg-[#101114] border border-[#1A1A1A] rounded-full hover:scale-105 transition-transform" title="TeleTorrent Home">
+            <img src="/logo-round.jpg" alt="TeleTorrent Logo" className="w-9 h-9 rounded-full" />
           </Link>
         </div>
 
         {/* Navigation Links */}
-        <nav className="flex-1 flex flex-col gap-2 p-6 overflow-y-auto">
-          <div className="text-[12px] font-bold text-[#888888] tracking-wider uppercase mb-4 px-2">Menu</div>
+        <nav className="flex-1 flex flex-col gap-6 items-center py-6 w-full overflow-y-auto no-scrollbar">
           {navLinks.map((link) => {
             const isActive = activeHref === link.href || (activeHref.startsWith('/blog') && link.name === 'Blog');
             return (
             <Link 
               key={link.name} 
               href={link.href}
+              title={link.name}
               onClick={(e) => {
                 setIsOpen(false)
                 setActiveHref(link.href)
@@ -93,18 +92,20 @@ export function Navbar() {
                   }
                 }
               }}
-              className={`text-[15px] font-medium px-5 py-3.5 flex items-center gap-3 transition-all rounded-full ${isActive ? 'bg-[#000000] text-[#B7FF32] shadow-md' : 'text-[#666666] hover:text-[#000000] hover:bg-[#F5F5F5]'}`}
+              className={`relative flex items-center justify-center w-12 h-12 transition-all rounded-[18px] group ${isActive ? 'text-[#B7FF32]' : 'text-[#8D919B] hover:text-[#FFFFFF]'}`}
             >
+              {isActive && (
+                <div className="absolute inset-0 border border-[#B7FF32] rounded-[18px] opacity-80 shadow-[0_0_12px_rgba(183,255,50,0.15)]"></div>
+              )}
               {link.icon}
-              {link.name}
             </Link>
           )})}
         </nav>
 
         {/* CTA Bottom */}
-        <div className="p-6 border-t border-[#E5E5E5] shrink-0">
-          <a href="https://play.google.com/store/apps/details?id=com.teletorrent.app" target="_blank" rel="noopener noreferrer" className="w-full flex justify-center transition-transform hover:scale-105 focus:outline-none rounded-full overflow-hidden">
-            <img src="/playstore.png" alt="Get it on Google Play" className="h-[48px] w-auto drop-shadow-md" />
+        <div className="h-[100px] flex items-center justify-center shrink-0 w-full mb-2">
+          <a href="https://play.google.com/store/apps/details?id=com.teletorrent.app" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-12 h-12 bg-[#101114] border border-[#1A1A1A] hover:bg-[#B7FF32] text-[#F5F5F5] hover:text-[#000000] transition-colors focus:outline-none rounded-full" title="Get it on Google Play">
+            <Download className="w-5 h-5" />
           </a>
         </div>
       </aside>
