@@ -60,19 +60,19 @@ export function Navbar() {
 
       {/* Modern Sidebar (Desktop Persistent, Mobile Drawer) */}
       <aside 
-        className={`fixed top-0 left-0 h-full w-[260px] bg-[#101114] border-r border-[#141518] z-50 flex flex-col transition-transform duration-300 ease-in-out md:translate-x-0 ${isOpen ? "translate-x-0 shadow-2xl" : "-translate-x-full"}`}
+        className={`fixed top-0 left-0 h-full w-[260px] bg-[#FFFFFF] border-r border-[#E5E5E5] z-50 flex flex-col transition-transform duration-300 ease-in-out md:translate-x-0 ${isOpen ? "translate-x-0 shadow-2xl" : "-translate-x-full"}`}
       >
         {/* Logo Area */}
-        <div className="h-[80px] flex items-center px-8 border-b border-[#141518] shrink-0">
+        <div className="h-[80px] flex items-center px-8 border-b border-[#E5E5E5] shrink-0">
           <Link href="/" className="flex items-center gap-3">
-            <img src="/logo-round.jpg" alt="TeleTorrent Logo" className="w-8 h-8 rounded-full" />
-            <span className="font-bold text-[18px] tracking-tight text-[#F5F5F5]">TeleTorrent</span>
+            <img src="/logo-round.jpg" alt="TeleTorrent Logo" className="w-8 h-8 rounded-full shadow-sm" />
+            <span className="font-bold text-[18px] tracking-tight text-[#000000]">TeleTorrent</span>
           </Link>
         </div>
 
         {/* Navigation Links */}
         <nav className="flex-1 flex flex-col gap-1 py-6 pl-6 pr-0 overflow-y-auto">
-          <div className="text-[12px] font-bold text-[#8D919B] tracking-wider uppercase mb-4 px-2">Menu</div>
+          <div className="text-[12px] font-bold text-[#888888] tracking-wider uppercase mb-4 px-2">Menu</div>
           {navLinks.map((link) => {
             const isActive = activeHref === link.href || (activeHref.startsWith('/blog') && link.name === 'Blog');
             return (
@@ -89,12 +89,11 @@ export function Navbar() {
                   const elem = document.getElementById(targetId)
                   if (elem) {
                     elem.scrollIntoView({ behavior: "smooth" })
-                    // Manually push state so URL updates without breaking smooth scroll
                     window.history.pushState(null, '', link.href)
                   }
                 }
               }}
-              className={`text-[15px] font-medium py-3.5 pl-4 flex items-center gap-3 transition-colors ${isActive ? 'nav-item-active text-[#B7FF32]' : 'text-[#8D919B] hover:text-[#F5F5F5] rounded-l-[24px]'}`}
+              className={`text-[15px] font-medium py-3.5 pl-4 flex items-center gap-3 transition-all ${isActive ? 'nav-item-active text-[#B7FF32] shadow-lg' : 'text-[#666666] hover:text-[#000000] hover:bg-[#F5F5F5] rounded-l-[24px]'}`}
             >
               {link.icon}
               {link.name}
@@ -103,7 +102,7 @@ export function Navbar() {
         </nav>
 
         {/* CTA Bottom */}
-        <div className="p-6 border-t border-[#141518] shrink-0">
+        <div className="p-6 border-t border-[#E5E5E5] shrink-0">
           <a href="https://play.google.com/store/apps/details?id=com.teletorrent.app" target="_blank" rel="noopener noreferrer" className="w-full flex justify-center transition-transform hover:scale-105 focus:outline-none rounded-full overflow-hidden">
             <img src="/playstore.png" alt="Get it on Google Play" className="h-[48px] w-auto drop-shadow-md" />
           </a>
