@@ -1,64 +1,196 @@
-import { Metadata } from "next"
-
-export const metadata: Metadata = {
-  title: "Privacy Policy - TeleTorrent",
-  description: "Privacy Policy for TeleTorrent Telegram Download Manager.",
-}
-
-export default function PrivacyPolicy() {
+export default function PrivacyPolicyPage() {
   return (
-    <main className="container mx-auto px-4 py-24 md:py-32 max-w-3xl min-h-[80vh]">
-      <div className="mb-16">
-        <h1 className="text-4xl md:text-5xl font-semibold tracking-[-0.04em] mb-4">Privacy Policy</h1>
-        <p className="text-muted-foreground font-medium">Last updated: August 1, 2026</p>
-      </div>
+    <div className="bg-[#000000] min-h-screen pt-32 pb-24">
+      <div className="container mx-auto px-5 md:px-12 max-w-[800px] prose prose-invert">
+        <h1 className="text-[36px] md:text-[48px] font-bold text-[#F5F5F5] mb-4">Privacy Policy</h1>
+        <p className="text-[15px] text-[#8D919B] mb-12">Last Updated: August 11, 2026</p>
 
-      <div className="space-y-12 text-base md:text-lg leading-relaxed text-muted-foreground">
-        <section className="space-y-4">
-          <h2 className="text-xl font-semibold tracking-tight text-foreground">1. Information Processing & Authentication</h2>
-          <p>TeleTorrent connects directly to secure servers to enable download management functionality. When you log in, certain necessary authentication tokens and session data pass securely through our servers to facilitate the connection. We do not permanently store or intercept your passwords, messages, or files.</p>
-        </section>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-12">
+          This Privacy Policy explains how TeleTorrent handles information when you use the TeleTorrent Android application and related website. We believe privacy should be clear and understandable. This policy explains what information TeleTorrent accesses, why it is needed, whether it is stored, and when it may be processed or shared.
+        </p>
 
-        <section className="space-y-4">
-          <h2 className="text-xl font-semibold tracking-tight text-foreground">2. Data Retention</h2>
-          <p>We only retain the minimal data required to maintain your active session. Authentication tokens and session identifiers are kept only as long as you are actively logged in and using the service. Once you log out, this temporary session data is immediately discarded.</p>
-        </section>
+        <h2 className="text-[24px] font-bold text-[#F5F5F5] mt-8 mb-4">1. About TeleTorrent</h2>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-4">
+          TeleTorrent is an independent third-party application that provides file downloading and file-management functionality using services including the Telegram API.
+        </p>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-4">
+          TeleTorrent is not owned, operated, endorsed, or sponsored by Telegram.
+        </p>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-8">
+          Telegram is a separate service governed by its own terms and privacy policies.
+        </p>
 
-        <section className="space-y-4">
-          <h2 className="text-xl font-semibold tracking-tight text-foreground">3. Local Storage & Download History</h2>
-          <p>Your downloaded files and download history are stored locally on your device. You have full control over this data and can clear your history or delete files at any time through the app settings or your device&apos;s file manager.</p>
-        </section>
-
-        <section className="space-y-4">
-          <h2 className="text-xl font-semibold tracking-tight text-foreground">4. Third-Party Services</h2>
-          <p>We may employ trusted third-party hosting and infrastructure providers to facilitate our service. These providers process data on our behalf under strict confidentiality agreements and only to the extent necessary to keep the application operational. We do not sell or share your data with advertisers.</p>
-        </section>
-
-        <section className="space-y-4">
-          <h2 className="text-xl font-semibold tracking-tight text-foreground">5. International Data Transfers</h2>
-          <p>To provide our services globally, your information, including session data, may be transferred to — and maintained on — computers located outside of your state, province, country, or other governmental jurisdiction where the data protection laws may differ. We take all reasonable steps to ensure your data is treated securely.</p>
-        </section>
+        <h2 className="text-[24px] font-bold text-[#F5F5F5] mt-8 mb-4">2. Information We Handle</h2>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-4">
+          TeleTorrent follows a data-minimization approach. We only handle information that is necessary to provide the application's functionality. Depending on how you use the application, this may include:
+        </p>
         
-        <section className="space-y-4">
-          <h2 className="text-xl font-semibold tracking-tight text-foreground">6. Permissions</h2>
-          <p>To function correctly, TeleTorrent requires storage permissions to save your downloaded files and notification permissions to keep you updated on background downloads.</p>
-        </section>
+        <h3 className="text-[18px] font-bold text-[#F5F5F5] mt-6 mb-3">Telegram Account Information</h3>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-4">
+          When you connect your Telegram account, the application may access information provided by Telegram that is necessary to identify and operate your connected account. This may include information such as:
+        </p>
+        <ul className="list-disc pl-6 space-y-2 mb-8 text-[#8D919B]">
+          <li>Telegram user identifier</li>
+          <li>Display name</li>
+          <li>Username, where available</li>
+          <li>Profile information made available through Telegram</li>
+          <li>Authentication/session information required to maintain the connection</li>
+        </ul>
 
-        <section className="space-y-4">
-          <h2 className="text-xl font-semibold tracking-tight text-foreground">7. User Rights</h2>
-          <p>You have the right to request access to or deletion of any personal data we may hold about you. Because we process minimal data and store your files locally, you can exercise most of these rights simply by logging out and deleting the app. For further assistance, contact us using the details below.</p>
-        </section>
+        <h2 className="text-[24px] font-bold text-[#F5F5F5] mt-8 mb-4">3. Telegram Content</h2>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-4">
+          When you use TeleTorrent to access your Saved Messages or other permitted Telegram content, the application may process information required to display and download that content. This may include:
+        </p>
+        <ul className="list-disc pl-6 space-y-2 mb-4 text-[#8D919B]">
+          <li>File names</li>
+          <li>File types</li>
+          <li>File sizes</li>
+          <li>File identifiers</li>
+          <li>Thumbnails or preview information</li>
+          <li>Download status</li>
+          <li>Message-related information necessary to identify a file</li>
+        </ul>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-8">
+          This information is used solely to provide the application's file-management and downloading functionality.
+        </p>
 
-        <section className="space-y-4">
-          <h2 className="text-xl font-semibold tracking-tight text-foreground">8. Children&apos;s Privacy</h2>
-          <p>TeleTorrent is not intended for use by children under the age of 13 (or 16 in certain jurisdictions). We do not knowingly collect personal information from children. If we discover that a child has provided us with personal information, we will immediately delete it from our servers.</p>
-        </section>
+        <h2 className="text-[24px] font-bold text-[#F5F5F5] mt-8 mb-4">4. Download Information</h2>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-4">
+          During a download, TeleTorrent may temporarily process technical information required to perform and display the download. This may include:
+        </p>
+        <ul className="list-disc pl-6 space-y-2 mb-4 text-[#8D919B]">
+          <li>Download progress</li>
+          <li>Downloaded amount</li>
+          <li>Total file size</li>
+          <li>Current download speed</li>
+          <li>Download status</li>
+          <li>Error status</li>
+          <li>File location information required for the download</li>
+        </ul>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-8">
+          This information is used to operate and display the download process.
+        </p>
 
-        <section className="space-y-4 pt-8 border-t border-border/50">
-          <h2 className="text-xl font-semibold tracking-tight text-foreground">9. Contact</h2>
-          <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:privacy@teletorrent.me" className="text-foreground underline decoration-border hover:decoration-foreground underline-offset-4 transition-colors">privacy@teletorrent.me</a>.</p>
-        </section>
+        <h2 className="text-[24px] font-bold text-[#F5F5F5] mt-8 mb-4">5. We Do Not Sell Your Information</h2>
+        <p className="text-[16px] font-bold text-[#F5F5F5] leading-relaxed mb-4">
+          TeleTorrent does not sell personal information to advertisers, data brokers, or other third parties.
+        </p>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-4">
+          TeleTorrent does not use Telegram content accessed through the application for advertising profiling.
+        </p>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-8">
+          TeleTorrent does not use user content for unrelated purposes.
+        </p>
+
+        <h2 className="text-[24px] font-bold text-[#F5F5F5] mt-8 mb-4">6. Data Storage</h2>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-8">
+          TeleTorrent does not intentionally retain your Telegram account information, Telegram messages, or downloaded file content on TeleTorrent servers as part of the normal operation of the application. Information required for a specific request may be processed temporarily and is not intentionally retained longer than necessary to provide that functionality.
+        </p>
+
+        <h2 className="text-[24px] font-bold text-[#F5F5F5] mt-8 mb-4">7. Local Device Data</h2>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-4">
+          Some application information may exist locally on your Android device to provide functionality such as:
+        </p>
+        <ul className="list-disc pl-6 space-y-2 mb-4 text-[#8D919B]">
+          <li>Application preferences</li>
+          <li>Download state</li>
+          <li>File references</li>
+          <li>Download history</li>
+          <li>Cached information</li>
+          <li>Authentication/session state, where applicable</li>
+        </ul>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-8">
+          Information stored locally remains subject to your device's operating-system security and permissions.
+        </p>
+
+        <h2 className="text-[24px] font-bold text-[#F5F5F5] mt-8 mb-4">8. File Access</h2>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-4">
+          TeleTorrent may request access to device storage or use Android's supported file-management mechanisms when necessary to save downloaded files.
+        </p>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-4">
+          TeleTorrent does not access unrelated personal files merely because they exist on your device.
+        </p>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-8">
+          The application only requests permissions necessary for supported functionality.
+        </p>
+
+        <h2 className="text-[24px] font-bold text-[#F5F5F5] mt-8 mb-4">9. Third-Party Services</h2>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-4">
+          TeleTorrent may rely on third-party services necessary to operate the application. These services may include:
+        </p>
+        <ul className="list-disc pl-6 space-y-2 mb-8 text-[#8D919B]">
+          <li>Telegram API</li>
+          <li>Hosting infrastructure</li>
+        </ul>
+
+        <h2 className="text-[24px] font-bold text-[#F5F5F5] mt-8 mb-4">10. Telegram</h2>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-4">
+          TeleTorrent uses Telegram's API. Your use of Telegram-related functionality is also subject to Telegram's applicable terms and policies.
+        </p>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-4">
+          TeleTorrent does not control Telegram's independent handling of information within Telegram's services.
+        </p>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-8">
+          Telegram's API terms require third-party clients to clearly inform users that they use the Telegram API.
+        </p>
+
+        <h2 className="text-[24px] font-bold text-[#F5F5F5] mt-8 mb-4">11. Advertising</h2>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-8">
+          TeleTorrent does not display third-party advertising and does not sell user information for advertising purposes.
+        </p>
+
+        <h2 className="text-[24px] font-bold text-[#F5F5F5] mt-8 mb-4">12. Analytics</h2>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-8">
+          TeleTorrent does not use third-party advertising analytics to create user profiles.
+        </p>
+
+        <h2 className="text-[24px] font-bold text-[#F5F5F5] mt-8 mb-4">13. Security</h2>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-4">
+          TeleTorrent takes reasonable technical and organizational measures to protect information handled by the application. Where appropriate, information transmitted between the application and remote services is protected using secure communication protocols.
+        </p>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-4">
+          However, no internet-connected service can guarantee absolute security. Users should also protect their Android device and Telegram account credentials.
+        </p>
+
+        <h2 className="text-[24px] font-bold text-[#F5F5F5] mt-8 mb-4">14. Data Retention</h2>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-4">
+          TeleTorrent follows a data-minimization approach. Information is retained only when necessary to provide the requested functionality, comply with legal requirements, resolve security issues, or maintain essential service operation.
+        </p>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-8">
+          If information is not required anymore, it should be deleted or otherwise handled according to the application's retention practices.
+        </p>
+
+        <h2 className="text-[24px] font-bold text-[#F5F5F5] mt-8 mb-4">15. Children's Privacy</h2>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-4">
+          TeleTorrent is not intended to collect personal information from children. We do not knowingly design the service to collect personal information from children.
+        </p>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-8">
+          If you believe a child has provided information through the service, contact us so that we can review the situation and take appropriate action.
+        </p>
+
+        <h2 className="text-[24px] font-bold text-[#F5F5F5] mt-8 mb-4">16. International Users</h2>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-4">
+          TeleTorrent may be accessed from different countries. Depending on the services used to operate the application, information may be processed in countries other than your own.
+        </p>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-8">
+          We handle information according to applicable privacy and data-protection requirements.
+        </p>
+
+        <h2 className="text-[24px] font-bold text-[#F5F5F5] mt-8 mb-4">17. Changes to This Privacy Policy</h2>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-4">
+          We may update this Privacy Policy when the application, services, or legal requirements change.
+        </p>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-8">
+          When significant changes are made, the updated policy will be published on this page with a new "Last Updated" date.
+        </p>
+
+        <h2 className="text-[24px] font-bold text-[#F5F5F5] mt-8 mb-4">18. Contact</h2>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-2">For privacy questions:</p>
+        <p className="text-[16px] font-bold text-[#F5F5F5] leading-relaxed mb-2">TeleTorrent Privacy Team</p>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-2">Email: <a href="mailto:privacy@teletorrent.app" className="text-[#F5F5F5] hover:text-[#B7FF32]">privacy@teletorrent.app</a></p>
+        <p className="text-[16px] text-[#8D919B] leading-relaxed mb-8">Website: <a href="https://www.teletorrent.app" className="text-[#F5F5F5] hover:text-[#B7FF32]">www.teletorrent.app</a></p>
+
       </div>
-    </main>
+    </div>
   )
 }

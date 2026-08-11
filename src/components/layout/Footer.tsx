@@ -2,50 +2,75 @@ import Link from "next/link"
 
 export function Footer() {
   return (
-    <footer className="mt-12 md:mt-24 mx-4 md:mx-auto max-w-7xl border border-border/40 bg-background/50 rounded-2xl md:rounded-3xl mb-8 overflow-hidden">
-      <div className="px-4 md:px-8 py-12 md:py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-          <div className="col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <img src="/logo-new.jpg" alt="TeleTorrent Logo" className="w-8 h-8 rounded-full" />
-              <span className="font-bold text-lg tracking-tight">TeleTorrent</span>
+    <footer className="bg-[#000000] pt-20 pb-8 border-t border-[#141518]">
+      <div className="container mx-auto px-5 md:px-12 max-w-[1240px]">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12 mb-16">
+          
+          {/* Brand */}
+          <div className="md:col-span-1">
+            <Link href="/" className="flex items-center gap-2.5 mb-6">
+              <img src="/logo-round.jpg" alt="TeleTorrent Logo" className="w-8 h-8 rounded-full" />
+              <span className="font-bold text-[18px] tracking-tight text-[#F5F5F5]">
+                TeleTorrent
+              </span>
             </Link>
-            <p className="text-muted-foreground max-w-xs text-sm">
-              The modern Telegram download manager designed for users who frequently save large files inside Telegram.
+            <p className="text-[14px] text-[#8D919B] leading-relaxed max-w-[240px]">
+              A focused file downloading and management experience for Android.
             </p>
           </div>
+
+          {/* Product */}
           <div>
-            <h3 className="font-semibold mb-4 text-sm">Product</h3>
-            <ul className="space-y-3 text-sm text-muted-foreground">
-              <li>
-                <Link href="/features" className="hover:text-foreground transition-colors">Features</Link>
-              </li>
-              <li>
-                <Link href="/platform" className="hover:text-foreground transition-colors">How it Works</Link>
-              </li>
-              <li>
-                <Link href="/" className="hover:text-foreground transition-colors">Download</Link>
-              </li>
+            <h4 className="font-bold text-[#F5F5F5] mb-5 text-[14px]">Product</h4>
+            <ul className="space-y-4">
+              <li><Link href="/#features" className="text-[14px] text-[#8D919B] hover:text-[#F5F5F5] transition-colors">Features</Link></li>
+              <li><Link href="/#how-it-works" className="text-[14px] text-[#8D919B] hover:text-[#F5F5F5] transition-colors">How it works</Link></li>
+              <li><Link href="/" className="text-[14px] text-[#8D919B] hover:text-[#F5F5F5] transition-colors">Download</Link></li>
             </ul>
           </div>
+
+          {/* Tools */}
           <div>
-            <h3 className="font-semibold mb-4 text-sm">Legal</h3>
-            <ul className="space-y-3 text-sm text-muted-foreground">
-              <li>
-                <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
-              </li>
-              <li>
-                <Link href="/terms" className="hover:text-foreground transition-colors">Terms & Conditions</Link>
-              </li>
-              <li>
-                <Link href="mailto:contact@teletorrent.app" className="hover:text-foreground transition-colors">Contact</Link>
-              </li>
+            <h4 className="font-bold text-[#F5F5F5] mb-5 text-[14px]">Tools</h4>
+            <ul className="space-y-4">
+              <li><Link href="/telegram-downloader" className="text-[14px] text-[#8D919B] hover:text-[#F5F5F5] transition-colors">Telegram Downloader</Link></li>
+              <li><Link href="/telegram-video-downloader" className="text-[14px] text-[#8D919B] hover:text-[#F5F5F5] transition-colors">Video Downloader</Link></li>
+              <li><Link href="/telegram-file-downloader" className="text-[14px] text-[#8D919B] hover:text-[#F5F5F5] transition-colors">File Downloader</Link></li>
+              <li><Link href="/telegram-media-downloader" className="text-[14px] text-[#8D919B] hover:text-[#F5F5F5] transition-colors">Media Downloader</Link></li>
+              <li><Link href="/telegram-document-downloader" className="text-[14px] text-[#8D919B] hover:text-[#F5F5F5] transition-colors">Document Downloader</Link></li>
+              <li><Link href="/telegram-download-manager" className="text-[14px] text-[#8D919B] hover:text-[#F5F5F5] transition-colors">Download Manager</Link></li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h4 className="font-bold text-[#F5F5F5] mb-5 text-[14px]">Company</h4>
+            <ul className="space-y-4">
+              <li><Link href="/about" className="text-[14px] text-[#8D919B] hover:text-[#F5F5F5] transition-colors">About</Link></li>
+              <li><Link href="/contact" className="text-[14px] text-[#8D919B] hover:text-[#F5F5F5] transition-colors">Contact</Link></li>
+              <li><Link href="/help" className="text-[14px] text-[#8D919B] hover:text-[#F5F5F5] transition-colors">Help & Support</Link></li>
+              <li><Link href="/report-problem" className="text-[14px] text-[#8D919B] hover:text-[#F5F5F5] transition-colors">Report a Problem</Link></li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="font-bold text-[#F5F5F5] mb-5 text-[14px]">Legal</h4>
+            <ul className="space-y-4">
+              <li><Link href="/privacy" className="text-[14px] text-[#8D919B] hover:text-[#F5F5F5] transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="text-[14px] text-[#8D919B] hover:text-[#F5F5F5] transition-colors">Terms & Conditions</Link></li>
             </ul>
           </div>
         </div>
-        <div className="pt-8 border-t border-border/40 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} TeleTorrent. All rights reserved.</p>
-          <p>Not affiliated with Telegram FZ-LLC.</p>
+
+        {/* Disclaimer & Bottom */}
+        <div className="border-t border-[#141518] pt-8 flex flex-col items-start md:items-center justify-between gap-6 text-center md:text-left">
+          <p className="text-[12px] text-[#8D919B] max-w-[800px] text-center mx-auto mb-2">
+            TeleTorrent is an independent third-party application and is not affiliated with, endorsed by, or sponsored by Telegram.
+          </p>
+          <p className="text-[13px] text-[#8D919B] w-full text-center">
+            © {new Date().getFullYear()} TeleTorrent. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

@@ -4,25 +4,26 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { BottomNav } from "@/components/layout/BottomNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.teletorrent.me"),
-  title: "TeleTorrent \u2013 Telegram File Downloader for Android",
-  description: "Download Telegram videos, documents, ZIP files, APKs, audio, and media with TeleTorrent. Fast, secure background downloads with resume support and download management.",
-  keywords: "telegram downloader, telegram file downloader, telegram download manager, telegram video downloader, telegram media downloader, telegram saved messages downloader, download telegram files, telegram document downloader, telegram apk downloader",
+  title: "Telegram Downloader – Download Telegram Videos & Files | TeleTorrent",
+  description: "TeleTorrent is a fast Telegram downloader for saving Telegram videos, files, documents, ZIPs, APKs, audio and supported media. Download Telegram files with resume support and background downloads.",
+  keywords: "telegram downloader, telegram video downloader, telegram file downloader, telegram media downloader, android download manager, teletorrent, download telegram videos",
   openGraph: {
-    title: "TeleTorrent \u2013 Telegram File Downloader for Android",
-    description: "Download Telegram videos, documents, ZIP files, APKs, audio, and media with TeleTorrent. Fast, secure background downloads with resume support.",
-    url: "https://www.teletorrent.me",
+    title: "Telegram Downloader – Download Telegram Videos & Files | TeleTorrent",
+    description: "Download supported Telegram videos, files, documents and media with TeleTorrent.",
+    url: "https://www.teletorrent.me/",
     siteName: "TeleTorrent",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "TeleTorrent - Telegram Download Manager",
+        alt: "TeleTorrent - Telegram Downloader",
       },
     ],
     locale: "en_US",
@@ -30,17 +31,28 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "TeleTorrent \u2013 Telegram File Downloader for Android",
-    description: "Download Telegram videos, documents, ZIP files, APKs, audio, and media with TeleTorrent. Fast, secure background downloads with resume support.",
+    title: "Telegram Downloader – Download Telegram Videos & Files | TeleTorrent",
+    description: "Download supported Telegram videos, files, documents and media with TeleTorrent.",
     images: ["/og-image.jpg"],
   },
   icons: {
-    icon: "/logo-new.jpg",
-    shortcut: "/logo-new.jpg",
-    apple: "/logo-new.jpg",
+    icon: "/logo-round.jpg",
+    shortcut: "/logo-round.jpg",
+    apple: "/logo-round.jpg",
   },
   alternates: {
-    canonical: "https://www.teletorrent.me",
+    canonical: "https://www.teletorrent.me/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
@@ -54,21 +66,43 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "TeleTorrent",
+                "url": "https://www.teletorrent.me/"
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                "name": "TeleTorrent",
+                "applicationCategory": "UtilitiesApplication",
+                "operatingSystem": "Android, Web",
+                "url": "https://www.teletorrent.me/"
+              }
+            ])
+          }}
+        />
       </head>
       <body className={`${inter.className} antialiased`} suppressHydrationWarning={true}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="dark"
+          forcedTheme="dark"
+          enableSystem={false}
           disableTransitionOnChange
         >
           <div className="flex flex-col min-h-screen">
             <Navbar />
-            <main className="flex-1">
+            <main className="flex-1 pb-[64px] md:pb-0">
               {children}
             </main>
             <Footer />
+            <BottomNav />
           </div>
         </ThemeProvider>
       </body>

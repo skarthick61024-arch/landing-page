@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://teletorrent.app/sitemap.xml",
+    sitemap: "https://www.teletorrent.me/sitemap.xml",
   };
 }

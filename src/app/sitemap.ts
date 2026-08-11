@@ -1,48 +1,27 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: 'https://www.teletorrent.me',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1,
-    },
-    {
-      url: 'https://www.teletorrent.me/features',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://www.teletorrent.me/platform',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://www.teletorrent.me/pricing',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://www.teletorrent.me/about',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: 'https://www.teletorrent.me/privacy',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.5,
-    },
-    {
-      url: 'https://www.teletorrent.me/terms',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.5,
-    },
-  ]
+  const baseUrl = 'https://www.teletorrent.me';
+  
+  const routes = [
+    '',
+    '/telegram-downloader',
+    '/telegram-video-downloader',
+    '/telegram-file-downloader',
+    '/telegram-media-downloader',
+    '/telegram-document-downloader',
+    '/telegram-download-manager',
+    '/about',
+    '/privacy',
+    '/terms',
+    '/contact',
+    '/help'
+  ];
+
+  return routes.map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
+    changeFrequency: route === '' ? 'weekly' : 'monthly',
+    priority: route === '' ? 1.0 : (route.includes('downloader') || route.includes('manager') ? 0.9 : 0.6),
+  }));
 }

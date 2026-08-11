@@ -3,31 +3,43 @@ import { Button } from "@/components/ui/button"
 
 export function Navbar() {
   return (
-    <header className="sticky top-4 z-50 mx-auto max-w-7xl w-[95%] bg-background/80 backdrop-blur-md border border-border/40 rounded-2xl md:rounded-full mt-4">
-      <div className="px-4 md:px-8 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <img src="/logo-new.jpg" alt="TeleTorrent Logo" className="w-8 h-8 rounded-full" />
-          <span className="font-bold text-lg tracking-tight">TeleTorrent</span>
+    <header className="sticky top-0 z-50 w-full bg-[#000000]/80 backdrop-blur-xl border-b border-[#141518] h-[64px] flex items-center">
+      <div className="container mx-auto px-5 md:px-8 max-w-[1240px] flex items-center justify-between">
+        
+        {/* Left: Logo */}
+        <Link href="/" className="flex items-center gap-2.5">
+          <img src="/logo-round.jpg" alt="TeleTorrent Logo" className="w-8 h-8 rounded-full" />
+          <span className="font-bold text-[16px] tracking-tight text-[#F5F5F5]">
+            TeleTorrent
+          </span>
         </Link>
-        <nav className="hidden md:flex items-center gap-8 text-[13px] font-semibold text-muted-foreground">
-          <Link href="/" className="text-foreground transition-colors">
-            Home
+
+        {/* Center: Links (Desktop) */}
+        <nav className="hidden md:flex items-center gap-8">
+          <Link href="/#features" className="text-[13px] font-medium text-[#8D919B] hover:text-[#F5F5F5] transition-colors">
+            Product
           </Link>
-          <Link href="/about" className="hover:text-foreground transition-colors">
+          <Link href="/#features" className="text-[13px] font-medium text-[#8D919B] hover:text-[#F5F5F5] transition-colors">
+            Features
+          </Link>
+          <Link href="/#how-it-works" className="text-[13px] font-medium text-[#8D919B] hover:text-[#F5F5F5] transition-colors">
+            How it works
+          </Link>
+          <Link href="/about" className="text-[13px] font-medium text-[#8D919B] hover:text-[#F5F5F5] transition-colors">
             About
           </Link>
-          <Link href="/platform" className="hover:text-foreground transition-colors">
-            Platform
-          </Link>
-          <Link href="/features" className="hover:text-foreground transition-colors">
-            Features <span className="ml-1 opacity-50">▾</span>
-          </Link>
-          <Link href="/pricing" className="hover:text-foreground transition-colors">
-            Pricing
+          <Link href="/help" className="text-[13px] font-medium text-[#8D919B] hover:text-[#F5F5F5] transition-colors">
+            Support
           </Link>
         </nav>
-        <div className="flex items-center gap-6">
+
+        {/* Right: CTA */}
+        <div className="flex items-center gap-4">
+          <button className="hidden md:flex transition-transform hover:scale-105 focus:outline-none rounded-full overflow-hidden">
+            <img src="/playstore.png" alt="Get it on Google Play" className="h-[40px] w-auto drop-shadow-md" />
+          </button>
         </div>
+
       </div>
     </header>
   )

@@ -1,58 +1,55 @@
-import { LogIn, RefreshCcw, CheckSquare, Zap } from "lucide-react"
-
-const steps = [
-  {
-    num: "01",
-    title: "Login with Telegram",
-    description: "Securely connect to your account to access your saved media.",
-    icon: <LogIn className="w-6 h-6" />,
-  },
-  {
-    num: "02",
-    title: "Sync Saved Messages",
-    description: "TeleTorrent instantly loads your media, files, and links.",
-    icon: <RefreshCcw className="w-6 h-6" />,
-  },
-  {
-    num: "03",
-    title: "Choose Files",
-    description: "Select what you want to download, filter by type or size.",
-    icon: <CheckSquare className="w-6 h-6" />,
-  },
-  {
-    num: "04",
-    title: "Download Instantly",
-    description: "Enjoy fast, background downloads with pause & resume.",
-    icon: <Zap className="w-6 h-6" />,
-  },
-]
-
 export function HowItWorksSection() {
+  const steps = [
+    {
+      number: "01",
+      title: "Connect",
+      description: "Connect your Telegram account securely.",
+    },
+    {
+      number: "02",
+      title: "Sync",
+      description: "Synchronize your available Saved Messages files.",
+    },
+    {
+      number: "03",
+      title: "Download",
+      description: "Choose a file and monitor the download.",
+    }
+  ];
+
   return (
-    <section id="how-it-works" className="pt-12 pb-24 md:pt-16 md:pb-32 bg-muted/30 border-y border-border/40">
-      <div className="container mx-auto px-4 md:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-16 md:mb-24">
-          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6">How it works</h2>
-          <p className="text-lg md:text-xl font-normal text-muted-foreground">
-            Get started in seconds. No complicated setup required.
-          </p>
+    <section id="how-it-works" className="bg-[#000000] py-24 md:py-32 border-t border-[#141518]">
+      <div className="container mx-auto px-5 md:px-12 max-w-[1000px]">
+        
+        {/* Header */}
+        <div className="text-center mb-20">
+          <h2 className="text-[32px] md:text-[42px] font-bold tracking-tight text-[#F5F5F5]">
+            How it works
+          </h2>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-8 relative">
-          {/* Connecting line for desktop */}
-          <div className="hidden md:block absolute top-12 left-1/8 right-1/8 h-[1px] bg-border z-0" />
-          
-          {steps.map((step, i) => (
-            <div key={i} className="relative z-10 flex flex-col items-center text-center">
-              <div className="w-24 h-24 rounded-[2rem] bg-background premium-shadow border border-border/50 flex items-center justify-center text-primary mb-6">
-                {step.icon}
+        {/* Steps */}
+        <div className="relative">
+          {/* Connecting Line (Desktop) */}
+          <div className="hidden md:block absolute top-8 left-[15%] right-[15%] h-[1px] bg-[#141518] z-0"></div>
+
+          <div className="grid md:grid-cols-3 gap-12 md:gap-8 relative z-10">
+            {steps.map((step, i) => (
+              <div key={i} className="flex flex-col items-center text-center">
+                <div className="w-16 h-16 rounded-full bg-[#0B0C0E] border border-[#141518] flex items-center justify-center text-[20px] font-bold text-[#F5F5F5] mb-6 shadow-sm">
+                  {step.number}
+                </div>
+                <h3 className="text-[18px] md:text-[20px] font-bold text-[#F5F5F5] mb-3">
+                  {step.title}
+                </h3>
+                <p className="text-[14px] md:text-[15px] text-[#8D919B] leading-relaxed max-w-[240px]">
+                  {step.description}
+                </p>
               </div>
-              <span className="text-sm font-bold text-muted-foreground mb-2">{step.num}</span>
-              <h3 className="font-semibold text-xl mb-3 text-foreground">{step.title}</h3>
-              <p className="text-sm font-normal text-muted-foreground leading-relaxed max-w-[200px]">{step.description}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+
       </div>
     </section>
   )

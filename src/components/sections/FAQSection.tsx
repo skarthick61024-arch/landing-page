@@ -1,5 +1,3 @@
-"use client"
-
 import {
   Accordion,
   AccordionContent,
@@ -7,74 +5,69 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 
-const faqs = [
-  {
-    question: "What is TeleTorrent?",
-    answer: "TeleTorrent is a dedicated download manager for Android designed specifically to fetch, organize, and manage large files, videos, and documents directly from your Telegram account."
-  },
-  {
-    question: "How do I download Telegram files?",
-    answer: "Simply log in with your Telegram account securely, browse your chats or saved messages, select the files you want, and hit download. TeleTorrent handles the rest in the background."
-  },
-  {
-    question: "Does TeleTorrent support background downloads?",
-    answer: "Yes, fully. Unlike the official Telegram app which might stop downloading when closed or when the screen is locked, TeleTorrent keeps your downloads running reliably in the background."
-  },
-  {
-    question: "Can I download videos?",
-    answer: "Absolutely. You can download any video format (MP4, MKV, WEBM, etc.) regardless of size. TeleTorrent is optimized for large media files."
-  },
-  {
-    question: "Does it support documents?",
-    answer: "Yes. PDFs, Word documents, ZIP archives, APKs, and any other file type shared on Telegram can be downloaded effortlessly."
-  },
-  {
-    question: "Can I resume downloads?",
-    answer: "Yes. If your connection drops or you need to pause a download, TeleTorrent allows you to resume exactly from where you left off without starting over."
-  },
-  {
-    question: "Is it secure?",
-    answer: "Your login happens directly via the standard secure protocols, and we do not store your passwords or intercept your messages."
-  },
-  {
-    question: "Is my data private?",
-    answer: "Your downloaded files are stored locally on your device. We do not track your download history or share any personal information with third parties."
-  },
-]
-
 export function FAQSection() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  };
+  const faqs = [
+    {
+      question: "What is a Telegram downloader?",
+      answer: "A Telegram downloader is an application that allows you to easily find, manage, and download media and files directly from your Telegram account, specifically from your Saved Messages."
+    },
+    {
+      question: "How can I download Telegram videos?",
+      answer: "With TeleTorrent, simply forward the video to your Telegram Saved Messages, open the TeleTorrent app, and tap download. The video will be saved directly to your device."
+    },
+    {
+      question: "Can I download Telegram files?",
+      answer: "Yes, TeleTorrent supports downloading any file type available on Telegram. Whether it's documents, media, or archives, you can manage and download them seamlessly."
+    },
+    {
+      question: "What files does TeleTorrent support?",
+      answer: "TeleTorrent supports videos, documents, ZIP archives, APK files, audio tracks, and all other standard media types that Telegram allows you to send and receive."
+    },
+    {
+      question: "Can I download Telegram documents?",
+      answer: "Absolutely. TeleTorrent is perfect for downloading large PDFs, Word documents, Excel sheets, and other professional files directly from your Telegram account."
+    },
+    {
+      question: "Can I download ZIP files from Telegram?",
+      answer: "Yes, you can easily download ZIP and RAR archives. TeleTorrent manages the download process so you can access your compressed files securely."
+    },
+    {
+      question: "Can I resume interrupted downloads?",
+      answer: "Yes, TeleTorrent features full resume support for interrupted or paused downloads, ensuring you never have to restart large file transfers from scratch."
+    },
+    {
+      question: "Does TeleTorrent work on Android?",
+      answer: "Yes, TeleTorrent is natively built for Android, offering a smooth, optimized experience for managing and downloading your Telegram files on the go."
+    },
+    {
+      question: "Is TeleTorrent free?",
+      answer: "TeleTorrent is completely free to use with zero ads and no premium tiers required for core downloading functionality."
+    },
+    {
+      question: "Does TeleTorrent require Telegram login?",
+      answer: "Yes, to securely access your Saved Messages and download your files, you need to log in to your Telegram account through the TeleTorrent app."
+    }
+  ]
 
   return (
-    <section className="py-24 md:py-32">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <div className="container mx-auto px-4 md:px-8 max-w-3xl">
+    <section className="bg-[#0B0C0E] py-24 md:py-32 border-t border-[#141518]">
+      <div className="container mx-auto px-5 md:px-12 max-w-[800px]">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6">Frequently Asked Questions</h2>
-          <p className="text-lg md:text-xl font-normal text-muted-foreground">
-            Everything you need to know about TeleTorrent.
+          <h2 className="text-[32px] md:text-[42px] font-bold text-[#F5F5F5] tracking-tight mb-4">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-[15px] md:text-[17px] text-[#8D919B]">
+            Everything you need to know about downloading files with TeleTorrent.
           </p>
         </div>
 
         <Accordion type="single" collapsible className="w-full">
           {faqs.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="text-left font-semibold text-xl py-6 text-foreground">{faq.question}</AccordionTrigger>
-              <AccordionContent className="text-sm font-normal text-muted-foreground leading-relaxed">
+            <AccordionItem key={index} value={`item-${index}`} className="border-[#141518]">
+              <AccordionTrigger className="text-[#F5F5F5] hover:text-[#B7FF32] text-left text-[15px] md:text-[16px]">
+                {faq.question}
+              </AccordionTrigger>
+              <AccordionContent className="text-[#8D919B] text-[14px] md:text-[15px] leading-relaxed">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
