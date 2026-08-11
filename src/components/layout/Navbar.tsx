@@ -104,8 +104,8 @@ export function Navbar() {
 
         {/* CTA Bottom */}
         <div className="h-[100px] flex items-center justify-center shrink-0 w-full mb-2">
-          <a href="https://play.google.com/store/apps/details?id=com.teletorrent.app" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-12 h-12 bg-[#101114] border border-[#1A1A1A] hover:bg-[#B7FF32] text-[#F5F5F5] hover:text-[#000000] transition-colors focus:outline-none rounded-full" title="Get it on Google Play">
-            <Download className="w-5 h-5" />
+          <a href="https://play.google.com/store/apps/details?id=com.teletorrent.app" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-12 h-12 bg-[#101114] border border-[#1A1A1A] hover:bg-[#1A1A1A] hover:scale-110 transition-all focus:outline-none rounded-full" title="Get it on Google Play">
+            <img src="/play-store-icon.png" alt="Get it on Google Play" className="w-8 h-8 object-contain" />
           </a>
         </div>
       </aside>
