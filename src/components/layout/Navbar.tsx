@@ -71,7 +71,17 @@ export function Navbar() {
             <Link 
               key={link.name} 
               href={link.href}
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => {
+                setIsOpen(false)
+                if (link.href.startsWith("/#") && pathname === "/") {
+                  e.preventDefault()
+                  const targetId = link.href.replace("/#", "")
+                  const elem = document.getElementById(targetId)
+                  if (elem) {
+                    elem.scrollIntoView({ behavior: "smooth" })
+                  }
+                }
+              }}
               className={`text-[15px] font-medium py-3.5 pl-4 flex items-center gap-3 transition-colors ${isActive ? 'nav-item-active text-[#B7FF32]' : 'text-[#8D919B] hover:text-[#F5F5F5] rounded-l-[24px]'}`}
             >
               {link.icon}
