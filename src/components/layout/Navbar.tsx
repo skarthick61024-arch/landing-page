@@ -30,44 +30,18 @@ export function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-40 w-full bg-[#000000]/80 backdrop-blur-xl border-b border-[#141518] h-[64px] flex items-center">
-        <div className="container mx-auto px-5 md:px-8 max-w-[1240px] flex items-center justify-between">
-          
-          {/* Left: Logo */}
-          <Link href="/" className="flex items-center gap-2.5 z-50">
-            <img src="/logo-round.jpg" alt="TeleTorrent Logo" className="w-8 h-8 rounded-full" />
-            <span className="font-bold text-[16px] tracking-tight text-[#F5F5F5]">
-              TeleTorrent
-            </span>
-          </Link>
-
-          {/* Center: Links (Desktop) */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link 
-                key={link.name} 
-                href={link.href} 
-                className="text-[13px] font-medium text-[#8D919B] hover:text-[#F5F5F5] transition-colors"
-              >
-                {link.name}
-              </Link>
-            ))}
-          </nav>
-
-          {/* Right: CTA & Hamburger */}
-          <div className="flex items-center gap-4 z-50">
-            <button className="hidden md:flex transition-transform hover:scale-105 focus:outline-none rounded-full overflow-hidden">
-              <img src="/playstore.png" alt="Get it on Google Play" className="h-[40px] w-auto drop-shadow-md" />
-            </button>
-            <button 
-              className="flex md:hidden text-[#F5F5F5] focus:outline-none"
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-
-        </div>
+      {/* Mobile Header (Sticky Top) */}
+      <header className="md:hidden sticky top-0 z-40 w-full bg-[#000000]/80 backdrop-blur-xl border-b border-[#141518] h-[64px] flex items-center px-5 justify-between">
+        <Link href="/" className="flex items-center gap-2.5 z-50">
+          <img src="/logo-round.jpg" alt="TeleTorrent Logo" className="w-8 h-8 rounded-full" />
+          <span className="font-bold text-[16px] tracking-tight text-[#F5F5F5]">TeleTorrent</span>
+        </Link>
+        <button 
+          className="text-[#F5F5F5] focus:outline-none z-50"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
       </header>
 
       {/* Mobile Sidebar Overlay */}
@@ -76,29 +50,40 @@ export function Navbar() {
         onClick={() => setIsOpen(false)}
       />
 
-      {/* Modern Side Nav */}
-      <div 
-        className={`fixed top-0 right-0 h-full w-[280px] bg-[#101114] border-l border-[#1A1A1A] z-50 transform transition-transform duration-300 ease-in-out md:hidden flex flex-col pt-[80px] px-6 pb-8 ${isOpen ? "translate-x-0 shadow-2xl" : "translate-x-full"}`}
+      {/* Modern Sidebar (Desktop Persistent, Mobile Drawer) */}
+      <aside 
+        className={`fixed top-0 left-0 h-full w-[260px] bg-[#000000] border-r border-[#141518] z-50 flex flex-col transition-transform duration-300 ease-in-out md:translate-x-0 ${isOpen ? "translate-x-0 shadow-2xl" : "-translate-x-full"}`}
       >
-        <nav className="flex flex-col gap-6 flex-1">
+        {/* Logo Area */}
+        <div className="h-[80px] flex items-center px-8 border-b border-[#141518] shrink-0">
+          <Link href="/" className="flex items-center gap-3">
+            <img src="/logo-round.jpg" alt="TeleTorrent Logo" className="w-8 h-8 rounded-full" />
+            <span className="font-bold text-[18px] tracking-tight text-[#F5F5F5]">TeleTorrent</span>
+          </Link>
+        </div>
+
+        {/* Navigation Links */}
+        <nav className="flex-1 flex flex-col gap-1 p-6 overflow-y-auto">
+          <div className="text-[12px] font-bold text-[#8D919B] tracking-wider uppercase mb-4 px-2">Menu</div>
           {navLinks.map((link) => (
             <Link 
               key={link.name} 
-              href={link.href} 
-              className="text-[18px] font-semibold text-[#F5F5F5] hover:text-[#B7FF32] transition-colors flex items-center border-b border-[#1A1A1A] pb-4"
+              href={link.href}
               onClick={() => setIsOpen(false)}
+              className="text-[14px] font-medium text-[#8D919B] hover:text-[#B7FF32] hover:bg-[#101114] px-4 py-3 rounded-[12px] transition-all flex items-center"
             >
               {link.name}
             </Link>
           ))}
         </nav>
-        
-        <div className="mt-8">
-          <button className="w-full flex justify-center transition-transform hover:scale-105 focus:outline-none rounded-full overflow-hidden">
+
+        {/* CTA Bottom */}
+        <div className="p-6 border-t border-[#141518] shrink-0">
+          <a href="https://play.google.com/store/apps/details?id=com.teletorrent.app" target="_blank" rel="noopener noreferrer" className="w-full flex justify-center transition-transform hover:scale-105 focus:outline-none rounded-full overflow-hidden">
             <img src="/playstore.png" alt="Get it on Google Play" className="h-[48px] w-auto drop-shadow-md" />
-          </button>
+          </a>
         </div>
-      </div>
+      </aside>
     </>
   )
 }
