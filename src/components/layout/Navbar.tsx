@@ -9,6 +9,14 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
 
+  const [activeHref, setActiveHref] = useState("/")
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setActiveHref(window.location.pathname + window.location.hash)
+    }
+  }, [pathname])
+
   // Prevent scrolling when sidebar is open
   useEffect(() => {
     if (isOpen) {
@@ -66,19 +74,23 @@ export function Navbar() {
         <nav className="flex-1 flex flex-col gap-1 py-6 pl-6 pr-0 overflow-y-auto">
           <div className="text-[12px] font-bold text-[#8D919B] tracking-wider uppercase mb-4 px-2">Menu</div>
           {navLinks.map((link) => {
-            const isActive = pathname === link.href || (pathname.startsWith('/blog') && link.name === 'Blog');
+            const isActive = activeHref === link.href || (activeHref.startsWith('/blog') && link.name === 'Blog');
             return (
             <Link 
               key={link.name} 
               href={link.href}
               onClick={(e) => {
                 setIsOpen(false)
+                setActiveHref(link.href)
+                
                 if (link.href.startsWith("/#") && pathname === "/") {
                   e.preventDefault()
                   const targetId = link.href.replace("/#", "")
                   const elem = document.getElementById(targetId)
                   if (elem) {
                     elem.scrollIntoView({ behavior: "smooth" })
+                    // Manually push state so URL updates without breaking smooth scroll
+                    window.history.pushState(null, '', link.href)
                   }
                 }
               }}
