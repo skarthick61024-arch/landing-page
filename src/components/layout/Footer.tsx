@@ -49,7 +49,7 @@ export function Footer() {
               <li><Link href="/about" className="text-[14px] text-[#8D919B] hover:text-[#F5F5F5] transition-colors">About</Link></li>
               <li><Link href="/blog" className="text-[14px] text-[#8D919B] hover:text-[#F5F5F5] transition-colors">Blog</Link></li>
               <li><Link href="/contact" className="text-[14px] text-[#8D919B] hover:text-[#F5F5F5] transition-colors">Contact</Link></li>
-              <li><Link href="/help" className="text-[14px] text-[#8D919B] hover:text-[#F5F5F5] transition-colors">Help & Support</Link></li>
+              <li><a href="mailto:support@teletorrent.me" className="text-[14px] text-[#8D919B] hover:text-[#F5F5F5] transition-colors">Help & Support</a></li>
               <li><Link href="/report-problem" className="text-[14px] text-[#8D919B] hover:text-[#F5F5F5] transition-colors">Report a Problem</Link></li>
             </ul>
           </div>
