@@ -121,7 +121,7 @@ export const blogPosts: BlogPost[] = [
     category: "Download Management",
     date: "Aug 09, 2026",
     readingTime: "6 min read",
-    image: "/mensta_dashboard_1786427053176.png",
+    image: "/blog-download-manager.jpg",
     content: (
       <>
         <p className="text-[17px] md:text-[18px] text-[#8D919B] leading-relaxed mb-8">
