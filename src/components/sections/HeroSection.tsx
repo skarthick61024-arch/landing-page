@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 
 export function HeroSection({
   title = "Telegram Downloader",
-  subtitle = "Download Telegram videos, files, documents and media with TeleTorrent. Fast, simple downloads with resume support and background downloading."
+  subtitle = "Download files, documents and media directly from your Telegram Saved Messages with TeleTorrent. Fast, simple downloads with resume support and background downloading."
 }: {
   title?: string;
   subtitle?: string;
@@ -33,29 +33,20 @@ export function HeroSection({
         
         {/* CTAs */}
         <div className="flex flex-col items-center gap-6 mb-16 md:mb-24 w-full justify-center">
-          <div className="flex flex-col sm:flex-row items-center gap-4">
-            <button className="transition-transform hover:scale-105 focus:outline-none rounded-full overflow-hidden">
-              <img src="/playstore.png" alt="Get it on Google Play" className="h-[52px] md:h-[56px] w-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]" />
-            </button>
+          <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+            <a href="mailto:notify@teletorrent.me?subject=Notify%20Me%20on%20Launch" className="w-full sm:w-auto rounded-full bg-[#B7FF32] text-[#000000] hover:bg-[#a3e62c] font-semibold px-8 h-[52px] md:h-[56px] text-[15px] transition-all flex items-center justify-center gap-2">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+              </svg>
+              Notify Me on Launch
+            </a>
             <Button className="w-full sm:w-auto rounded-full bg-[#101114] border border-[#141518] text-[#F5F5F5] hover:bg-[#141518] font-semibold px-8 h-[52px] md:h-[56px] text-[15px] transition-all">
               Learn More
             </Button>
           </div>
           
-          {/* User Ratings */}
-          <div className="flex flex-col sm:flex-row items-center gap-4 text-[#8D919B] text-[13px] font-medium mt-2">
-            <div className="flex items-center gap-1">
-              <svg className="w-4 h-4 text-[#F59E0B]" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-              <svg className="w-4 h-4 text-[#F59E0B]" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-              <svg className="w-4 h-4 text-[#F59E0B]" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-              <svg className="w-4 h-4 text-[#F59E0B]" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-              <svg className="w-4 h-4 text-[#F59E0B]" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-            </div>
-            <div className="flex items-center gap-4">
-              <span><strong className="text-[#F5F5F5]">4.8/5</strong> Rating</span>
-              <div className="w-1 h-1 rounded-full bg-[#333333]"></div>
-              <span><strong className="text-[#F5F5F5]">500K+</strong> Downloads</span>
-            </div>
+          <div className="text-[12px] text-[#8D919B] mt-2 max-w-[500px] text-center px-4">
+            TeleTorrent is an independent third-party application and is not affiliated with, endorsed by, or sponsored by Telegram.
           </div>
         </div>
 

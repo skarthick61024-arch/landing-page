@@ -84,8 +84,10 @@ export function Navbar() {
 
         {/* CTA Bottom */}
         <div className="h-[100px] flex items-center justify-center shrink-0 w-full mb-2">
-          <a href="https://play.google.com/store/apps/details?id=com.teletorrent.app" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-12 h-12 bg-white/10 border border-white/20 hover:bg-white/20 hover:scale-110 transition-all focus:outline-none rounded-full shadow-inner" title="Get it on Google Play">
-            <img src="/play-store-icon.png" alt="Get it on Google Play" className="w-8 h-8 object-contain" />
+          <a href="mailto:notify@teletorrent.me?subject=Notify%20Me%20on%20Launch" className="flex items-center justify-center w-12 h-12 bg-[#B7FF32]/20 border border-[#B7FF32]/30 hover:bg-[#B7FF32]/30 hover:scale-110 transition-all focus:outline-none rounded-full shadow-inner" title="Notify Me on Launch">
+            <svg className="w-6 h-6 text-[#B7FF32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+            </svg>
           </a>
         </div>
       </aside>

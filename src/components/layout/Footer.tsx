@@ -65,10 +65,7 @@ export function Footer() {
         </div>
 
         {/* Disclaimer & Bottom */}
-        <div className="border-t border-[#141518] pt-8 flex flex-col items-start md:items-center justify-between gap-6 text-center md:text-left">
-          <p className="text-[12px] text-[#8D919B] max-w-[800px] text-center mx-auto mb-2">
-            TeleTorrent is an independent third-party application and is not affiliated with, endorsed by, or sponsored by Telegram.
-          </p>
+        <div className="border-t border-[#141518] pt-8 flex flex-col items-center justify-between gap-4">
           <p className="text-[13px] text-[#8D919B] w-full text-center">
             © {new Date().getFullYear()} TeleTorrent. All rights reserved.
           </p>

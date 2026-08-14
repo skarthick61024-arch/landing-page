@@ -74,7 +74,7 @@ export function FeaturesSection() {
             Everything you need.
           </h2>
           <p className="text-[15px] md:text-[17px] text-[#8D919B] max-w-[500px] leading-relaxed">
-            A comprehensive set of tools designed specifically for handling large files over Telegram.
+            A comprehensive set of tools designed specifically for handling large files from your Telegram Saved Messages.
           </p>
         </div>
 

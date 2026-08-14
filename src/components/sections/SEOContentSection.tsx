@@ -6,8 +6,8 @@ export function SEOContentSection() {
         <div className="mb-12">
           <h2 className="text-[24px] font-bold text-[#F5F5F5] mb-4">Download Telegram Videos and Files</h2>
           <p className="text-[15px] leading-[1.6]">
-            TeleTorrent is designed to make saving your favorite media and documents from Telegram seamless. 
-            Whether you need to download Telegram videos in high quality or save large documents from your 
+            TeleTorrent is designed to make saving your favorite media and documents from your Telegram Saved Messages seamless. 
+            Whether you need to download Telegram videos in high quality or save large documents you've stored in your 
             Saved Messages, our specialized downloader provides a clean, fast, and native experience on Android.
           </p>
         </div>
@@ -16,7 +16,7 @@ export function SEOContentSection() {
           <h2 className="text-[24px] font-bold text-[#F5F5F5] mb-4">How to Download Files from Telegram</h2>
           <p className="text-[15px] leading-[1.6]">
             Learning how to download files from Telegram has never been easier. Simply forward the files, 
-            videos, or documents you want to keep into your Telegram Saved Messages. When you open TeleTorrent, 
+            videos, or documents you want to keep into your own Telegram Saved Messages. When you open TeleTorrent, 
             those files will appear in a neat, organized list ready for download with a single tap. 
             You can monitor progress, pause, and resume downloads at any time.
           </p>
@@ -25,8 +25,8 @@ export function SEOContentSection() {
         <div className="mb-12">
           <h2 className="text-[24px] font-bold text-[#F5F5F5] mb-4">Telegram Downloader Features</h2>
           <p className="text-[15px] leading-[1.6]">
-            Our download manager comes packed with powerful features tailored for heavy users. TeleTorrent 
-            supports background downloading, allowing you to minimize the app while large files transfer. 
+            Our download manager comes packed with powerful features tailored for managing your Saved Messages. TeleTorrent 
+            supports background downloading, allowing you to minimize the app while large personal files transfer. 
             Additionally, robust resume support means that if your connection drops, your downloads will pick 
             up exactly where they left off without wasting data.
           </p>
@@ -35,7 +35,7 @@ export function SEOContentSection() {
         <div className="mb-12">
           <h2 className="text-[24px] font-bold text-[#F5F5F5] mb-4">Supported Telegram Downloads</h2>
           <p className="text-[15px] leading-[1.6]">
-            TeleTorrent isn't just a video downloader—it's a complete file management utility. You can 
+            TeleTorrent isn't just a video downloader—it's a complete file management utility for your Saved Messages. You can 
             effortlessly download Telegram media, ZIP archives, Android APK files, audio tracks, and heavy 
             work documents (PDF, DOCX) directly to your local storage without limitations.
           </p>

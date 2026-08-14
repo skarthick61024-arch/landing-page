@@ -2,18 +2,18 @@ export function HowItWorksSection() {
   const steps = [
     {
       number: "01",
-      title: "Connect",
-      description: "Connect your Telegram account securely.",
+      title: "Forward",
+      description: "Forward the files you want to keep into your Telegram Saved Messages.",
     },
     {
       number: "02",
       title: "Sync",
-      description: "Synchronize your available Saved Messages files.",
+      description: "Open TeleTorrent and securely sync your Saved Messages.",
     },
     {
       number: "03",
       title: "Download",
-      description: "Choose a file and monitor the download.",
+      description: "Choose your files and download them directly to your device.",
     }
   ];
 

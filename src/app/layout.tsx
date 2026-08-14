@@ -88,8 +88,94 @@ export default function RootLayout({
                 "@type": "SoftwareApplication",
                 "name": "TeleTorrent",
                 "applicationCategory": "UtilitiesApplication",
-                "operatingSystem": "Android, Web",
+                "operatingSystem": "Android",
                 "url": "https://www.teletorrent.me/"
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "What is a Telegram downloader?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "A Telegram downloader is an application that allows you to easily find, manage, and download media and files directly from your Telegram account, specifically from your Saved Messages."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How can I download Telegram videos?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "With TeleTorrent, simply forward the video to your Telegram Saved Messages, open the TeleTorrent app, and tap download. The video will be saved directly to your device."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Can I download Telegram files?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes, TeleTorrent supports downloading any file type available on Telegram. Whether it's documents, media, or archives, you can manage and download them seamlessly."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What files does TeleTorrent support?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "TeleTorrent supports videos, documents, ZIP archives, APK files, audio tracks, and all other standard media types that Telegram allows you to send and receive."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Can I download Telegram documents?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Absolutely. TeleTorrent is perfect for downloading large PDFs, Word documents, Excel sheets, and other professional files directly from your Telegram account."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Can I download ZIP files from Telegram?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes, you can easily download ZIP and RAR archives. TeleTorrent manages the download process so you can access your compressed files securely."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Can I resume interrupted downloads?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes, TeleTorrent features full resume support for interrupted or paused downloads, ensuring you never have to restart large file transfers from scratch."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Does TeleTorrent work on Android?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes, TeleTorrent is natively built for Android, offering a smooth, optimized experience for managing and downloading your Telegram files on the go."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Is TeleTorrent free?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "TeleTorrent is completely free to use with zero ads and no premium tiers required for core downloading functionality."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Does TeleTorrent require Telegram login?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes, to securely access your Saved Messages and download your files, you need to log in to your Telegram account through the TeleTorrent app."
+                    }
+                  }
+                ]
               }
             ])
           }}
