@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { BottomNav } from "@/components/layout/BottomNav";
@@ -182,22 +181,14 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} antialiased`} suppressHydrationWarning={true}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          forcedTheme="dark"
-          enableSystem={false}
-          disableTransitionOnChange
-        >
-          <div className="flex flex-col min-h-screen md:pl-[112px]">
-            <Navbar />
-            <main className="flex-1 pb-[64px] md:pb-0">
-              {children}
-            </main>
-            <Footer />
-            <BottomNav />
-          </div>
-        </ThemeProvider>
+        <div className="flex flex-col min-h-screen md:pl-[112px]">
+          <Navbar />
+          <main className="flex-1 pb-[64px] md:pb-0">
+            {children}
+          </main>
+          <Footer />
+          <BottomNav />
+        </div>
       </body>
     </html>
   );

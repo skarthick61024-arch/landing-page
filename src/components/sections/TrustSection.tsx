@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export function TrustSection() {
   return (
-    <section id="security" className="bg-[#000000] py-24 md:py-32 border-t border-[#141518]">
+    <section id="security" className="bg-[#000000] py-24 md:py-32 border-t border-[#141518] cv-auto">
       <div className="container mx-auto px-5 md:px-12 max-w-[1000px] text-center">
         
         {/* Header */}

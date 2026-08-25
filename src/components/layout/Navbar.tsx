@@ -7,9 +7,7 @@ import { usePathname } from "next/navigation"
 import { Menu, X, LayoutDashboard, Sparkles, HelpCircle, FileText, Download } from "lucide-react"
 
 export function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
-
   const [activeHref, setActiveHref] = useState("/")
 
   useEffect(() => {
@@ -17,18 +15,6 @@ export function Navbar() {
       setActiveHref(window.location.pathname + window.location.hash)
     }
   }, [pathname])
-
-  // Prevent scrolling when sidebar is open
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden"
-    } else {
-      document.body.style.overflow = "auto"
-    }
-    return () => {
-      document.body.style.overflow = "auto"
-    }
-  }, [isOpen])
 
   const navLinks = [
     { name: "Product", href: "/", icon: <LayoutDashboard className="w-5 h-5" /> },
@@ -61,7 +47,6 @@ export function Navbar() {
               title={link.name}
               aria-label={link.name}
               onClick={(e) => {
-                setIsOpen(false)
                 setActiveHref(link.href)
                 
                 if (link.href.startsWith("/#") && pathname === "/") {

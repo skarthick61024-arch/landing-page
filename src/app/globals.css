@@ -37,5 +37,9 @@ html {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
+  .cv-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 600px;
+  }
 }
 
