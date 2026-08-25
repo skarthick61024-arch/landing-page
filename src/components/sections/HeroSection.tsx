@@ -11,7 +11,7 @@ export function HeroSection({
     <section className="bg-[#000000] pt-[80px] md:pt-[100px] pb-[100px] overflow-hidden flex flex-col items-center relative">
       
       {/* Subtle background glow */}
-      <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#9333EA]/10 blur-[120px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle,_rgba(147,51,234,0.12)_0%,_transparent_70%)] rounded-full pointer-events-none"></div>
 
       <div className="container mx-auto px-5 md:px-12 max-w-[1280px] flex flex-col items-center text-center relative z-10">
         
