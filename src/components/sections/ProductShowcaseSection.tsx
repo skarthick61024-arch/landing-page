@@ -44,7 +44,7 @@ export function ProductShowcaseSection() {
                 Completed
               </div>
               
-              <div className="h-[1px] bg-[#141518] my-4 mx-2"></div>
+              <div className="h-[1px] bg-[#141518] my-2 mx-2"></div>
               
               <div className="px-3 py-2.5 rounded-[10px] text-[#858993] hover:bg-[#141518] hover:text-[#F5F5F5] text-[14px] font-medium flex items-center gap-3 cursor-pointer transition-colors">
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.58 4 8 4s8-1.79 8-4M4 7c0-2.21 3.58-4 8-4s8 1.79 8 4m0 5c0 2.21-3.58 4-8 4s-8-1.79-8-4"/></svg>
@@ -86,7 +86,7 @@ export function ProductShowcaseSection() {
                 <img src="/logo-round.jpg" alt="TeleTorrent Logo" className="w-7 h-7 rounded-full" />
               </div>
               
-              <h1 className="text-[18px] md:text-[20px] font-bold text-[#F5F5F5]">Downloads</h1>
+              <p className="text-[18px] md:text-[20px] font-bold text-[#F5F5F5]" aria-hidden="true">Downloads</p>
               
               <div className="flex items-center gap-3 md:gap-5">
                 <div className="w-8 h-8 md:w-9 md:h-9 rounded-full hover:bg-[#141518] flex items-center justify-center cursor-pointer text-[#858993] transition-colors">
@@ -128,15 +128,15 @@ export function ProductShowcaseSection() {
 
                 {/* Active Downloads List */}
                 <div className="mb-10">
-                  <h3 className="text-[12px] font-bold text-[#858993] uppercase tracking-widest mb-4 flex items-center gap-2">
+                  <h3 className="text-xs font-semibold text-[#858993] mb-4 flex items-center gap-2">
                     Active Downloads
-                    <span className="bg-[#141518] text-[#F5F5F5] px-1.5 py-0.5 rounded text-[10px]">2</span>
+                    <span className="bg-[#141518] text-[#F5F5F5] px-2 py-0.5 rounded text-xs">2</span>
                   </h3>
                   
                   <div className="flex flex-col gap-3">
                     
                     {/* Active Row 1 */}
-                    <div className="bg-[#0D0F11] border border-[#141518] hover:border-[#22252A] rounded-[16px] p-3 md:p-4 flex flex-col md:flex-row items-start md:items-center gap-4 transition-colors group relative overflow-hidden">
+                    <div className="bg-[#0D0F11] border border-[#141518] hover:border-[#22252A] rounded-[16px] p-3 md:p-4 pb-4 md:pb-5 flex flex-col md:flex-row items-start md:items-center gap-4 transition-colors group relative overflow-hidden">
                       {/* Left color bar */}
                       <div className="absolute top-0 left-0 w-[3px] h-full bg-[#B7FF32]"></div>
                       
@@ -165,7 +165,7 @@ export function ProductShowcaseSection() {
                           <span className="text-[#B7FF32] text-[12px] md:text-[13px] font-bold font-mono">2.5 MB/s</span>
                         </div>
                         
-                        <div className="w-full h-1.5 md:h-2 bg-[#141518] rounded-full mt-1 md:mt-1.5 overflow-hidden">
+                        <div className="w-full h-1.5 md:h-2 bg-[#141518] rounded-full mt-1.5 overflow-hidden">
                           <div className="h-full bg-[#B7FF32] rounded-full w-[52%] relative overflow-hidden">
                             <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.4),transparent)] -translate-x-full animate-[shimmer_2s_infinite]"></div>
                           </div>
@@ -184,7 +184,7 @@ export function ProductShowcaseSection() {
                     </div>
 
                     {/* Active Row 2 */}
-                    <div className="bg-[#0D0F11] border border-[#141518] hover:border-[#22252A] rounded-[16px] p-3 md:p-4 flex flex-col md:flex-row items-start md:items-center gap-4 transition-colors group relative overflow-hidden">
+                    <div className="bg-[#0D0F11] border border-[#141518] hover:border-[#22252A] rounded-[16px] p-3 md:p-4 pb-4 md:pb-5 flex flex-col md:flex-row items-start md:items-center gap-4 transition-colors group relative overflow-hidden">
                       <div className="absolute top-0 left-0 w-[3px] h-full bg-[#F97316]/80"></div>
                       
                       <div className="w-12 h-12 md:w-14 md:h-14 rounded-[12px] bg-[#141518] shrink-0 relative overflow-hidden border border-[#22252A]">
@@ -210,7 +210,7 @@ export function ProductShowcaseSection() {
                           <span className="text-[#B7FF32] text-[12px] md:text-[13px] font-bold font-mono">780 KB/s</span>
                         </div>
                         
-                        <div className="w-full h-1.5 md:h-2 bg-[#141518] rounded-full mt-1 md:mt-1.5 overflow-hidden">
+                        <div className="w-full h-1.5 md:h-2 bg-[#141518] rounded-full mt-1.5 overflow-hidden">
                           <div className="h-full bg-[#B7FF32] rounded-full w-[56%] relative overflow-hidden">
                             <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.4),transparent)] -translate-x-full animate-[shimmer_2s_infinite_1s]"></div>
                           </div>
@@ -231,7 +231,7 @@ export function ProductShowcaseSection() {
 
                 {/* Completed Downloads */}
                 <div>
-                  <h3 className="text-[12px] font-bold text-[#858993] uppercase tracking-widest mb-4 flex items-center gap-2">
+                  <h3 className="text-xs font-semibold text-[#858993] mb-4 flex items-center gap-2">
                     Recently Completed
                   </h3>
                   
@@ -297,75 +297,45 @@ export function ProductShowcaseSection() {
           {/* RIGHT SIDEBAR (Desktop Activity Panel) */}
           {/* ================================================== */}
           <div className="hidden lg:flex flex-col w-[260px] xl:w-[280px] shrink-0 border-l border-[#141518] bg-[#000000]/30 p-6">
-            <h3 className="text-[12px] font-bold text-[#858993] uppercase tracking-widest mb-6">Activity</h3>
+            <h3 className="text-xs font-semibold text-[#858993] uppercase tracking-wider mb-6">Activity & Storage</h3>
             
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-6">
               {/* Today */}
               <div>
-                <div className="flex justify-between items-end mb-2">
-                  <div className="text-[14px] font-bold text-[#F5F5F5]">Today</div>
-                  <div className="text-[12px] font-medium text-[#858993]">8 files</div>
+                <div className="flex justify-between items-center text-xs mb-1.5">
+                  <span className="text-[#F5F5F5] font-medium">Today</span>
+                  <span className="text-[#8D919B]">12.4 GB (8 files)</span>
                 </div>
-                <div className="text-[20px] font-bold text-[#F5F5F5] mb-3">12.4 <span className="text-[13px] text-[#858993]">GB</span></div>
-                
-                {/* Mini bar chart representation */}
-                <div className="flex items-end gap-1.5 h-10 w-full mb-1">
-                  <div className="flex-1 bg-[#141518] hover:bg-[#22252A] rounded-t-[4px] h-[30%]"></div>
-                  <div className="flex-1 bg-[#141518] hover:bg-[#22252A] rounded-t-[4px] h-[45%]"></div>
-                  <div className="flex-1 bg-[#141518] hover:bg-[#22252A] rounded-t-[4px] h-[20%]"></div>
-                  <div className="flex-1 bg-[#141518] hover:bg-[#22252A] rounded-t-[4px] h-[60%]"></div>
-                  <div className="flex-1 bg-[#141518] hover:bg-[#22252A] rounded-t-[4px] h-[85%]"></div>
-                  <div className="flex-1 bg-[#B7FF32] rounded-t-[4px] h-[100%] shadow-[0_0_12px_rgba(183,255,50,0.3)]"></div>
-                  <div className="flex-1 bg-[#141518] hover:bg-[#22252A] rounded-t-[4px] h-[40%]"></div>
+                <div className="w-full h-2 bg-[#141518] rounded-full overflow-hidden">
+                  <div className="h-full bg-[#B7FF32] rounded-full w-[45%]"></div>
                 </div>
               </div>
 
               {/* This Week */}
               <div>
-                <div className="flex justify-between items-end mb-2">
-                  <div className="text-[14px] font-bold text-[#F5F5F5]">This Week</div>
-                  <div className="text-[12px] font-medium text-[#858993]">32 files</div>
+                <div className="flex justify-between items-center text-xs mb-1.5">
+                  <span className="text-[#F5F5F5] font-medium">This Week</span>
+                  <span className="text-[#8D919B]">48.7 GB (32 files)</span>
                 </div>
-                <div className="text-[20px] font-bold text-[#F5F5F5] mb-3">48.7 <span className="text-[13px] text-[#858993]">GB</span></div>
-                <div className="w-full h-1.5 bg-[#141518] rounded-full overflow-hidden">
-                  <div className="h-full bg-[#858993] rounded-full w-[65%]"></div>
+                <div className="w-full h-2 bg-[#141518] rounded-full overflow-hidden">
+                  <div className="h-full bg-[#B7FF32] rounded-full w-[65%]"></div>
                 </div>
               </div>
 
-              <div className="h-[1px] bg-[#141518]"></div>
+              <div className="h-[1px] bg-[#141518] my-1"></div>
 
               {/* Storage */}
               <div>
-                <div className="text-[14px] font-bold text-[#F5F5F5] mb-4">Device Storage</div>
-                
-                <div className="relative w-32 h-32 mx-auto mb-4">
-                  {/* Fake Donut SVG */}
-                  <svg viewBox="0 0 36 36" className="w-full h-full -rotate-90">
-                    <path
-                      className="text-[#141518]"
-                      strokeWidth="3.5"
-                      stroke="currentColor"
-                      fill="none"
-                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                    />
-                    <path
-                      className="text-[#B7FF32]"
-                      strokeDasharray="72, 100"
-                      strokeWidth="3.5"
-                      stroke="currentColor"
-                      fill="none"
-                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                    />
-                  </svg>
-                  <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-                    <span className="text-[16px] font-bold text-[#F5F5F5]">72%</span>
-                    <span className="text-[10px] text-[#858993] uppercase tracking-wider">Used</span>
-                  </div>
+                <div className="flex justify-between items-center text-xs mb-1.5">
+                  <span className="text-[#F5F5F5] font-medium">Device Storage</span>
+                  <span className="text-[#B7FF32] font-semibold">72% used</span>
                 </div>
-                
-                <div className="flex justify-between items-center text-[12px]">
-                  <span className="text-[#F5F5F5] font-medium"><span className="inline-block w-2 h-2 rounded-full bg-[#B7FF32] mr-1.5"></span>87.4 GB Used</span>
-                  <span className="text-[#858993]">128 GB Total</span>
+                <div className="w-full h-2 bg-[#141518] rounded-full overflow-hidden">
+                  <div className="h-full bg-[#B7FF32] rounded-full w-[72%]"></div>
+                </div>
+                <div className="flex justify-between text-[11px] text-[#8D919B] mt-1.5">
+                  <span>87.4 GB Used</span>
+                  <span>128 GB Total</span>
                 </div>
               </div>
 

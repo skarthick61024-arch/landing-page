@@ -26,7 +26,7 @@ export function TrustSection() {
               <svg className="w-4 h-4 text-[#B7FF32]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/></svg>
             </div>
             <div>
-              <h4 className="text-[#F5F5F5] font-bold text-[15px] mb-2">Local File Control</h4>
+              <h3 className="text-[#F5F5F5] font-bold text-[15px] mb-2">Local File Control</h3>
               <p className="text-[#8D919B] text-[14px] leading-relaxed">Your files are downloaded directly to your device storage and managed entirely locally by you.</p>
             </div>
           </div>
@@ -36,7 +36,7 @@ export function TrustSection() {
               <svg className="w-4 h-4 text-[#B7FF32]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/></svg>
             </div>
             <div>
-              <h4 className="text-[#F5F5F5] font-bold text-[15px] mb-2">Transparent Data Handling</h4>
+              <h3 className="text-[#F5F5F5] font-bold text-[15px] mb-2">Transparent Data Handling</h3>
               <p className="text-[#8D919B] text-[14px] leading-relaxed">We process only the information required to provide the core downloading functionality.</p>
             </div>
           </div>

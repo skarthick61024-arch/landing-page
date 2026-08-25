@@ -50,7 +50,7 @@ export function Navbar() {
         </div>
 
         {/* Navigation Links */}
-        <nav className="flex-1 flex flex-col gap-6 items-center py-6 w-full overflow-y-auto no-scrollbar">
+        <nav className="flex-1 flex flex-col gap-3 items-center py-4 w-full overflow-y-auto no-scrollbar" aria-label="Main Navigation">
           {navLinks.map((link) => {
             const isActive = activeHref === link.href || (activeHref.startsWith('/blog') && link.name === 'Blog');
             return (
@@ -58,6 +58,7 @@ export function Navbar() {
               key={link.name} 
               href={link.href}
               title={link.name}
+              aria-label={link.name}
               onClick={(e) => {
                 setIsOpen(false)
                 setActiveHref(link.href)
@@ -72,12 +73,13 @@ export function Navbar() {
                   }
                 }
               }}
-              className={`relative flex items-center justify-center w-12 h-12 transition-all rounded-[18px] group ${isActive ? 'text-[#B7FF32] bg-[#B7FF32]/10' : 'text-white/70 hover:text-white hover:bg-white/10'}`}
+              className={`relative flex flex-col items-center justify-center w-14 h-14 transition-all rounded-[16px] group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B7FF32] ${isActive ? 'text-[#B7FF32] bg-[#B7FF32]/10' : 'text-white/70 hover:text-white hover:bg-white/10'}`}
             >
               {isActive && (
-                <div className="absolute inset-0 border border-[#B7FF32]/50 rounded-[18px] shadow-[0_0_12px_rgba(183,255,50,0.2)]"></div>
+                <div className="absolute inset-0 border border-[#B7FF32]/50 rounded-[16px] shadow-[0_0_12px_rgba(183,255,50,0.2)]"></div>
               )}
               {link.icon}
+              <span className="text-[10px] font-medium tracking-tight mt-0.5">{link.name}</span>
             </Link>
           )})}
         </nav>

@@ -40,9 +40,9 @@ export function HeroSection({
               </svg>
               Notify Me on Launch
             </a>
-            <Button className="w-full sm:w-auto rounded-full bg-[#101114] border border-[#141518] text-[#F5F5F5] hover:bg-[#141518] font-semibold px-8 h-[52px] md:h-[56px] text-[15px] transition-all">
+            <a href="#workspace" className="w-full sm:w-auto rounded-full bg-white/5 border border-white/20 text-[#F5F5F5] hover:bg-white/10 hover:border-white/30 font-semibold px-8 h-[52px] md:h-[56px] text-sm md:text-base transition-all flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B7FF32]">
               Learn More
-            </Button>
+            </a>
           </div>
           
           <div className="text-[12px] text-[#8D919B] mt-2 max-w-[500px] text-center px-4">
@@ -89,7 +89,7 @@ export function HeroSection({
                 
                 <div className="flex-1 min-w-0 flex flex-col gap-1.5 md:gap-1">
                   <div className="flex justify-between items-start">
-                    <h4 className="text-[#F5F5F5] text-[13px] md:text-[15px] font-semibold truncate pr-4">Demonstration_Video_4K.mp4</h4>
+                    <h3 className="text-[#F5F5F5] text-[13px] md:text-[15px] font-semibold truncate pr-4">Demonstration_Video_4K.mp4</h3>
                     <span className="text-[#B7FF32] text-[11px] md:text-[12px] font-bold shrink-0 font-mono hidden md:block">2.5 MB/s</span>
                   </div>
                   
@@ -129,7 +129,7 @@ export function HeroSection({
                 
                 <div className="flex-1 min-w-0 flex flex-col gap-1.5 md:gap-1">
                   <div className="flex justify-between items-start">
-                    <h4 className="text-[#F5F5F5] text-[13px] md:text-[15px] font-semibold truncate pr-4">Project_Assets_2026.zip</h4>
+                    <h3 className="text-[#F5F5F5] text-[13px] md:text-[15px] font-semibold truncate pr-4">Project_Assets_2026.zip</h3>
                     <span className="text-[#B7FF32] text-[11px] md:text-[12px] font-bold shrink-0 font-mono hidden md:block">780 KB/s</span>
                   </div>
                   
@@ -166,7 +166,7 @@ export function HeroSection({
                 
                 <div className="flex-1 min-w-0 flex flex-col justify-center gap-1">
                   <div className="flex justify-between items-center">
-                    <h4 className="text-[#8D919B] text-[13px] md:text-[15px] font-semibold truncate pr-4">Q3_Financial_Report.pdf</h4>
+                    <h3 className="text-[#8D919B] text-[13px] md:text-[15px] font-semibold truncate pr-4">Q3_Financial_Report.pdf</h3>
                     <span className="text-[#8D919B] text-[11px] md:text-[12px] font-medium shrink-0">Queued</span>
                   </div>
                   <div className="text-[#8D919B] text-[11px] md:text-[12px] font-medium">

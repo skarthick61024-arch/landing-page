@@ -43,7 +43,7 @@ export function DownloadExperienceSection() {
                     {/* Title and Menu */}
                     <div className="flex justify-between items-start">
                       <div>
-                        <h4 className="text-[#F5F5F5] text-[15px] md:text-[17px] font-bold truncate pr-4 leading-tight mb-1">TeleTorrent_v2.1.apk</h4>
+                        <h3 className="text-[#F5F5F5] text-[15px] md:text-[17px] font-bold truncate pr-4 leading-tight mb-1">TeleTorrent_v2.1.apk</h3>
                         <div className="flex items-center gap-1.5">
                           <svg className="w-3.5 h-3.5 text-[#8D919B]" viewBox="0 0 24 24" fill="currentColor"><path d="M4 22C3.45 22 2.979 21.804 2.587 21.412C2.195 21.02 2 20.55 2 20V4C2 3.45 2.195 2.979 2.587 2.587C2.979 2.195 3.45 2 4 2H10L12 4H20C20.55 4 21.02 4.195 21.412 4.587C21.804 4.979 22 5.45 22 6V20C22 20.55 21.804 21.02 21.412 21.412C21.02 21.804 20.55 22 20 22H4ZM4 6V20H20V6H4Z"/></svg>
                           <span className="text-[#8D919B] text-[12px] font-medium">Android Package</span>
