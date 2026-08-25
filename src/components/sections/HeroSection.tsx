@@ -156,21 +156,21 @@ export function HeroSection({
             </div>
 
             {/* Queued Item */}
-            <div className="bg-[#0B0C0E] border border-[#141518] rounded-[16px] p-3 md:p-4 flex flex-col md:flex-row items-start md:items-center gap-4 relative overflow-hidden opacity-60">
+            <div className="bg-[#0B0C0E] border border-[#141518] rounded-[16px] p-3 md:p-4 flex flex-col md:flex-row items-start md:items-center gap-4 relative overflow-hidden">
               <div className="flex w-full items-center gap-4">
                 <div className="w-12 h-12 md:w-14 md:h-14 rounded-[12px] bg-[#101114] shrink-0 overflow-hidden relative border border-[#1A1A1A]">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <svg className="w-5 h-5 text-[#8D919B]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+                    <svg className="w-5 h-5 text-[#A1A7B4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
                   </div>
                 </div>
                 
                 <div className="flex-1 min-w-0 flex flex-col justify-center gap-1">
                   <div className="flex justify-between items-center">
-                    <h3 className="text-[#8D919B] text-[13px] md:text-[15px] font-semibold truncate pr-4">Q3_Financial_Report.pdf</h3>
-                    <span className="text-[#8D919B] text-[11px] md:text-[12px] font-medium shrink-0">Queued</span>
+                    <h3 className="text-[#F5F5F5] text-sm md:text-base font-semibold truncate pr-4">Q3_Financial_Report.pdf</h3>
+                    <span className="text-[#A1A7B4] text-xs font-medium shrink-0 bg-[#141518] px-2 py-0.5 rounded">Queued</span>
                   </div>
-                  <div className="text-[#8D919B] text-[11px] md:text-[12px] font-medium">
-                    0 B <span className="mx-1 text-[#333333]">/</span> 45 MB
+                  <div className="text-[#A1A7B4] text-xs font-medium">
+                    0 B <span className="mx-1 text-[#555555]">/</span> 45 MB
                   </div>
                   {/* Progress bar */}
                   <div className="w-full h-1.5 md:h-2 bg-[#1A1A1A] rounded-full mt-1 overflow-hidden"></div>
@@ -178,7 +178,7 @@ export function HeroSection({
                 
                 {/* Controls */}
                 <div className="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-[#101114] border border-[#1A1A1A] cursor-pointer shrink-0">
-                  <svg className="w-4 h-4 text-[#8D919B]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                  <svg className="w-4 h-4 text-[#A1A7B4]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                 </div>
               </div>
             </div>

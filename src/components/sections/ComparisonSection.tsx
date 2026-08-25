@@ -21,47 +21,45 @@ export function ComparisonSection() {
           
           {/* LEFT: Other Sites (The Nightmare) */}
           <div className="flex-1 bg-gradient-to-b from-[#1A0A0A] to-[#0A0000] border border-[#331111] rounded-[32px] p-8 md:p-12 relative overflow-hidden group">
-            {/* Background texture/noise */}
-            <div className="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
             
-            <h3 className="text-[24px] font-bold text-[#FF4444] mb-2 flex items-center gap-3 relative z-10">
-              <span className="text-[28px]">🤡</span> Other Download Sites
+            <h3 className="text-[24px] font-bold text-[#EF4444] mb-2 flex items-center gap-3 relative z-10">
+              <span className="text-[28px]" aria-hidden="true">🤡</span> Other Download Sites
             </h3>
-            <p className="text-[#8D919B] text-[15px] mb-12 relative z-10">A web of deception, ads, and artificial limits.</p>
+            <p className="text-[#A1A7B4] text-[15px] mb-12 relative z-10">A web of deception, ads, and artificial limits.</p>
 
             {/* Meme UI Representation */}
-            <div className="relative z-10 flex flex-col gap-4 max-w-[400px] mx-auto opacity-90 group-hover:opacity-100 transition-opacity">
+            <div className="relative z-10 flex flex-col gap-4 max-w-[400px] mx-auto opacity-95 group-hover:opacity-100 transition-opacity">
               
               {/* Fake Download Button Ad */}
-              <div className="bg-[#222222] border-2 border-dashed border-[#444444] p-4 flex flex-col items-center justify-center text-center animate-pulse">
-                <span className="text-xs text-[#8D919B] uppercase tracking-wider mb-2 font-semibold">Advertisement</span>
-                <div className="w-full bg-[#FF4444] text-white font-black text-lg py-3 uppercase cursor-pointer hover:bg-[#CC0000]">
+              <div className="bg-[#222222] border-2 border-dashed border-[#555555] p-4 flex flex-col items-center justify-center text-center animate-pulse rounded-lg">
+                <span className="text-xs text-[#A1A7B4] uppercase tracking-wider mb-2 font-semibold">Advertisement</span>
+                <div className="w-full bg-[#DC2626] text-white font-black text-lg py-3 uppercase cursor-pointer hover:bg-[#B91C1C] rounded shadow-md">
                   ⬇️ DOWNLOAD NOW! ⬇️
                 </div>
-                <span className="text-xs text-[#8D919B] mt-2 font-medium">Your PC might be at risk. Click to fix.</span>
+                <span className="text-xs text-[#A1A7B4] mt-2 font-medium">Your PC might be at risk. Click to fix.</span>
               </div>
 
               {/* Slow Download Card */}
-              <div className="bg-[#111111] border border-[#222222] p-4 flex flex-col gap-3">
+              <div className="bg-[#111111] border border-[#222222] p-4 flex flex-col gap-3 rounded-lg">
                 <div className="flex justify-between items-start">
-                  <div className="font-mono text-[#CCCCCC] text-xs">file_final_v2.rar</div>
-                  <div className="text-[#FF4444] font-bold text-xs">50 KB/s</div>
+                  <div className="font-mono text-[#E5E7EB] text-xs">file_final_v2.rar</div>
+                  <div className="text-[#EF4444] font-bold text-xs">50 KB/s</div>
                 </div>
                 
                 <div className="w-full h-2 bg-[#222222] overflow-hidden rounded-full">
-                  <div className="h-full bg-[#FF4444] w-[12%]"></div>
+                  <div className="h-full bg-[#EF4444] w-[12%]"></div>
                 </div>
                 
-                <div className="flex justify-between items-center text-xs text-[#8D919B]">
+                <div className="flex justify-between items-center text-xs text-[#A1A7B4]">
                   <span>ETA: 14 hours, 23 mins</span>
                   <span>Free Tier Limit</span>
                 </div>
               </div>
 
               {/* Premium Paywall Alert */}
-              <div className="bg-[#332200] border border-[#FF9900] p-4 text-center mt-2 rounded-md">
-                <div className="text-[#FF9900] font-bold text-sm mb-1">⚠️ Premium Required</div>
-                <div className="text-[#CCCCCC] text-xs">Wait 59 seconds to download, or buy Premium for unlimited speed!</div>
+              <div className="bg-[#2D1B00] border border-[#D97706] p-4 text-center mt-2 rounded-lg">
+                <div className="text-[#FBBF24] font-bold text-sm mb-1">⚠️ Premium Required</div>
+                <div className="text-[#E5E7EB] text-xs">Wait 59 seconds to download, or buy Premium for unlimited speed!</div>
               </div>
 
             </div>
@@ -69,17 +67,15 @@ export function ComparisonSection() {
 
           {/* RIGHT: TeleTorrent (The Dream) */}
           <div className="flex-1 bg-gradient-to-b from-[#0B1A0A] to-[#000A00] border border-[#113311] rounded-[32px] p-8 md:p-12 relative overflow-hidden group flex flex-col justify-between">
-            {/* Background texture/noise */}
-            <div className="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
             
             <div>
               <h3 className="text-xl md:text-2xl font-bold text-[#B7FF32] mb-2 flex items-center gap-3 relative z-10">
                 <span className="text-2xl" aria-hidden="true">😎</span> TeleTorrent
               </h3>
-              <p className="text-[#8D919B] text-sm mb-8 relative z-10">Direct, blazing fast, 100% free with no interruptions.</p>
+              <p className="text-[#A1A7B4] text-sm mb-8 relative z-10">Direct, blazing fast, 100% free with no interruptions.</p>
 
               {/* Meme UI Representation */}
-              <div className="relative z-10 flex flex-col gap-4 max-w-[400px] mx-auto opacity-90 group-hover:opacity-100 transition-opacity">
+              <div className="relative z-10 flex flex-col gap-4 max-w-[400px] mx-auto opacity-95 group-hover:opacity-100 transition-opacity">
                 
                 {/* TeleTorrent Download Card */}
                 <div className="bg-[#0B0C0E] border border-[#141518] rounded-[16px] p-4 flex flex-col gap-3 shadow-[0_20px_40px_rgba(183,255,50,0.05)]">

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { Menu, X, LayoutDashboard, Sparkles, HelpCircle, FileText, Download } from "lucide-react"
 
@@ -45,7 +46,7 @@ export function Navbar() {
         {/* Logo Area */}
         <div className="h-[100px] flex items-center justify-center shrink-0 w-full mt-2">
           <Link href="/" className="flex items-center justify-center w-12 h-12 bg-white/10 border border-white/20 rounded-full hover:scale-105 transition-transform shadow-inner" title="TeleTorrent Home">
-            <img src="/logo-round.jpg" alt="TeleTorrent Logo" className="w-9 h-9 rounded-full" />
+            <Image src="/logo-round.jpg" alt="TeleTorrent Logo" width={36} height={36} className="w-9 h-9 rounded-full" priority />
           </Link>
         </div>
 

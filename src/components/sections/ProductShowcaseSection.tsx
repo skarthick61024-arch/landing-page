@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export function ProductShowcaseSection() {
   return (
     <section id="workspace" className="bg-[#000000] py-24 md:py-32 border-t border-[#141518] overflow-hidden">
@@ -25,7 +27,7 @@ export function ProductShowcaseSection() {
           <div className="hidden md:flex flex-col w-[240px] shrink-0 border-r border-[#141518] bg-[#000000]/40">
             {/* Logo */}
             <div className="h-20 flex items-center px-6 border-b border-[#141518]/50">
-              <img src="/logo-round.jpg" alt="TeleTorrent Logo" className="w-8 h-8 rounded-full mr-3" />
+              <Image src="/logo-round.jpg" alt="TeleTorrent Logo" width={32} height={32} className="w-8 h-8 rounded-full mr-3" loading="lazy" />
               <span className="font-bold text-[16px] tracking-tight text-[#F5F5F5]">TeleTorrent</span>
             </div>
             
@@ -83,7 +85,7 @@ export function ProductShowcaseSection() {
               
               {/* Mobile Only Logo + Title */}
               <div className="md:hidden flex items-center gap-2">
-                <img src="/logo-round.jpg" alt="TeleTorrent Logo" className="w-7 h-7 rounded-full" />
+                <Image src="/logo-round.jpg" alt="TeleTorrent Logo" width={28} height={28} className="w-7 h-7 rounded-full" loading="lazy" />
               </div>
               
               <p className="text-[18px] md:text-[20px] font-bold text-[#F5F5F5]" aria-hidden="true">Downloads</p>
@@ -248,7 +250,7 @@ export function ProductShowcaseSection() {
                           <svg className="w-3.5 h-3.5 text-[#B7FF32] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6L9 17l-5-5"/></svg>
                           <h4 className="text-[#F5F5F5] text-[13px] md:text-[14px] font-bold truncate">Insidious.2010.1080p.mkv</h4>
                         </div>
-                        <div className="text-[#858993] text-[11px] md:text-[12px] pl-5.5">MKV · 1.59 GB · <span className="text-[#666666]">Completed 2 min ago</span></div>
+                        <div className="text-[#858993] text-[11px] md:text-[12px] pl-5.5">MKV · 1.59 GB · <span className="text-[#A1A7B4]">Completed 2 min ago</span></div>
                       </div>
                       <div className="hidden md:flex text-[#B7FF32] text-[12px] font-bold opacity-0 group-hover:opacity-100 transition-opacity">Open</div>
                     </div>
@@ -265,7 +267,7 @@ export function ProductShowcaseSection() {
                           <svg className="w-3.5 h-3.5 text-[#B7FF32] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6L9 17l-5-5"/></svg>
                           <h4 className="text-[#F5F5F5] text-[13px] md:text-[14px] font-bold truncate">Photo_2026_export.jpg</h4>
                         </div>
-                        <div className="text-[#858993] text-[11px] md:text-[12px] pl-5.5">JPG · 518 KB · <span className="text-[#666666]">Completed 8 min ago</span></div>
+                        <div className="text-[#858993] text-[11px] md:text-[12px] pl-5.5">JPG · 518 KB · <span className="text-[#A1A7B4]">Completed 8 min ago</span></div>
                       </div>
                       <div className="hidden md:flex text-[#B7FF32] text-[12px] font-bold opacity-0 group-hover:opacity-100 transition-opacity">Open</div>
                     </div>
@@ -282,7 +284,7 @@ export function ProductShowcaseSection() {
                           <svg className="w-3.5 h-3.5 text-[#B7FF32] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6L9 17l-5-5"/></svg>
                           <h4 className="text-[#F5F5F5] text-[13px] md:text-[14px] font-bold truncate">Recording_Screen_12.mp4</h4>
                         </div>
-                        <div className="text-[#858993] text-[11px] md:text-[12px] pl-5.5">MP4 · 89.5 MB · <span className="text-[#666666]">Completed 14 min ago</span></div>
+                        <div className="text-[#858993] text-[11px] md:text-[12px] pl-5.5">MP4 · 89.5 MB · <span className="text-[#A1A7B4]">Completed 14 min ago</span></div>
                       </div>
                       <div className="hidden md:flex text-[#B7FF32] text-[12px] font-bold opacity-0 group-hover:opacity-100 transition-opacity">Open</div>
                     </div>

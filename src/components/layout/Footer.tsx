@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export function Footer() {
   return (
@@ -9,7 +10,7 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center gap-2.5 mb-4">
-              <img src="/logo-round.jpg" alt="TeleTorrent Logo" className="w-8 h-8 rounded-full" />
+              <Image src="/logo-round.jpg" alt="TeleTorrent Logo" width={32} height={32} className="w-8 h-8 rounded-full" loading="lazy" />
               <span className="font-bold text-[18px] tracking-tight text-[#F5F5F5]">
                 TeleTorrent
               </span>

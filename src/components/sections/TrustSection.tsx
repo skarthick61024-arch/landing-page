@@ -54,7 +54,7 @@ export function TrustSection() {
           </Link>
           <div className="w-1.5 h-1.5 rounded-full bg-[#333333]"></div>
           <Link href="/help" className="text-[14px] font-medium text-[#F5F5F5] hover:text-[#B7FF32] transition-colors underline underline-offset-4 decoration-[#333333] hover:decoration-[#B7FF32]">
-            Help & Support
+            Help Center
           </Link>
         </div>
 
