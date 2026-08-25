@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { BottomNav } from "@/components/layout/BottomNav";
 
-const inter = Inter({ subsets: ["latin"], display: "swap" });
+const inter = Inter({ 
+  subsets: ["latin"], 
+  display: "swap",
+  preload: true,
+  fallback: ["system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
+  adjustFontFallback: true,
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.teletorrent.me"),
@@ -66,12 +71,32 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <Script
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3586845532361162"
-          crossOrigin="anonymous"
-          strategy="lazyOnload"
-        />
         <meta name="google-adsense-account" content="ca-pub-3586845532361162" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var loaded = false;
+                function loadAds() {
+                  if (loaded) return;
+                  loaded = true;
+                  ['scroll', 'touchstart', 'mousemove', 'click'].forEach(function(e) {
+                    window.removeEventListener(e, loadAds);
+                  });
+                  var s = document.createElement('script');
+                  s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3586845532361162';
+                  s.crossOrigin = 'anonymous';
+                  s.async = true;
+                  document.head.appendChild(s);
+                }
+                ['scroll', 'touchstart', 'mousemove', 'click'].forEach(function(e) {
+                  window.addEventListener(e, loadAds, { passive: true, once: true });
+                });
+                setTimeout(loadAds, 3500);
+              })();
+            `
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

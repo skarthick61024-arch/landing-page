@@ -33,7 +33,7 @@ export function ComparisonSection() {
               {/* Fake Download Button Ad */}
               <div className="bg-[#222222] border-2 border-dashed border-[#555555] p-4 flex flex-col items-center justify-center text-center animate-pulse rounded-lg">
                 <span className="text-xs text-[#A1A7B4] uppercase tracking-wider mb-2 font-semibold">Advertisement</span>
-                <div className="w-full bg-[#DC2626] text-white font-black text-lg py-3 uppercase cursor-pointer hover:bg-[#B91C1C] rounded shadow-md">
+                <div className="w-full bg-[#991B1B] text-[#FFFFFF] font-black text-lg py-3 uppercase cursor-pointer hover:bg-[#7F1D1D] rounded shadow-md">
                   ⬇️ DOWNLOAD NOW! ⬇️
                 </div>
                 <span className="text-xs text-[#A1A7B4] mt-2 font-medium">Your PC might be at risk. Click to fix.</span>
