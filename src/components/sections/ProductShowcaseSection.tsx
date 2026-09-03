@@ -346,25 +346,6 @@ export function ProductShowcaseSection() {
           
         </div>
       </div>
-
-      <style dangerouslySetInnerHTML={{__html: `
-        @keyframes shimmer {
-          100% { transform: translateX(100%); }
-        }
-        .custom-scrollbar::-webkit-scrollbar {
-          width: 6px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-          background: #000000;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: #141518;
-          border-radius: 10px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: #22252A;
-        }
-      `}} />
     </section>
   )
 }

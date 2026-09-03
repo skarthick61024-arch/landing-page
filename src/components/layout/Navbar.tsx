@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { Menu, X, LayoutDashboard, Sparkles, HelpCircle, FileText, Download } from "lucide-react"
+import { LayoutDashboard, Sparkles, HelpCircle, FileText } from "lucide-react"
 
 export function Navbar() {
   const pathname = usePathname()

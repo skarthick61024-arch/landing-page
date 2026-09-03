@@ -4,6 +4,15 @@ import { ScreenShowcaseSection } from "@/components/sections/ScreenShowcaseSecti
 export const metadata = {
   title: 'Platform | TeleTorrent',
   description: 'See how the TeleTorrent platform works.',
+  alternates: {
+    canonical: 'https://www.teletorrent.me/platform',
+  },
+  openGraph: {
+    title: 'Platform | TeleTorrent',
+    description: 'See how the TeleTorrent platform works.',
+    url: 'https://www.teletorrent.me/platform',
+    type: 'website',
+  },
 }
 
 export default function PlatformPage() {

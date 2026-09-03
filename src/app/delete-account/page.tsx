@@ -3,6 +3,15 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Account & Data Deletion - TeleTorrent',
   description: 'Instructions on how to delete your TeleTorrent local data and manage your Telegram account session.',
+  alternates: {
+    canonical: 'https://www.teletorrent.me/delete-account',
+  },
+  openGraph: {
+    title: 'Account & Data Deletion - TeleTorrent',
+    description: 'Instructions on how to delete your TeleTorrent local data and manage your Telegram account session.',
+    url: 'https://www.teletorrent.me/delete-account',
+    type: 'website',
+  },
 };
 
 export default function DeleteAccountPage() {

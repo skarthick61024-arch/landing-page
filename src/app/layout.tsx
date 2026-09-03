@@ -71,6 +71,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
+        <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net" />
         <meta name="google-adsense-account" content="ca-pub-3586845532361162" />
         <script
           dangerouslySetInnerHTML={{

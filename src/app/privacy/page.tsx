@@ -3,6 +3,15 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Privacy Policy - TeleTorrent',
   description: 'Learn how TeleTorrent handles your data, permissions, and privacy in compliance with Google Play standards.',
+  alternates: {
+    canonical: 'https://www.teletorrent.me/privacy',
+  },
+  openGraph: {
+    title: 'Privacy Policy - TeleTorrent',
+    description: 'Learn how TeleTorrent handles your data, permissions, and privacy in compliance with Google Play standards.',
+    url: 'https://www.teletorrent.me/privacy',
+    type: 'website',
+  },
 };
 
 export default function PrivacyPolicyPage() {

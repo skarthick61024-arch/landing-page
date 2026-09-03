@@ -4,6 +4,15 @@ import { Check } from "lucide-react"
 export const metadata = {
   title: 'Pricing | TeleTorrent',
   description: 'Simple, transparent pricing.',
+  alternates: {
+    canonical: 'https://www.teletorrent.me/pricing',
+  },
+  openGraph: {
+    title: 'Pricing | TeleTorrent',
+    description: 'Simple, transparent pricing.',
+    url: 'https://www.teletorrent.me/pricing',
+    type: 'website',
+  },
 }
 
 export default function PricingPage() {

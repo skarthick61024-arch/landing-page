@@ -142,11 +142,6 @@ export function ComparisonSection() {
           
         </div>
       </div>
-      <style dangerouslySetInnerHTML={{__html: `
-        @keyframes shimmer {
-          100% { transform: translateX(100%); }
-        }
-      `}} />
     </section>
   )
 }

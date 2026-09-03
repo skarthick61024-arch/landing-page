@@ -1,3 +1,19 @@
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Terms & Conditions – TeleTorrent",
+  description: "Terms & Conditions governing the use of the TeleTorrent Android file management and downloading application.",
+  alternates: {
+    canonical: "https://www.teletorrent.me/terms",
+  },
+  openGraph: {
+    title: "Terms & Conditions – TeleTorrent",
+    description: "Terms & Conditions governing the use of the TeleTorrent Android file management and downloading application.",
+    url: "https://www.teletorrent.me/terms",
+    type: "website",
+  },
+}
+
 export default function TermsPage() {
   return (
     <div className="bg-[#000000] min-h-screen pt-32 pb-24">

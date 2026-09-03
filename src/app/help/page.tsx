@@ -1,3 +1,19 @@
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Help Center & Support – TeleTorrent",
+  description: "Find troubleshooting help, answers to common issues, and support for downloading files with TeleTorrent.",
+  alternates: {
+    canonical: "https://www.teletorrent.me/help",
+  },
+  openGraph: {
+    title: "Help Center & Support – TeleTorrent",
+    description: "Find troubleshooting help, answers to common issues, and support for downloading files with TeleTorrent.",
+    url: "https://www.teletorrent.me/help",
+    type: "website",
+  },
+}
+
 export default function HelpPage() {
   const faqs = [
     {

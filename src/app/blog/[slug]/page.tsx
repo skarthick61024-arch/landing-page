@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import { notFound } from "next/navigation"
 import { blogPosts } from "@/lib/blogData"
 
@@ -147,11 +148,14 @@ export default async function ArticlePage({ params }: Props) {
           </div>
 
           {/* Featured Image */}
-          <div className="w-full h-[300px] md:h-[500px] rounded-[24px] overflow-hidden mb-16 border border-[#141518]">
-            <img 
+          <div className="w-full h-[300px] md:h-[500px] rounded-[24px] overflow-hidden mb-16 border border-[#141518] relative">
+            <Image 
               src={post.image} 
               alt={post.title} 
-              className="w-full h-full object-cover"
+              fill
+              priority
+              sizes="(max-width: 1000px) 100vw, 1000px"
+              className="object-cover"
             />
           </div>
 
@@ -181,11 +185,14 @@ export default async function ArticlePage({ params }: Props) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {relatedPosts.map((related) => (
               <Link href={`/blog/${related.slug}`} key={related.slug} className="group flex flex-col bg-[#101114] border border-[#141518] rounded-[20px] overflow-hidden transition-transform duration-300 hover:-translate-y-1">
-                <div className="w-full h-[180px] bg-[#1A1A1A] overflow-hidden">
-                  <img 
+                <div className="w-full h-[180px] bg-[#1A1A1A] overflow-hidden relative">
+                  <Image 
                     src={related.image} 
                     alt={related.title} 
-                    className="w-full h-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105 group-hover:opacity-100"
+                    fill
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover opacity-90 transition-transform duration-500 group-hover:scale-105 group-hover:opacity-100"
                   />
                 </div>
                 <div className="p-6 flex flex-col flex-1">

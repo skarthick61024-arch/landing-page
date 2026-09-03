@@ -1,3 +1,19 @@
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "About TeleTorrent – Android File Manager & Downloader",
+  description: "Learn about TeleTorrent, a modern Android application designed for simple, organized, and transparent file downloads from Telegram Saved Messages.",
+  alternates: {
+    canonical: "https://www.teletorrent.me/about",
+  },
+  openGraph: {
+    title: "About TeleTorrent – Android File Manager & Downloader",
+    description: "Learn about TeleTorrent, a modern Android application designed for simple, organized, and transparent file downloads from Telegram Saved Messages.",
+    url: "https://www.teletorrent.me/about",
+    type: "website",
+  },
+}
+
 export default function AboutPage() {
   return (
     <div className="bg-[#000000] min-h-screen pt-32 pb-24">

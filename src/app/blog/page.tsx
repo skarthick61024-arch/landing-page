@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Metadata } from "next"
 import { blogPosts } from "@/lib/blogData"
 
@@ -50,11 +51,14 @@ export default function BlogIndex() {
           {/* Featured Article */}
           <Link href={`/blog/${featuredPost.slug}`} className="block group mb-20">
             <div className="bg-[#101114] border border-[#141518] rounded-[24px] overflow-hidden flex flex-col md:flex-row transition-transform duration-300 hover:-translate-y-1">
-              <div className="w-full md:w-1/2 h-[250px] md:h-[400px] bg-[#1A1A1A] overflow-hidden">
-                <img 
+              <div className="w-full md:w-1/2 h-[250px] md:h-[400px] bg-[#1A1A1A] overflow-hidden relative">
+                <Image 
                   src={featuredPost.image} 
                   alt={featuredPost.title} 
-                  className="w-full h-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105 group-hover:opacity-100"
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover opacity-90 transition-transform duration-500 group-hover:scale-105 group-hover:opacity-100"
                 />
               </div>
               <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
@@ -79,11 +83,14 @@ export default function BlogIndex() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {remainingPosts.map((post) => (
                 <Link href={`/blog/${post.slug}`} key={post.slug} className="group flex flex-col bg-[#101114] border border-[#141518] rounded-[20px] overflow-hidden transition-transform duration-300 hover:-translate-y-1">
-                  <div className="w-full h-[200px] bg-[#1A1A1A] overflow-hidden">
-                    <img 
+                  <div className="w-full h-[200px] bg-[#1A1A1A] overflow-hidden relative">
+                    <Image 
                       src={post.image} 
                       alt={post.title} 
-                      className="w-full h-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105 group-hover:opacity-100"
+                      fill
+                      loading="lazy"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover opacity-90 transition-transform duration-500 group-hover:scale-105 group-hover:opacity-100"
                     />
                   </div>
                   <div className="p-6 flex flex-col flex-1">
