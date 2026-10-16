@@ -7,7 +7,7 @@ export function BlogHighlightSection() {
   const recentPosts = blogPosts.slice(0, 3);
 
   return (
-    <section className="bg-[#0B0C0E] py-24 md:py-32 border-t border-[#141518] cv-auto">
+    <section className="bg-[#0B0C0E] py-24 md:py-32 border-t border-[#141518]">
       <div className="container mx-auto px-5 md:px-12 max-w-[1240px]">
         
         {/* Header */}

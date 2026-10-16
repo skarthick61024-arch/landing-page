@@ -50,7 +50,7 @@ export function FAQSection() {
   ]
 
   return (
-    <section className="bg-[#0B0C0E] pt-20 md:pt-28 pb-16 md:pb-20 border-t border-[#141518] cv-auto">
+    <section className="bg-[#0B0C0E] pt-20 md:pt-28 pb-16 md:pb-20 border-t border-[#141518]">
       <div className="container mx-auto px-5 md:px-12 max-w-[800px]">
         <div className="text-center mb-16">
           <h2 className="text-[32px] md:text-[42px] font-bold text-[#F5F5F5] tracking-tight mb-4">

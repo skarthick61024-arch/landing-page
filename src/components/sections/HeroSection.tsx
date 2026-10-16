@@ -1,8 +1,9 @@
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
 export function HeroSection({
-  title = "Telegram Downloader",
-  subtitle = "Download files, documents and media directly from your Telegram Saved Messages with TeleTorrent. Fast, simple downloads with resume support and background downloading."
+  title = "TeleTorrent – Fast Telegram Downloader",
+  subtitle = "Download movies, 4K videos, documents, and files directly from your Telegram Saved Messages with TeleTorrent. Fast, uncapped downloads with resume support and background downloading for Android."
 }: {
   title?: string;
   subtitle?: string;
@@ -18,34 +19,54 @@ export function HeroSection({
         {/* Badge */}
         <div className="bg-[#101114] border border-[#141518] text-[#8D919B] text-[12px] font-medium px-4 py-1.5 rounded-full mb-8 flex items-center gap-2">
           <div className="w-1.5 h-1.5 bg-[#B7FF32] rounded-full shadow-[0_0_8px_rgba(183,255,50,0.6)] animate-pulse"></div>
-          Modern Telegram File Manager
+          Official TeleTorrent Android Downloader
         </div>
 
         {/* Headline */}
-        <h1 className="text-[38px] md:text-[56px] lg:text-[64px] font-bold text-[#F5F5F5] tracking-tight mb-6 max-w-[800px] leading-[1.1]">
+        <h1 className="text-[38px] md:text-[56px] lg:text-[64px] font-bold text-[#F5F5F5] tracking-tight mb-6 max-w-[950px] leading-[1.1]">
           {title}
         </h1>
 
         {/* Supporting text */}
-        <p className="text-[15px] md:text-[17px] text-[#8D919B] leading-[1.6] max-w-[580px] mx-auto mb-10">
+        <p className="text-[15px] md:text-[17px] text-[#8D919B] leading-[1.6] max-w-[620px] mx-auto mb-10">
           {subtitle}
         </p>
         
         {/* CTAs */}
         <div className="flex flex-col items-center gap-6 mb-16 md:mb-24 w-full justify-center">
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-            <a href="mailto:notify@teletorrent.me?subject=Notify%20Me%20on%20Launch" className="w-full sm:w-auto rounded-full bg-[#B7FF32] text-[#000000] hover:bg-[#a3e62c] font-semibold px-8 h-[52px] md:h-[56px] text-[15px] transition-all flex items-center justify-center gap-2">
+            <a
+              href="/teletorrent.apk"
+              download
+              className="w-full sm:w-auto rounded-full bg-[#B7FF32] text-[#000000] hover:bg-[#a3e62c] font-bold px-8 h-[52px] md:h-[56px] text-[15px] transition-all flex items-center justify-center gap-2 shadow-[0_10px_25px_rgba(183,255,50,0.25)]"
+            >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
               </svg>
-              Notify Me on Launch
+              Download TeleTorrent APK (Free)
             </a>
-            <a href="#workspace" className="w-full sm:w-auto rounded-full bg-white/5 border border-white/20 text-[#F5F5F5] hover:bg-white/10 hover:border-white/30 font-semibold px-8 h-[52px] md:h-[56px] text-sm md:text-base transition-all flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B7FF32]">
-              Learn More
-            </a>
+            <Link
+              href="/telegram-movie-downloader"
+              className="w-full sm:w-auto rounded-full bg-white/5 border border-white/20 text-[#F5F5F5] hover:bg-white/10 hover:border-white/30 font-semibold px-8 h-[52px] md:h-[56px] text-sm md:text-base transition-all flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B7FF32]"
+            >
+              Movie Downloader →
+            </Link>
+          </div>
+
+          {/* Trust and Safety Rating Badge */}
+          <div className="flex items-center gap-4 text-xs font-mono text-[#8D919B]">
+            <span className="flex items-center gap-1.5 text-[#F5F5F5]">
+              <span className="text-[#B7FF32]">✓</span> v1.2.0 Direct APK
+            </span>
+            <span>•</span>
+            <span>12 MB</span>
+            <span>•</span>
+            <span>Android 8.0+</span>
+            <span>•</span>
+            <span className="text-emerald-400">100% Virus Free</span>
           </div>
           
-          <div className="text-[12px] text-[#8D919B] mt-2 max-w-[500px] text-center px-4">
+          <div className="text-[12px] text-[#8D919B] max-w-[500px] text-center px-4">
             TeleTorrent is an independent third-party application and is not affiliated with, endorsed by, or sponsored by Telegram.
           </div>
         </div>
@@ -55,11 +76,11 @@ export function HeroSection({
           
           {/* Header row */}
           <div className="flex justify-between items-end border-b border-[#141518] pb-4 px-2">
-            <h2 className="text-[#F5F5F5] font-bold text-[18px] md:text-[22px]">Downloads</h2>
+            <h2 className="text-[#F5F5F5] font-bold text-[18px] md:text-[22px]">TeleTorrent Active Queue</h2>
             <div className="flex gap-6 md:gap-10 text-right">
               <div>
                 <div className="text-[#8D919B] text-[10px] md:text-[11px] font-medium mb-1">Live Speed</div>
-                <div className="text-[#B7FF32] text-[14px] md:text-[16px] font-bold font-mono">2.5 MB/s</div>
+                <div className="text-[#B7FF32] text-[14px] md:text-[16px] font-bold font-mono">48.2 MB/s</div>
               </div>
               <div>
                 <div className="text-[#8D919B] text-[10px] md:text-[11px] font-medium mb-1">Active</div>
@@ -72,118 +93,70 @@ export function HeroSection({
             </div>
           </div>
 
-          {/* Download Queue */}
-          <div className="flex flex-col gap-3">
+          {/* Cards container */}
+          <div className="flex flex-col gap-4">
             
-            {/* Active Item 1 */}
-            <div className="bg-[#101114] border border-[#141518] rounded-[16px] p-3 md:p-4 flex flex-col md:flex-row items-start md:items-center gap-4 relative overflow-hidden group">
-              <div className="absolute top-0 left-0 w-1 h-full bg-[#B7FF32]"></div>
-              
-              <div className="flex w-full items-center gap-4">
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-[12px] bg-[#1A1A1A] shrink-0 overflow-hidden relative border border-[#222222]">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#3B82F6]/20 to-[#1E3A8A]/20"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <svg className="w-5 h-5 text-[#3B82F6]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 10l4.55-2.27A1 1 0 0121 8.62v6.76a1 1 0 01-1.45.9L15 14v4a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1h10a1 1 0 011 1v4z"/></svg>
+            {/* Card 1: Active Inception Movie Download */}
+            <div className="bg-[#101114] border border-[#141518] rounded-[16px] p-4 flex flex-col gap-3">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-[10px] bg-[#141518] flex items-center justify-center shrink-0">
+                    <svg className="w-5 h-5 text-[#8D919B]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
                   </div>
-                </div>
-                
-                <div className="flex-1 min-w-0 flex flex-col gap-1.5 md:gap-1">
-                  <div className="flex justify-between items-start">
-                    <h3 className="text-[#F5F5F5] text-[13px] md:text-[15px] font-semibold truncate pr-4">Demonstration_Video_4K.mp4</h3>
-                    <span className="text-[#B7FF32] text-[11px] md:text-[12px] font-bold shrink-0 font-mono hidden md:block">2.5 MB/s</span>
-                  </div>
-                  
-                  <div className="flex justify-between items-end w-full">
-                    <div className="text-[#8D919B] text-[11px] md:text-[12px] font-medium">
-                      1.2 GB <span className="mx-1 text-[#333333]">/</span> 3.8 GB
+                  <div className="text-left">
+                    <div className="text-[#F5F5F5] text-[14px] md:text-[15px] font-semibold truncate max-w-[200px] sm:max-w-[300px]">
+                      Inception.2010.IMAX.2160p.HDR.x265.mkv
                     </div>
-                    <span className="text-[#B7FF32] text-[11px] md:text-[12px] font-bold shrink-0 font-mono md:hidden">2.5 MB/s</span>
-                  </div>
-                  
-                  {/* Progress bar */}
-                  <div className="w-full h-1.5 md:h-2 bg-[#1A1A1A] rounded-full mt-1 overflow-hidden relative">
-                    <div className="absolute top-0 left-0 h-full bg-[#B7FF32] rounded-full w-[31.5%] relative overflow-hidden">
-                      <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.4),transparent)] -translate-x-full animate-[shimmer_2s_infinite]"></div>
+                    <div className="text-[#8D919B] text-[12px] mt-0.5">
+                      1.28 GB / 1.78 GB · 28.5 MB/s
                     </div>
                   </div>
                 </div>
-                
-                {/* Controls */}
-                <div className="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-[#1A1A1A] border border-[#222222] hover:bg-[#222222] cursor-pointer shrink-0 transition-colors">
-                  <svg className="w-4 h-4 text-[#F5F5F5]" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>
+                <div className="text-right">
+                  <span className="text-[#B7FF32] text-[12px] font-mono font-medium bg-[#B7FF32]/10 px-2 py-0.5 rounded-full border border-[#B7FF32]/20">
+                    72%
+                  </span>
                 </div>
+              </div>
+              <div className="w-full bg-[#141518] h-1.5 rounded-full overflow-hidden">
+                <div className="bg-gradient-to-r from-[#B7FF32] to-[#00c7e8] h-full w-[72%] rounded-full"></div>
               </div>
             </div>
 
-            {/* Active Item 2 */}
-            <div className="bg-[#101114] border border-[#141518] rounded-[16px] p-3 md:p-4 flex flex-col md:flex-row items-start md:items-center gap-4 relative overflow-hidden group">
-              <div className="absolute top-0 left-0 w-1 h-full bg-[#B7FF32]"></div>
-              
-              <div className="flex w-full items-center gap-4">
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-[12px] bg-[#1A1A1A] shrink-0 overflow-hidden relative border border-[#222222]">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#D8B4FE]/20 to-[#9333EA]/20"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-[#D8B4FE] text-[12px] md:text-[14px] font-bold tracking-wider">ZIP</span>
+            {/* Card 2: Completed Archive */}
+            <div className="bg-[#101114] border border-[#141518] rounded-[16px] p-4 flex flex-col gap-3">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-[10px] bg-[#141518] flex items-center justify-center shrink-0">
+                    <svg className="w-5 h-5 text-[#8D919B]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                    </svg>
                   </div>
-                </div>
-                
-                <div className="flex-1 min-w-0 flex flex-col gap-1.5 md:gap-1">
-                  <div className="flex justify-between items-start">
-                    <h3 className="text-[#F5F5F5] text-[13px] md:text-[15px] font-semibold truncate pr-4">Project_Assets_2026.zip</h3>
-                    <span className="text-[#B7FF32] text-[11px] md:text-[12px] font-bold shrink-0 font-mono hidden md:block">780 KB/s</span>
-                  </div>
-                  
-                  <div className="flex justify-between items-end w-full">
-                    <div className="text-[#8D919B] text-[11px] md:text-[12px] font-medium">
-                      512 MB <span className="mx-1 text-[#333333]">/</span> 1.4 GB
+                  <div className="text-left">
+                    <div className="text-[#F5F5F5] text-[14px] md:text-[15px] font-semibold truncate max-w-[200px] sm:max-w-[300px]">
+                      Project_Source_Assets_2026.zip
                     </div>
-                    <span className="text-[#B7FF32] text-[11px] md:text-[12px] font-bold shrink-0 font-mono md:hidden">780 KB/s</span>
-                  </div>
-                  
-                  {/* Progress bar */}
-                  <div className="w-full h-1.5 md:h-2 bg-[#1A1A1A] rounded-full mt-1 overflow-hidden relative">
-                    <div className="absolute top-0 left-0 h-full bg-[#B7FF32] rounded-full w-[36%] relative overflow-hidden">
-                      <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.4),transparent)] -translate-x-full animate-[shimmer_2s_infinite_0.5s]"></div>
+                    <div className="text-[#8D919B] text-[12px] mt-0.5">
+                      860 MB · Saved to Downloads/TeleTorrent
                     </div>
                   </div>
                 </div>
-                
-                {/* Controls */}
-                <div className="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-[#1A1A1A] border border-[#222222] hover:bg-[#222222] cursor-pointer shrink-0 transition-colors">
-                  <svg className="w-4 h-4 text-[#F5F5F5]" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>
+                <div className="text-right">
+                  <span className="text-emerald-400 text-[12px] font-mono font-medium bg-emerald-400/10 px-2 py-0.5 rounded-full border border-emerald-400/20">
+                    ✓ Ready
+                  </span>
                 </div>
               </div>
-            </div>
-
-            {/* Queued Item */}
-            <div className="bg-[#0B0C0E] border border-[#141518] rounded-[16px] p-3 md:p-4 flex flex-col md:flex-row items-start md:items-center gap-4 relative overflow-hidden">
-              <div className="flex w-full items-center gap-4">
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-[12px] bg-[#101114] shrink-0 overflow-hidden relative border border-[#1A1A1A]">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <svg className="w-5 h-5 text-[#A1A7B4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
-                  </div>
-                </div>
-                
-                <div className="flex-1 min-w-0 flex flex-col justify-center gap-1">
-                  <div className="flex justify-between items-center">
-                    <h3 className="text-[#F5F5F5] text-sm md:text-base font-semibold truncate pr-4">Q3_Financial_Report.pdf</h3>
-                    <span className="text-[#A1A7B4] text-xs font-medium shrink-0 bg-[#141518] px-2 py-0.5 rounded">Queued</span>
-                  </div>
-                  <div className="text-[#A1A7B4] text-xs font-medium">
-                    0 B <span className="mx-1 text-[#555555]">/</span> 45 MB
-                  </div>
-                  {/* Progress bar */}
-                  <div className="w-full h-1.5 md:h-2 bg-[#1A1A1A] rounded-full mt-1 overflow-hidden"></div>
-                </div>
-                
-                {/* Controls */}
-                <div className="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-[#101114] border border-[#1A1A1A] cursor-pointer shrink-0">
-                  <svg className="w-4 h-4 text-[#A1A7B4]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                </div>
+              <div className="w-full bg-[#141518] h-1.5 rounded-full overflow-hidden">
+                <div className="bg-emerald-400 h-full w-full rounded-full"></div>
               </div>
             </div>
 
           </div>
+
         </div>
 
       </div>

@@ -1,6 +1,6 @@
 export function DownloadExperienceSection() {
   return (
-    <section className="bg-[#000000] py-24 md:py-32 overflow-hidden border-t border-[#141518] cv-auto">
+    <section className="bg-[#000000] py-24 md:py-32 overflow-hidden border-t border-[#141518]">
       <div className="container mx-auto px-5 md:px-12 max-w-[1240px]">
         
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">

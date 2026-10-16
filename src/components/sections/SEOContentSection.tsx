@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export function SEOContentSection() {
   return (
-    <section className="bg-[#000000] py-20 border-t border-[#141518] cv-auto" aria-labelledby="seo-overview-heading">
+    <section className="bg-[#000000] py-20 border-t border-[#141518]" aria-labelledby="seo-overview-heading">
       <div className="container mx-auto px-5 md:px-12 max-w-[1240px]">
         
         {/* Section Header */}

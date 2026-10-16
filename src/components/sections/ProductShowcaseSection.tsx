@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export function ProductShowcaseSection() {
   return (
-    <section id="workspace" className="bg-[#000000] py-24 md:py-32 border-t border-[#141518] overflow-hidden cv-auto">
+    <section id="workspace" className="bg-[#000000] py-24 md:py-32 border-t border-[#141518] overflow-hidden">
       <div className="container mx-auto px-5 md:px-8 max-w-[1400px]">
         
         {/* Section Header */}
