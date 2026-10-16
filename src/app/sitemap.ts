@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   
   const staticRoutes = [
     '',
+    '/telegram-movie-downloader',
     '/telegram-downloader',
     '/telegram-video-downloader',
     '/telegram-file-downloader',
@@ -26,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
-    changeFrequency: route === '' || route === '/blog' ? 'weekly' : 'monthly',
-    priority: route === '' ? 1.0 : (route.includes('downloader') || route.includes('manager') ? 0.9 : 0.6),
+    changeFrequency: route === '' || route === '/telegram-movie-downloader' || route === '/blog' ? 'weekly' : 'monthly',
+    priority: route === '' || route === '/telegram-movie-downloader' ? 1.0 : (route.includes('downloader') || route.includes('manager') ? 0.9 : 0.6),
   }));
 }

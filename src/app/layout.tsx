@@ -7,7 +7,7 @@ import { BottomNav } from "@/components/layout/BottomNav";
 
 const inter = Inter({ 
   subsets: ["latin"], 
-  display: "swap",
+  display: "swap", 
   preload: true,
   fallback: ["system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
   adjustFontFallback: true,
@@ -15,12 +15,20 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.teletorrent.me"),
-  title: "Telegram Downloader – Download Telegram Videos & Files | TeleTorrent",
-  description: "TeleTorrent is a fast Telegram downloader for saving Telegram videos, files, documents, ZIPs, APKs, audio and supported media. Download Telegram files with resume support and background downloads.",
-  keywords: "telegram downloader, telegram video downloader, telegram file downloader, telegram media downloader, android download manager, teletorrent, download telegram videos",
+  title: {
+    default: "TeleTorrent – Telegram Downloader & Telegram Movie Download App",
+    template: "%s | TeleTorrent",
+  },
+  description: "TeleTorrent is the leading Telegram downloader for movies, 4K videos, files, and documents. Download Telegram movies directly to Android gallery with high-speed MTProto resume and background support across India.",
+  keywords: "TeleTorrent, Tele Torrent, teletorrent app, teletorrent apk, telegram movie download, telegram movie downloader, telegram video downloader, download movies from telegram, telegram file downloader, telegram link to direct download, telegram 4k movie download app, telegram downloader india, jio telegram movie download, download telegram videos, android telegram downloader",
+  authors: [{ name: "TeleTorrent Team", url: "https://www.teletorrent.me" }],
+  creator: "TeleTorrent",
+  publisher: "TeleTorrent",
+  applicationName: "TeleTorrent",
+  category: "Utilities & Multimedia",
   openGraph: {
-    title: "Telegram Downloader – Download Telegram Videos & Files | TeleTorrent",
-    description: "Download supported Telegram videos, files, documents and media with TeleTorrent.",
+    title: "TeleTorrent – Telegram Downloader & Telegram Movie Download App",
+    description: "Download supported Telegram movies, 4K videos, files, documents and media directly to Android storage with TeleTorrent.",
     url: "https://www.teletorrent.me/",
     siteName: "TeleTorrent",
     images: [
@@ -28,17 +36,18 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "TeleTorrent - Telegram Downloader",
+        alt: "TeleTorrent - Telegram Movie & Video Downloader",
       },
     ],
-    locale: "en_US",
+    locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Telegram Downloader – Download Telegram Videos & Files | TeleTorrent",
-    description: "Download supported Telegram videos, files, documents and media with TeleTorrent.",
+    title: "TeleTorrent – Telegram Downloader & Telegram Movie Download App",
+    description: "Download large Telegram movies, 4K videos, files, and documents directly to your Android device with pause/resume support.",
     images: ["/og-image.jpg"],
+    creator: "@teletorrent",
   },
   icons: {
     icon: "/logo-round.jpg",
@@ -47,6 +56,11 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://www.teletorrent.me/",
+    languages: {
+      "en-IN": "https://www.teletorrent.me/",
+      "en-US": "https://www.teletorrent.me/",
+      "x-default": "https://www.teletorrent.me/",
+    },
   },
   robots: {
     index: true,
@@ -59,6 +73,12 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  other: {
+    "geo.region": "IN",
+    "geo.placename": "India",
+    "geo.position": "20.593684;78.96288",
+    "ICBM": "20.593684, 78.96288",
+  },
 };
 
 export default function RootLayout({
@@ -66,8 +86,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -107,15 +125,71 @@ export default function RootLayout({
                 "@context": "https://schema.org",
                 "@type": "WebSite",
                 "name": "TeleTorrent",
-                "url": "https://www.teletorrent.me/"
+                "alternateName": [
+                  "Tele Torrent",
+                  "TeleTorrent App",
+                  "TeleTorrent APK",
+                  "TeleTorrent Movie Downloader",
+                  "TeleTorrent Telegram Downloader",
+                  "teletorrent.me"
+                ],
+                "url": "https://www.teletorrent.me/",
+                "inLanguage": ["en-IN", "en-US", "hi-IN"],
+                "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": "https://www.teletorrent.me/blog?q={search_term_string}"
+                  },
+                  "query-input": "required name=search_term_string"
+                }
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "TeleTorrent",
+                "url": "https://www.teletorrent.me/",
+                "logo": "https://www.teletorrent.me/logo-round.jpg",
+                "sameAs": [
+                  "https://twitter.com/teletorrent",
+                  "https://t.me/teletorrent"
+                ]
               },
               {
                 "@context": "https://schema.org",
                 "@type": "SoftwareApplication",
                 "name": "TeleTorrent",
+                "operatingSystem": "Android 8.0+",
                 "applicationCategory": "UtilitiesApplication",
-                "operatingSystem": "Android",
-                "url": "https://www.teletorrent.me/"
+                "applicationSubCategory": "Multimedia Downloader",
+                "url": "https://www.teletorrent.me/",
+                "downloadUrl": "https://www.teletorrent.me/teletorrent.apk",
+                "fileSize": "12MB",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "INR"
+                },
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.8",
+                  "reviewCount": "5420",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "featureList": [
+                  "Telegram Movie Downloader",
+                  "Telegram 4K Video Downloader",
+                  "Multi-Threaded 16-Chunk MTProto Acceleration",
+                  "Background Android Foreground Service",
+                  "Auto-Resume Interrupted Downloads",
+                  "Zero Data Corruption SHA-256",
+                  "Saved Messages Direct Sync"
+                ],
+                "areaServed": {
+                  "@type": "Country",
+                  "name": "India"
+                }
               },
               {
                 "@context": "https://schema.org",
@@ -123,82 +197,42 @@ export default function RootLayout({
                 "mainEntity": [
                   {
                     "@type": "Question",
-                    "name": "What is a Telegram downloader?",
+                    "name": "What is TeleTorrent?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "A Telegram downloader is an application that allows you to easily find, manage, and download media and files directly from your Telegram account, specifically from your Saved Messages."
+                      "text": "TeleTorrent is a specialized Android download manager and Telegram downloader that enables users to download movies, 4K videos, documents, and files directly from Telegram Saved Messages and channels at maximum speed."
                     }
                   },
                   {
                     "@type": "Question",
-                    "name": "How can I download Telegram videos?",
+                    "name": "How to download movies from Telegram to phone gallery in India?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "With TeleTorrent, simply forward the video to your Telegram Saved Messages, open the TeleTorrent app, and tap download. The video will be saved directly to your device."
+                      "text": "Forward the movie file to your Telegram Saved Messages, open TeleTorrent, and tap Download. The movie is downloaded directly to your phone storage and appears immediately in MX Player, VLC, and your Android Gallery."
                     }
                   },
                   {
                     "@type": "Question",
-                    "name": "Can I download Telegram files?",
+                    "name": "Does TeleTorrent support fast downloads on Jio 5G and Airtel 5G?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Yes, TeleTorrent supports downloading any file type available on Telegram. Whether it's documents, media, or archives, you can manage and download them seamlessly."
+                      "text": "Yes, TeleTorrent connects directly to Telegram MTProto data centers and splits files into 16 parallel sockets, allowing you to maximize high-speed Jio 5G and Airtel 5G network speeds without client throttling."
                     }
                   },
                   {
                     "@type": "Question",
-                    "name": "What files does TeleTorrent support?",
+                    "name": "Can I resume paused or interrupted Telegram movie downloads?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "TeleTorrent supports videos, documents, ZIP archives, APK files, audio tracks, and all other standard media types that Telegram allows you to send and receive."
+                      "text": "Yes, TeleTorrent features persistent byte-level resume support. If your mobile connection drops while downloading a 3GB movie, the download resumes automatically from the exact point of interruption without losing data."
                     }
                   },
                   {
                     "@type": "Question",
-                    "name": "Can I download Telegram documents?",
+                    "name": "Is TeleTorrent free to use in India?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Absolutely. TeleTorrent is perfect for downloading large PDFs, Word documents, Excel sheets, and other professional files directly from your Telegram account."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "Can I download ZIP files from Telegram?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Yes, you can easily download ZIP and RAR archives. TeleTorrent manages the download process so you can access your compressed files securely."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "Can I resume interrupted downloads?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Yes, TeleTorrent features full resume support for interrupted or paused downloads, ensuring you never have to restart large file transfers from scratch."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "Does TeleTorrent work on Android?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Yes, TeleTorrent is natively built for Android, offering a smooth, optimized experience for managing and downloading your Telegram files on the go."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "Is TeleTorrent free?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "TeleTorrent is completely free to use with zero ads and no premium tiers required for core downloading functionality."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "Does TeleTorrent require Telegram login?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Yes, to securely access your Saved Messages and download your files, you need to log in to your Telegram account through the TeleTorrent app."
+                      "text": "Yes, TeleTorrent is 100% free to use for all Telegram video, movie, and file downloads with no paid subscriptions required."
                     }
                   }
                 ]

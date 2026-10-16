@@ -34,6 +34,7 @@ export function Footer() {
           <div>
             <h4 className="font-bold text-[#F5F5F5] mb-4 text-[14px]">Tools</h4>
             <ul className="space-y-3">
+              <li><Link href="/telegram-movie-downloader" className="text-[14px] text-[#B7FF32] hover:text-[#F5F5F5] font-medium transition-colors">Movie Downloader</Link></li>
               <li><Link href="/telegram-downloader" className="text-[14px] text-[#8D919B] hover:text-[#F5F5F5] transition-colors">Telegram Downloader</Link></li>
               <li><Link href="/telegram-video-downloader" className="text-[14px] text-[#8D919B] hover:text-[#F5F5F5] transition-colors">Video Downloader</Link></li>
               <li><Link href="/telegram-file-downloader" className="text-[14px] text-[#8D919B] hover:text-[#F5F5F5] transition-colors">File Downloader</Link></li>
