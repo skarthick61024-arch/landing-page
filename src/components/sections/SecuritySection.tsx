@@ -51,7 +51,7 @@ export function SecuritySection() {
                 </div>
                 <div>
                   <h4 className="text-[18px] font-bold text-white mb-2">Secure account management</h4>
-                  <p className="text-[15px] text-[#A1A1A1]">Authentication is handled locally using secure TDLib protocols.</p>
+                  <p className="text-[15px] text-[#A1A1A1]">Authentication is handled locally on your device with end-to-end encrypted protocol security.</p>
                 </div>
               </li>
             </ul>

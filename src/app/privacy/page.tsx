@@ -35,10 +35,10 @@ export default function PrivacyPolicyPage() {
         <h2 className="text-[24px] font-bold text-[#F5F5F5] mt-8 mb-4">1. Important Notice Regarding Telegram</h2>
         <ul className="list-disc pl-6 space-y-2 mb-4 text-[#8D919B]">
           <li>
-            <strong className="text-[#F5F5F5]">Independent Third-Party Client:</strong> TeleTorrent is developed independently using the official Telegram Database Library (TDLib). It is not affiliated with, endorsed by, sponsored by, or operated by Telegram FZ-LLC.
+            <strong className="text-[#F5F5F5]">Independent Third-Party Client:</strong> TeleTorrent is developed independently as a utility client for Android. It is not affiliated with, endorsed by, sponsored by, or operated by Telegram FZ-LLC.
           </li>
           <li>
-            <strong className="text-[#F5F5F5]">No Intermediate Cloud Servers:</strong> TeleTorrent does not operate any proprietary servers, intermediate proxies, or backend cloud databases. All communication occurs directly between your Android device and Telegram&apos;s servers via encrypted MTProto protocols.
+            <strong className="text-[#F5F5F5]">No Intermediate Cloud Servers:</strong> TeleTorrent does not operate any proprietary servers, intermediate proxies, or backend cloud databases. All communication occurs directly between your Android device and Telegram&apos;s servers via encrypted transport protocols.
           </li>
           <li>
             <strong className="text-[#F5F5F5]">Telegram Privacy Policy:</strong> Your use of Telegram services is governed by the{' '}
@@ -61,7 +61,7 @@ export default function PrivacyPolicyPage() {
           To connect your account, you provide your international phone number, one-time verification code (OTP), and two-factor authentication (2FA) cloud password (if enabled).
         </p>
         <ul className="list-disc pl-6 space-y-2 mb-4 text-[#8D919B]">
-          <li>These credentials are processed exclusively by the local TDLib client and sent directly to Telegram servers.</li>
+          <li>These credentials are processed exclusively by the local application on your device and sent directly to Telegram servers.</li>
           <li>TeleTorrent never transmits or stores your passwords, OTP codes, or phone numbers on third-party servers.</li>
           <li>
             Basic profile metadata (Telegram User ID, Display Name, Username, Phone Number, and avatar path) is cached locally on your device in secure storage to enable instant UI loading.
@@ -70,15 +70,15 @@ export default function PrivacyPolicyPage() {
 
         <h3 className="text-[18px] font-bold text-[#F5F5F5] mt-6 mb-3">B. Messages, File Metadata, and Downloads</h3>
         <p className="text-[16px] text-[#8D919B] leading-relaxed mb-4">
-          When you browse and sync your Saved Messages, the application indexes message and file metadata (file names, sizes, MIME types, chat IDs, message IDs, captions, thumbnail paths) in a local on-device database (Isar) to support fast search and offline filtering.
+          When you browse and sync your Saved Messages, the application indexes message and file metadata (file names, sizes, MIME types, chat IDs, message IDs, captions, thumbnail paths) in a local on-device database to support fast search and offline filtering.
         </p>
         <p className="text-[16px] text-[#8D919B] leading-relaxed mb-4">
-          Downloaded files are streamed directly from Telegram servers by TDLib into your device storage (such as your device&apos;s <code className="text-[#B7FF32] bg-[#1F2228] px-2 py-0.5 rounded">Download/TeleTorrent</code> folder). TeleTorrent does not upload or mirror your downloaded content anywhere.
+          Downloaded files are streamed directly from Telegram servers into your device storage (such as your device&apos;s <code className="text-[#B7FF32] bg-[#1F2228] px-2 py-0.5 rounded">Download/TeleTorrent</code> folder). TeleTorrent does not upload or mirror your downloaded content anywhere.
         </p>
 
         <h3 className="text-[18px] font-bold text-[#F5F5F5] mt-6 mb-3">C. Problem Reports &amp; Diagnostics</h3>
         <p className="text-[16px] text-[#8D919B] leading-relaxed mb-8">
-          If you submit a Problem Report via the app, non-sensitive diagnostic details (app version, Android OS version, device model, and TDLib state) along with your description and optional screenshot are formatted and sent directly to your own Telegram Saved Messages for your records. No data is sent to external support collectors without your initiation.
+          If you submit a Problem Report via the app, non-sensitive diagnostic details (app version, Android OS version, device model, and connection state) along with your description and optional screenshot are formatted and sent directly to your own Telegram Saved Messages for your records. No data is sent to external support collectors without your initiation.
         </p>
 
         <h2 className="text-[24px] font-bold text-[#F5F5F5] mt-8 mb-4">3. Advertising &amp; Analytics (Third-Party Services)</h2>
@@ -158,7 +158,7 @@ export default function PrivacyPolicyPage() {
             <strong className="text-[#F5F5F5]">WAKE_LOCK:</strong> Prevents the CPU from sleeping during active background file downloading.
           </li>
           <li>
-            <strong className="text-[#F5F5F5]">REQUEST_INSTALL_PACKAGES:</strong> Enables launching the system installer when you tap to install a downloaded APK file.
+            <strong className="text-[#F5F5F5]">REQUEST_INSTALL_PACKAGES:</strong> Enables opening and handling downloaded package files directly upon user request.
           </li>
         </ul>
 
@@ -173,7 +173,7 @@ export default function PrivacyPolicyPage() {
             <strong className="text-[#F5F5F5]">Local Data Deletion:</strong> You can clear your local cache, message indexes, and temporary files at any time via <code className="text-[#B7FF32] bg-[#1F2228] px-2 py-0.5 rounded">Settings &gt; Account &amp; Data &gt; Delete Local Data</code>.
           </li>
           <li>
-            <strong className="text-[#F5F5F5]">Session Revocation:</strong> Tapping <code className="text-[#B7FF32] bg-[#1F2228] px-2 py-0.5 rounded">Log Out</code> terminates the TDLib session on Telegram servers and clears all local session keys and profile data.
+            <strong className="text-[#F5F5F5]">Session Revocation:</strong> Tapping <code className="text-[#B7FF32] bg-[#1F2228] px-2 py-0.5 rounded">Log Out</code> terminates the active session on Telegram servers and clears all local session keys and profile data.
           </li>
           <li>
             <strong className="text-[#F5F5F5]">No TeleTorrent Cloud Account:</strong> Because TeleTorrent operates zero cloud user accounts, there is no remote account database to delete.
@@ -201,7 +201,7 @@ export default function PrivacyPolicyPage() {
 
         <h2 className="text-[24px] font-bold text-[#F5F5F5] mt-8 mb-4">7. Security</h2>
         <p className="text-[16px] text-[#8D919B] leading-relaxed mb-8">
-          All Telegram communications are secured with Telegram&apos;s MTProto protocol. Communications with third-party SDKs utilize industry-standard HTTPS/TLS encryption. Local app data is isolated within Android&apos;s secure application sandbox.
+          All Telegram communications are secured with Telegram&apos;s official cryptographic transmission protocols. Communications with third-party SDKs utilize industry-standard HTTPS/TLS encryption. Local app data is isolated within Android&apos;s secure application sandbox.
         </p>
 
         <h2 className="text-[24px] font-bold text-[#F5F5F5] mt-8 mb-4">8. Children&apos;s Privacy</h2>

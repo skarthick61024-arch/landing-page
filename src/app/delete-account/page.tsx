@@ -24,7 +24,7 @@ export default function DeleteAccountPage() {
         <div className="bg-[#16181D] border border-[#232730] rounded-2xl p-6 mb-8">
           <h3 className="text-[20px] font-bold text-[#F5F5F5] mb-2">Important Architecture Notice</h3>
           <p className="text-[15px] text-[#8D919B] leading-relaxed">
-            TeleTorrent is a client-side Android application that operates directly via the official Telegram API (TDLib).{' '}
+            TeleTorrent is a client-side Android application that operates directly via official Telegram client protocols.{' '}
             <strong className="text-[#F5F5F5]">
               TeleTorrent does NOT operate its own cloud account database, proprietary user servers, or remote storage.
             </strong>{' '}
@@ -55,7 +55,7 @@ export default function DeleteAccountPage() {
           <li>In TeleTorrent, navigate to <strong className="text-[#F5F5F5]">Settings &gt; Account &amp; Data</strong>.</li>
           <li>Tap <strong className="text-[#EF4444]">Log Out</strong>.</li>
           <li>
-            This revokes the TDLib session on Telegram servers and immediately wipes your local encryption keys and session tokens.
+            This revokes the active session on Telegram servers and immediately wipes your local encryption keys and session tokens.
           </li>
         </ol>
 

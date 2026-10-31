@@ -7,14 +7,14 @@ import { ComparisonSection } from "@/components/sections/ComparisonSection"
 
 export const metadata: Metadata = {
   title: "Telegram Movie Downloader – Download Telegram Movies & 4K Videos to Gallery | TeleTorrent",
-  description: "Download 4K, 1080p, and HD movies from Telegram directly to your phone gallery with TeleTorrent. Fast multi-thread downloads, pause & resume support, and background downloading for Android.",
-  keywords: "telegram movie download, telegram movie downloader, download telegram movies, telegram movie download app, telegram link to direct download, telegram 4k movie download, download movies from telegram to gallery, telegram movie downloader android apk, jio telegram movie download, telegram bot movie download app",
+  description: "Download 4K, 1080p, and HD movies from Telegram directly to your phone gallery with TeleTorrent. Fast multi-thread downloads, pause & resume support, and background downloading for Android across India.",
+  keywords: "telegram movie download, telegram movie downloader, download telegram movies, telegram movie download app, telegram link to direct download, telegram 4k movie download, download movies from telegram to gallery, telegram movie downloader google play store, jio 5g telegram movie download, telegram movie download app india",
   alternates: {
     canonical: "https://www.teletorrent.me/telegram-movie-downloader",
   },
   openGraph: {
     title: "Telegram Movie Downloader – Download Telegram Movies & 4K Videos | TeleTorrent",
-    description: "The fastest Telegram movie downloader app for Android. Save 4K movies, MKV & MP4 directly to your gallery with resume support and high-speed MTProto connections.",
+    description: "The fastest Telegram movie downloader app for Android. Save 4K movies, MKV & MP4 directly to your gallery with resume support and high-speed TurboStream parallel acceleration.",
     url: "https://www.teletorrent.me/telegram-movie-downloader",
     type: "website",
     images: [
@@ -42,11 +42,11 @@ export default function TelegramMovieDownloaderPage() {
     },
     {
       q: "Can I resume large 2GB to 4GB movie downloads if my connection drops?",
-      a: "Yes! TeleTorrent features multi-socket chunking and persistent resume support. If your 5G/4G or Wi-Fi drops while downloading a 3GB movie, the download automatically pauses and resumes from the exact byte where it left off, saving your mobile data."
+      a: "Yes! TeleTorrent features 16-channel TurboStream parallel acceleration and persistent resume support. If your 5G/4G or Wi-Fi drops while downloading a 3GB movie, the download automatically pauses and resumes from the exact byte where it left off, saving your mobile data."
     },
     {
       q: "Does TeleTorrent download Telegram movies faster than the official Telegram app?",
-      a: "Yes. TeleTorrent connects directly to Telegram's MTProto data centers and splits large video files into parallel streams. This bypasses standard client throttling, allowing you to max out your Jio 5G, Airtel 5G, or fiber internet bandwidth."
+      a: "Yes. TeleTorrent accelerates downloads across 16 parallel high-speed TurboStream channels. This bypasses standard single-stream client throttling, allowing you to max out your Jio 5G, Airtel 5G, or fiber internet bandwidth."
     },
     {
       q: "Can I watch or stream the movie while it is downloading?",
@@ -72,6 +72,11 @@ export default function TelegramMovieDownloaderPage() {
               "operatingSystem": "Android 8.0+",
               "applicationCategory": "MultimediaApplication",
               "url": "https://www.teletorrent.me/telegram-movie-downloader",
+              "downloadUrl": "https://play.google.com/store/apps/details?id=com.teletorrent.app",
+              "installUrl": "https://play.google.com/store/apps/details?id=com.teletorrent.app",
+              "sameAs": [
+                "https://play.google.com/store/apps/details?id=com.teletorrent.app"
+              ],
               "offers": {
                 "@type": "Offer",
                 "price": "0",
@@ -149,19 +154,27 @@ export default function TelegramMovieDownloaderPage() {
 
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mb-14">
             <a
-              href="mailto:notify@teletorrent.me?subject=Notify%20Me%20on%20Launch"
-              className="w-full sm:w-auto rounded-full bg-[#B7FF32] text-[#000000] hover:bg-[#a3e62c] font-semibold px-8 h-[54px] text-[15px] transition-all flex items-center justify-center gap-2 shadow-[0_10px_25px_rgba(183,255,50,0.25)]"
+              href="https://play.google.com/store/apps/details?id=com.teletorrent.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto rounded-2xl bg-[#B7FF32] text-[#000000] hover:bg-[#c6ff4d] font-extrabold px-9 h-[54px] text-[15px] transition-all flex items-center justify-center gap-3 shadow-[0_12px_35px_rgba(183,255,50,0.35)]"
             >
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-              </svg>
-              Get Download Alert
+              <div className="w-5 h-5 relative shrink-0">
+                <Image 
+                  src="/play-store-icon.png" 
+                  alt="Google Play" 
+                  width={20} 
+                  height={20} 
+                  className="w-full h-full object-contain" 
+                />
+              </div>
+              <span>Install on Google Play</span>
             </a>
             <a
               href="#how-to-download"
-              className="w-full sm:w-auto rounded-full bg-white/5 border border-white/20 text-[#F5F5F5] hover:bg-white/10 font-semibold px-8 h-[54px] text-sm md:text-base transition-all flex items-center justify-center"
+              className="w-full sm:w-auto rounded-2xl bg-white/10 border border-white/20 text-[#F5F5F5] hover:bg-white/15 font-bold px-7 h-[54px] text-sm md:text-base transition-all flex items-center justify-center gap-2"
             >
-              How It Works ↓
+              <span>How It Works Guide</span>
             </a>
           </div>
 
@@ -177,7 +190,7 @@ export default function TelegramMovieDownloaderPage() {
             </div>
             <div>
               <div className="text-[11px] font-mono text-[#8D919B] uppercase mb-1">Network Speed</div>
-              <div className="text-[18px] font-bold text-[#F5F5F5]">Uncapped MTProto</div>
+              <div className="text-[18px] font-bold text-[#F5F5F5]">TurboStream 5G</div>
             </div>
             <div>
               <div className="text-[11px] font-mono text-[#8D919B] uppercase mb-1">Resume Support</div>
@@ -222,10 +235,10 @@ export default function TelegramMovieDownloaderPage() {
 
             <h3 className="text-[20px] font-bold text-[#F5F5F5] flex items-center gap-3">
               <span className="w-8 h-8 rounded-full bg-[#B7FF32] text-black text-sm flex items-center justify-center font-bold">3</span>
-              Tap Download with Multi-Socket Speed
+              Tap Download with TurboStream™ 5G Speed
             </h3>
             <p className="text-[15px] leading-relaxed pl-11">
-              Hit <strong>Download</strong>. TeleTorrent connects to Telegram&apos;s MTProto protocol using 16 parallel chunks, maxing out your Jio 5G, Airtel 5G, or fiber Wi-Fi. The movie downloads in the background even if your screen is off.
+              Hit <strong>Download</strong>. TeleTorrent accelerates through 16 parallel TurboStream channels, maxing out your Jio 5G, Airtel 5G, or fiber Wi-Fi. The movie downloads in the background even if your screen is off.
             </p>
 
             <h3 className="text-[20px] font-bold text-[#F5F5F5] flex items-center gap-3">

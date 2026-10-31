@@ -32,9 +32,9 @@ export function DownloadExperienceSection() {
                   
                   {/* Thumbnail */}
                   <div className="w-14 h-14 md:w-16 md:h-16 rounded-[14px] bg-[#1A1A1A] shrink-0 overflow-hidden relative border border-[#222222]">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#10B981]/20 to-[#047857]/20"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#B7FF32]/20 to-[#047857]/20"></div>
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-[#10B981] text-[13px] md:text-[15px] font-bold tracking-wider">APK</span>
+                      <span className="text-[#B7FF32] text-[13px] md:text-[15px] font-bold tracking-wider">4K</span>
                     </div>
                   </div>
                   
@@ -43,10 +43,10 @@ export function DownloadExperienceSection() {
                     {/* Title and Menu */}
                     <div className="flex justify-between items-start">
                       <div>
-                        <h3 className="text-[#F5F5F5] text-[15px] md:text-[17px] font-bold truncate pr-4 leading-tight mb-1">TeleTorrent_v2.1.apk</h3>
+                        <h3 className="text-[#F5F5F5] text-[15px] md:text-[17px] font-bold truncate pr-4 leading-tight mb-1">Kalki_2898_AD_4K_HDR_MultiAudio.mkv</h3>
                         <div className="flex items-center gap-1.5">
                           <svg className="w-3.5 h-3.5 text-[#8D919B]" viewBox="0 0 24 24" fill="currentColor"><path d="M4 22C3.45 22 2.979 21.804 2.587 21.412C2.195 21.02 2 20.55 2 20V4C2 3.45 2.195 2.979 2.587 2.587C2.979 2.195 3.45 2 4 2H10L12 4H20C20.55 4 21.02 4.195 21.412 4.587C21.804 4.979 22 5.45 22 6V20C22 20.55 21.804 21.02 21.412 21.412C21.02 21.804 20.55 22 20 22H4ZM4 6V20H20V6H4Z"/></svg>
-                          <span className="text-[#8D919B] text-[12px] font-medium">Android Package</span>
+                          <span className="text-[#8D919B] text-[12px] font-medium">Video • Hindi / Telugu / Tamil • 4K UHD</span>
                         </div>
                       </div>
                       <div className="w-8 h-8 rounded-full hover:bg-[#1A1A1A] flex items-center justify-center cursor-pointer transition-colors text-[#8D919B]">
@@ -57,9 +57,9 @@ export function DownloadExperienceSection() {
                     {/* Stats */}
                     <div className="flex justify-between items-end w-full mt-1">
                       <div className="text-[#8D919B] text-[12px] md:text-[13px] font-medium">
-                        32.4 MB <span className="mx-1.5 text-[#333333]">/</span> 45.6 MB
+                        2.84 GB <span className="mx-1.5 text-[#333333]">/</span> 3.92 GB
                       </div>
-                      <span className="text-[#B7FF32] text-[12px] md:text-[13px] font-bold font-mono">1.2 MB/s</span>
+                      <span className="text-[#B7FF32] text-[12px] md:text-[13px] font-bold font-mono">48.2 MB/s (Jio 5G)</span>
                     </div>
                     
                     {/* Progress bar */}

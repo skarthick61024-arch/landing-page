@@ -4,75 +4,90 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import Link from "next/link"
+import { HelpCircle, ArrowRight } from "lucide-react"
 
 export function FAQSection() {
   const faqs = [
     {
-      question: "What is a Telegram downloader?",
-      answer: "A Telegram downloader is an application that allows you to easily find, manage, and download media and files directly from your Telegram account, specifically from your Saved Messages."
+      question: "What is TeleTorrent?",
+      answer: "TeleTorrent is an ultra-fast Android download manager and Telegram downloader powered by our proprietary TurboStream™ parallel engine. It uses 16 concurrent acceleration channels, background downloading, byte-level auto-resume, and direct export to your phone gallery to make downloading 4K movies and large files effortless."
     },
     {
-      question: "How can I download Telegram videos?",
-      answer: "With TeleTorrent, simply forward the video to your Telegram Saved Messages, open the TeleTorrent app, and tap download. The video will be saved directly to your device."
+      question: "How do I download Telegram movies to my phone gallery in India?",
+      answer: "Forward the movie file (MKV, MP4, etc.) to your Telegram Saved Messages chat. Open TeleTorrent on your Android device, and tap Download. The movie is accelerated across 16 parallel channels and saved directly to your physical /Movies folder, becoming instantly visible in your default Gallery, VLC, and MX Player."
     },
     {
-      question: "Can I download Telegram files?",
-      answer: "Yes, TeleTorrent supports downloading any file type available on Telegram. Whether it's documents, media, or archives, you can manage and download them seamlessly."
+      question: "Does TeleTorrent maximize Jio 5G and Airtel 5G download speeds?",
+      answer: "Yes! Standard Telegram throttles single-stream client connections. TeleTorrent opens 16 simultaneous TurboStream parallel channels to bypass client limits and achieve peak download speeds up to 60+ MB/s on Jio 5G, Airtel 5G, and high-speed fiber Wi-Fi networks across India without paying for third-party bots."
     },
     {
-      question: "What files does TeleTorrent support?",
-      answer: "TeleTorrent supports videos, documents, ZIP archives, APK files, audio tracks, and all other standard media types that Telegram allows you to send and receive."
+      question: "Can I resume interrupted or paused Telegram movie downloads?",
+      answer: "Yes. TeleTorrent provides 100% byte-perfect auto-resume. If your connection drops in an elevator or switches between mobile data and Wi-Fi, the download pauses automatically and resumes from the exact byte where it left off, saving gigabytes of cellular data."
     },
     {
-      question: "Can I download Telegram documents?",
-      answer: "Absolutely. TeleTorrent is perfect for downloading large PDFs, Word documents, Excel sheets, and other professional files directly from your Telegram account."
+      question: "Does TeleTorrent download in the background when my phone screen is locked?",
+      answer: "Yes. TeleTorrent runs as an official Android Foreground Service with low-power wake-locks, ensuring heavy multi-gigabyte files download reliably even when your screen is locked or while you are using other apps like YouTube or Instagram."
     },
     {
-      question: "Can I download ZIP files from Telegram?",
-      answer: "Yes, you can easily download ZIP and RAR archives. TeleTorrent manages the download process so you can access your compressed files securely."
+      question: "Is TeleTorrent safe and free on Google Play Store?",
+      answer: "Yes, TeleTorrent is 100% free to download on the Google Play Store with zero subscription tiers. It is verified by Google Play Protect, ensuring zero malware, zero third-party proxies, and safe direct cloud connections."
     },
     {
-      question: "Can I resume interrupted downloads?",
-      answer: "Yes, TeleTorrent features full resume support for interrupted or paused downloads, ensuring you never have to restart large file transfers from scratch."
+      question: "Are multi-audio tracks and embedded subtitles preserved?",
+      answer: "Yes. TeleTorrent downloads the exact bit-for-bit MKV or MP4 container without re-encoding, preserving English, Hindi, Tamil, Telugu, and other multi-audio dubs, along with SRT/ASS subtitle tracks for cinema-grade playback."
     },
     {
-      question: "Does TeleTorrent work on Android?",
-      answer: "Yes, TeleTorrent is natively built for Android, offering a smooth, optimized experience for managing and downloading your Telegram files on the go."
-    },
-    {
-      question: "Is TeleTorrent free?",
-      answer: "TeleTorrent is completely free to use with zero ads and no premium tiers required for core downloading functionality."
-    },
-    {
-      question: "Does TeleTorrent require Telegram login?",
-      answer: "Yes, to securely access your Saved Messages and download your files, you need to log in to your Telegram account through the TeleTorrent app."
+      question: "What file types can I download from Telegram with TeleTorrent?",
+      answer: "TeleTorrent supports all formats sent over Telegram: 4K MKV/MP4 videos, large ZIP and RAR archives, high-definition software packages, lossless FLAC audio, PDF documents, and photo albums up to 4GB+ per file."
     }
   ]
 
   return (
-    <section className="bg-[#0B0C0E] pt-20 md:pt-28 pb-16 md:pb-20 border-t border-[#141518]">
-      <div className="container mx-auto px-5 md:px-12 max-w-[800px]">
-        <div className="text-center mb-16">
-          <h2 className="text-[32px] md:text-[42px] font-bold text-[#F5F5F5] tracking-tight mb-4">
+    <section id="faq" className="py-24 md:py-32 bg-[#060709] border-t border-white/[0.08] relative">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+        
+        {/* Section Header */}
+        <div className="text-center mb-16 md:mb-20">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-xs font-mono text-[#B7FF32] uppercase tracking-wider mb-4">
+            Got Questions?
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6 leading-tight">
             Frequently Asked Questions
           </h2>
-          <p className="text-[15px] md:text-[17px] text-[#8D919B]">
-            Everything you need to know about downloading files with TeleTorrent.
+          <p className="text-base sm:text-lg text-zinc-400 leading-relaxed">
+            Everything you need to know about downloading movies, videos, and large files from Telegram with TeleTorrent.
           </p>
         </div>
 
-        <Accordion type="single" collapsible className="w-full">
-          {faqs.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`} className="border-[#141518]">
-              <AccordionTrigger className="text-[#F5F5F5] hover:text-[#B7FF32] text-left text-[15px] md:text-[16px]">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-[#8D919B] text-[14px] md:text-[15px] leading-relaxed">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        {/* Accordion */}
+        <div className="rounded-3xl p-6 sm:p-8 bg-[#0B0D12] border border-white/[0.08]">
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            {faqs.map((faq, index) => (
+              <AccordionItem 
+                key={index} 
+                value={`item-${index}`} 
+                className="border-b border-white/[0.06] last:border-b-0 pb-2"
+              >
+                <AccordionTrigger className="text-white hover:text-[#B7FF32] text-left text-base sm:text-lg font-bold py-4 transition-colors">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-zinc-400 text-sm sm:text-base leading-relaxed pt-1 pb-4">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+
+        {/* Support Callout */}
+        <div className="mt-12 text-center flex flex-col sm:flex-row items-center justify-center gap-3 text-sm text-zinc-400">
+          <span>Still have questions about TeleTorrent?</span>
+          <Link href="/help" className="text-[#B7FF32] font-semibold hover:underline inline-flex items-center gap-1">
+            Visit our Help Center &amp; Support Hub <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
+        </div>
+
       </div>
     </section>
   )
